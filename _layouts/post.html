@@ -23,6 +23,23 @@ layout: default
 
 </div>
 
+{% if page.comments %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" defer>
+        var disqus_config = function () {
+            this.page.url = '{{ page.url | absolute_url }}';
+            this.page.identifier = '{{ page.url | absolute_url }}';
+        };
+
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://valentineus-link.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+{% endif %}
+
 <div class="pagination">
     {% if page.next.url %}
         <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
