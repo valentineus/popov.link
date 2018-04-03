@@ -1,0 +1,36 @@
+<div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <!-- Header -->
+            <h1>
+                <a href="{{ site.baseurl }}">
+                    {% if page.title == "Home" %}
+                        {{ site.title }}
+                    {% else %}
+                        {{ page.title }}
+                    {% endif %}
+                </a>
+            </h1>
+
+            <!-- Description -->
+            <p class="lead">
+                {% if page.title == "Home" %}
+                    {{ site.description }}
+                {% else %}
+                    {{ page.description }}
+                {% endif %}
+            </p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+            <a class="sidebar-nav-item {% if page.title == "Home" %}active{% endif %}" href="{{ site.baseurl }}">Домой</a>
+            <a class="sidebar-nav-item {% if page.title == " Archive " %}active{% endif %}" href="{{ " /archive " | relative_url }}">Архив записей</a>
+            <a class="sidebar-nav-item {% if page.title == " Notes " %}active{% endif %}" href="{{ " /notes " | relative_url }}">Полезные заметки</a>
+            <a class="sidebar-nav-item" href="{{ site.github.repo }}">Исходный код</a>
+        </nav>
+
+        <!-- Copyright -->
+        <p>&copy; {{ site.time | date: "%Y" }}. All rights reserved.</p>
+    </div>
+</div>
