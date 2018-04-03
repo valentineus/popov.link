@@ -135,8 +135,8 @@ pre {
     margin-bottom: 1rem;
     margin-top: 0;
     padding: 1rem;
-    white-space: pre-wrap;
     white-space: pre;
+    white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
 }
