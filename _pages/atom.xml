@@ -9,7 +9,7 @@ layout: null
     <!-- Identifiers and references -->
     <link href="{{ site.rss | absolute_url | xml_escape }}" rel="self" type="application/atom+xml" />
     <link href="{{ site.url | xml_escape }}" rel="alternate" type="text/html" />
-    <id>{{ site.url | xml_escape }}</id>
+    <id>{{ site.url | slugify | xml_escape }}</id>
 
     <!-- Description and name -->
     <icon>{{ "/assets/favicon-32x32.png" | absolute_url | xml_escape }}</icon>
@@ -29,7 +29,7 @@ layout: null
         <entry>
             <!-- Identifiers and references -->
             <link href="{{ node.url | absolute_url | xml_escape }}" rel="alternate" type="text/html" />
-            <id>{{ node.url | absolute_url | xml_escape }}</id>
+            <id>{{ node.id | slugify | xml_escape }}</id>
 
             <!-- Description and name -->
             <title>{{ node.title | smartify | strip_html | normalize_whitespace | xml_escape }}</title>
