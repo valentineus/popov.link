@@ -4,7 +4,7 @@
             <!-- Header -->
             <h1>
                 <a href="{{ site.baseurl }}">
-                    {% if page.title == "Home" %}
+                    {% if page.title == "index" %}
                         {{ site.title }}
                     {% else %}
                         {{ page.title }}
@@ -14,7 +14,7 @@
 
             <!-- Description -->
             <p class="lead">
-                {% if page.title == "Home" %}
+                {% if page.title == "index" %}
                     {{ site.description }}
                 {% else %}
                     {{ page.description }}
@@ -24,10 +24,19 @@
 
         <!-- Navigation -->
         <nav class="sidebar-nav">
-            <a class="sidebar-nav-item {% if page.title == "Home" %}active{% endif %}" href="{{ site.baseurl }}">Домой</a>
-            <a class="sidebar-nav-item {% if page.title == " Archive " %}active{% endif %}" href="{{ " /archive " | relative_url }}">Архив записей</a>
-            <a class="sidebar-nav-item {% if page.title == " Notes " %}active{% endif %}" href="{{ " /notes " | relative_url }}">Полезные заметки</a>
-            <a class="sidebar-nav-item" href="{{ site.github.repo }}">Исходный код</a>
+            <a class="sidebar-nav-item {% if page.title == "index" %}active{% endif %}" href="{{ site.baseurl }}">Домашняя страница</a>
+            {% for node in site.pages %}
+                {% if node.sidebar == true %}
+                    <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+
+        <!-- Additional elements -->
+        <nav class="sidebar-nav fa-sm">
+            <a class="sidebar-nav-icon" href="{{ site.rss | relative_url }}"><i class="fas fa-rss"></i></a>
+            <a class="sidebar-nav-icon" href="mailto:{{ site.author.email }}?subject={{ page.title }}"><i class="fas fa-envelope-open"></i></a>
+            <a class="sidebar-nav-icon" href="{{ site.github.repo | uri_escape }}"><i class="fab fa-github"></i></a>
         </nav>
 
         <!-- Copyright -->
