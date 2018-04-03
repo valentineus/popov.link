@@ -1,7 +1,7 @@
 ---
-layout: null
+layout:    null
 permalink: "/atom.xml"
-sidebar: false
+sidebar:   false
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
