@@ -3,9 +3,10 @@
 .c9
 
 ## Jekyll
-_site
-.sass-cache
 .jekyll-metadata
+.sass-cache
+styles.scss
+_site
 
 ## Ruby
 *.gem
