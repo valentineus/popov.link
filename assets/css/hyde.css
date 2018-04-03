@@ -1,0 +1,137 @@
+/**
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+html {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48em) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 58em) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/**
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+.sidebar {
+    background-color: #202020;
+    color: rgba(255, 255, 255, .5);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+@media (min-width: 48em) {
+    .sidebar {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        text-align: left;
+        top: 0;
+        width: 18rem;
+    }
+}
+
+.sidebar a {
+    color: #fff;
+}
+
+.sidebar-about h1 {
+    color: #fff;
+    font-family: "Abril Fatface", serif;
+    font-size: 3.25rem;
+    margin-top: 0;
+}
+
+.sidebar-nav {
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav-item {
+    display: block;
+    line-height: 1.75;
+}
+
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+    text-decoration: underline;
+}
+
+.sidebar-nav-item.active {
+    font-weight: bold;
+}
+
+/**
+ * Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+@media (min-width: 48em) {
+    .sidebar-sticky {
+        bottom: 1rem;
+        left: 1rem;
+        position: absolute;
+        right: 1rem;
+    }
+}
+
+/**
+ * Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+.content {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+@media (min-width: 48em) {
+    .content {
+        margin-left: 20rem;
+        margin-right: 2rem;
+        max-width: 38rem;
+    }
+}
+
+@media (min-width: 64em) {
+    .content {
+        margin-left: 22rem;
+        margin-right: 4rem;
+    }
+}
+
+/**
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` on the right.
+ */
+@media (min-width: 48em) {
+    .layout-reverse .sidebar {
+        left: auto;
+        right: 0;
+    }
+    .layout-reverse .content {
+        margin-left: 2rem;
+        margin-right: 20rem;
+    }
+}
+
+@media (min-width: 64em) {
+    .layout-reverse .content {
+        margin-left: 4rem;
+        margin-right: 22rem;
+    }
+}
