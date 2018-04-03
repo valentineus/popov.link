@@ -3,11 +3,11 @@
         <div class="sidebar-about">
             <!-- Header -->
             <h1>
-                <a href="{{ site.baseurl }}">
+                <a href="{{ site.baseurl | uri_escape }}">
                     {% if page.title == "index" %}
-                        {{ site.title }}
+                        {{ site.title | smartify | strip_html | strip | normalize_whitespace }}
                     {% else %}
-                        {{ page.title }}
+                        {{ page.title | smartify | strip_html | strip | normalize_whitespace }}
                     {% endif %}
                 </a>
             </h1>
@@ -15,28 +15,50 @@
             <!-- Description -->
             <p class="lead">
                 {% if page.title == "index" %}
-                    {{ site.description }}
+                    {{ site.description | smartify | strip_html | strip_newlines | strip | normalize_whitespace }}
                 {% else %}
-                    {{ page.description }}
+                    {{ page.description | smartify | strip_html | strip_newlines | strip | normalize_whitespace }}
                 {% endif %}
             </p>
         </div>
 
         <!-- Navigation -->
         <nav class="sidebar-nav">
-            <a class="sidebar-nav-item {% if page.title == "index" %}active{% endif %}" href="{{ site.baseurl }}">Домашняя страница</a>
+            <a class="sidebar-nav-item {% if page.title == "index" %}active{% endif %}" href="{{ site.baseurl | uri_escape }}">Домашняя страница</a>
             {% for node in site.pages %}
                 {% if node.sidebar == true %}
-                    <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+                    <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url | uri_escape }}">
+                        {{ node.title | smartify | strip_html | strip | normalize_whitespace }}
+                    </a>
                 {% endif %}
             {% endfor %}
         </nav>
 
         <!-- Additional elements -->
         <nav class="sidebar-nav fa-sm">
-            <a class="sidebar-nav-icon" href="{{ site.rss | relative_url }}"><i class="fas fa-rss"></i></a>
-            <a class="sidebar-nav-icon" href="mailto:{{ site.author.email }}?subject={{ page.title }}"><i class="fas fa-envelope-open"></i></a>
-            <a class="sidebar-nav-icon" href="{{ site.github.repo | uri_escape }}"><i class="fab fa-github"></i></a>
+            {% if site.rss %}
+                <a class="sidebar-nav-icon" href="{{ site.rss | relative_url | uri_escape }}">
+                    <i class="fas fa-rss"></i>
+                </a>
+            {% endif %}
+
+            {% if site.author.email %}
+                <a class="sidebar-nav-icon" href="mailto:{{ site.author.email | uri_escape }}">
+                    <i class="fas fa-envelope-open"></i>
+                </a>
+            {% endif %}
+
+            {% if site.links.twitter %}
+                <a class="sidebar-nav-icon" href="{{ site.links.twitter | uri_escape }}">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            {% endif %}
+
+            {% if site.links.github %}
+                <a class="sidebar-nav-icon" href="{{ site.links.github | uri_escape }}">
+                    <i class="fab fa-github"></i>
+                </a>
+            {% endif %}
         </nav>
 
         <!-- Copyright -->
