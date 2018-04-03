@@ -312,33 +312,10 @@ tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
     margin-top: -.5rem;
 }
 
-.related {
+.comments {
     border-top: 1px solid #eee;
     padding-bottom: 2rem;
     padding-top: 2rem;
-}
-
-.related-posts {
-    list-style: none;
-    padding-left: 0;
-}
-
-.related-posts h3 {
-    margin-top: 0;
-}
-
-.related-posts li small {
-    color: #999;
-    font-size: 75%;
-}
-
-.related-posts li a:hover {
-    color: #268bd2;
-    text-decoration: none;
-}
-
-.related-posts li a:hover small {
-    color: inherit;
 }
 
 /**
