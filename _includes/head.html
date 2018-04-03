@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
     <title>
-        {% if page.title == "index" %}
+        {% if page.id == "index" %}
             {{ site.title | smartify | strip_html | normalize_whitespace }}
         {% else %}
             {{ page.title | smartify | strip_html | normalize_whitespace }} &middot;

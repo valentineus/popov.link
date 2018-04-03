@@ -3,7 +3,7 @@
         <div class="sidebar-about">
             <!-- Header -->
             <a href="{{ site.baseurl | uri_escape }}">
-                {% if page.title == "index" %}
+                {% if page.id == "index" %}
                     <h1>{{ site.title | smartify | strip_html | normalize_whitespace }}</h1>
                 {% else %}
                     <h1>{{ page.title | smartify | strip_html | normalize_whitespace }}</h1>
@@ -12,7 +12,7 @@
 
             <!-- Description -->
             <p class="lead">
-                {% if page.title == "index" %}
+                {% if page.id == "index" %}
                     {{ site.description | smartify | strip_html | normalize_whitespace }}
                 {% else %}
                     {{ page.description | smartify | strip_html | normalize_whitespace }}
@@ -22,7 +22,7 @@
 
         <!-- Navigation -->
         <nav class="sidebar-nav">
-            <a class="sidebar-nav-item {% if page.title == "index" %}active{% endif %}" href="{{ site.baseurl | uri_escape }}">Домашняя страница</a>
+            <a class="sidebar-nav-item {% if page.id == "index" %}active{% endif %}" href="{{ site.baseurl | uri_escape }}">Домашняя страница</a>
             {% for node in site.pages %}
                 {% if node.sidebar == true %}
                     <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url | uri_escape }}">
