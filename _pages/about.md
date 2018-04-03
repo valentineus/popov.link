@@ -1,10 +1,9 @@
 ---
-permalink:      "/about.html"
-layout:         page
-sidebar:        true
-id:             about
-title:          "About"
-description:    "Обо мне"
+permalink: "/about.html"
+description: "Обо мне"
+title: "About"
+sidebar: true
+layout: page
 ---
 
 There is a significant amount of subtle, yet precisely calibrated, styling to ensure that your content is emphasized while still looking aesthetically pleasing.

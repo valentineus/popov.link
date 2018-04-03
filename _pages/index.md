@@ -1,8 +1,9 @@
 ---
-permalink:    "/index.html"
-layout:       default
-title:        "Home"
-id:           index
+permalink: "/index.html"
+layout: default
+sidebar: true
+title: "Home"
+id: index
 ---
 
 <div class="page">
