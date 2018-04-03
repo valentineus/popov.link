@@ -74,7 +74,15 @@ a.sidebar-nav-item:focus {
 
 .sidebar-nav-icon {
     display: inline;
-    margin-right: 1rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+@media (min-width: 48em) {
+    .sidebar-nav-icon {
+        margin-left: 0rem;
+        margin-right: 1rem;
+    }
 }
 
 /**
