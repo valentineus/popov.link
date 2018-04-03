@@ -8,10 +8,10 @@
 
     <title>
         {% if page.title == "index" %}
-            {{ site.title | smartify | strip_html | strip | normalize_whitespace }}
+            {{ site.title | smartify | strip_html | normalize_whitespace }}
         {% else %}
-            {{ page.title | smartify | strip_html | strip | normalize_whitespace }} &middot;
-            {{ site.title | smartify | strip_html | strip | normalize_whitespace }}
+            {{ page.title | smartify | strip_html | normalize_whitespace }} &middot;
+            {{ site.title | smartify | strip_html | normalize_whitespace }}
         {% endif %}
     </title>
 

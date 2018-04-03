@@ -2,22 +2,20 @@
     <div class="container sidebar-sticky">
         <div class="sidebar-about">
             <!-- Header -->
-            <h1>
-                <a href="{{ site.baseurl | uri_escape }}">
-                    {% if page.title == "index" %}
-                        {{ site.title | smartify | strip_html | strip | normalize_whitespace }}
-                    {% else %}
-                        {{ page.title | smartify | strip_html | strip | normalize_whitespace }}
-                    {% endif %}
-                </a>
-            </h1>
+            <a href="{{ site.baseurl | uri_escape }}">
+                {% if page.title == "index" %}
+                    <h1>{{ site.title | smartify | strip_html | normalize_whitespace }}</h1>
+                {% else %}
+                    <h1>{{ page.title | smartify | strip_html | normalize_whitespace }}</h1>
+                {% endif %}
+            </a>
 
             <!-- Description -->
             <p class="lead">
                 {% if page.title == "index" %}
-                    {{ site.description | smartify | strip_html | strip_newlines | strip | normalize_whitespace }}
+                    {{ site.description | smartify | strip_html | normalize_whitespace }}
                 {% else %}
-                    {{ page.description | smartify | strip_html | strip_newlines | strip | normalize_whitespace }}
+                    {{ page.description | smartify | strip_html | normalize_whitespace }}
                 {% endif %}
             </p>
         </div>
@@ -28,7 +26,7 @@
             {% for node in site.pages %}
                 {% if node.sidebar == true %}
                     <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url | uri_escape }}">
-                        {{ node.title | smartify | strip_html | strip | normalize_whitespace }}
+                        {{ node.title | smartify | strip_html | normalize_whitespace }}
                     </a>
                 {% endif %}
             {% endfor %}
