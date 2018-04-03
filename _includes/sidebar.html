@@ -22,8 +22,7 @@
 
         <!-- Navigation -->
         <nav class="sidebar-nav">
-            <a class="sidebar-nav-item {% if page.id == "index" %}active{% endif %}" href="{{ site.baseurl | uri_escape }}">Домашняя страница</a>
-            {% for node in site.pages %}
+            {% for node in site.pages reversed %}
                 {% if node.sidebar == true %}
                     <a class="sidebar-nav-item {% if page.url == node.url %}active{% endif %}" href="{{ node.url | relative_url | uri_escape }}">
                         {{ node.title | smartify | strip_html | normalize_whitespace }}
