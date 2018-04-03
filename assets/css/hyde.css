@@ -72,6 +72,11 @@ a.sidebar-nav-item:focus {
     font-weight: bold;
 }
 
+.sidebar-nav-icon {
+    display: inline;
+    margin-right: 1rem;
+}
+
 /**
  * Sticky sidebar
  *
