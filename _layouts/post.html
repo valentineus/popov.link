@@ -2,52 +2,30 @@
 layout: default
 ---
 
+<!-- Content of the post -->
 <div class="post">
-    <div class="post-info">
-        <span>Written by</span>
-            {% if page.author %}
-                {{ page.author }}
-            {% else %}
-                {{ site.author.name }}
-            {% endif %}
-
-            {% if page.date %}
-        <br />
-        <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time> {% endif %}
-    </div>
-
     <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-line"></div>
-
+    <span class="post-date">{{ page.date | date_to_long_string }}</span>
     {{ content }}
-
 </div>
 
-{% if page.comments %}
+<!-- Comments on the post -->
+<div class="comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript" defer>
-        var disqus_config = function () {
+        var disqus_config = function() {
+            this.page.identifier = '{{ page.url | relative_url }}';
+            this.page.title = '{{ page.title }}';
             this.page.url = '{{ page.url | absolute_url }}';
-            this.page.identifier = '{{ page.url | absolute_url }}';
         };
 
         (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://valentineus-link.disqus.com/embed.js';
+            var d = document,
+                s = d.createElement('script');
+            s.src = '//valentineus-link.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
     </script>
-{% endif %}
 
-<div class="pagination">
-    {% if page.next.url %}
-        <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-    {% endif %}
-
-    {% if page.previous.url %}
-        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-    {% endif %}
-
-    <a href="#" class="top">Top</a>
 </div>
