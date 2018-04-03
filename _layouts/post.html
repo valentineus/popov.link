@@ -2,11 +2,17 @@
 layout: default
 ---
 
-<!-- Content of the post -->
 <div class="post">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <!-- Header -->
+    <h1 class="post-title">
+        {{ page.title | smartify | strip_html | normalize_whitespace }}
+    </h1>
+
+    <!-- Date -->
     <span class="post-date">{{ page.date | date_to_long_string }}</span>
-    {{ content }}
+
+    <!-- Contents -->
+    {{ content | normalize_whitespace }}
 </div>
 
 <!-- Comments on the post -->
@@ -14,9 +20,9 @@ layout: default
     <div id="disqus_thread"></div>
     <script type="text/javascript" defer>
         var disqus_config = function() {
-            this.page.identifier = '{{ page.url | relative_url }}';
-            this.page.title = '{{ page.title }}';
-            this.page.url = '{{ page.url | absolute_url }}';
+            this.page.identifier = '{{ page.id | slugify }}';
+            this.page.title = '{{ page.title | smartify | strip_html | normalize_whitespace }}';
+            this.page.url = '{{ page.url | absolute_url | uri_escape }}';
         };
 
         (function() {
