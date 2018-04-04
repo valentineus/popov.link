@@ -10,12 +10,12 @@ markdown: kramdown
 
 # Compress HTML
 compress_html:
-  blanklines: true
+  blanklines: false
   clippings: all
   comments: all
-  endings: false
+  endings: []
   profile: false
-  startings: false
+  startings: []
 
 # Basic
 baseurl: ""
