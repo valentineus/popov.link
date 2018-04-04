@@ -78,6 +78,11 @@ a.sidebar-nav-item:focus {
     margin-right: 2%;
 }
 
+a.sidebar-nav-icon:hover,
+a.sidebar-nav-icon:focus {
+    text-decoration: none;
+}
+
 @media (min-width: 48em) {
     .sidebar-nav-icon {
         margin-left: 0rem;
