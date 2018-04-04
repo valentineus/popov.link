@@ -1,30 +1,39 @@
 # Permalinks
 permalink: /:year-:month-:day/:title
 
-# Setup
-title:    "Blog"
-paginate: 5
-baseurl:  ""
-url:      "https://valentineus.github.io"
+# Catalogs
+include: [ "_pages" ]
 
-# Assets
-sass:
-  sass_dir: "_sass"
-  style:    ":compressed"
-
-# Build settings
+# Dependencies
+highlighter: rouge
 markdown: kramdown
+
+# Compress HTML
+compress_html:
+  blanklines: false
+  clippings: all
+  comments: all
+  endings: false
+  profile: false
+  startings: false
+
+# Basic
+baseurl: ""
+url: "http://valentineus.link"
+description: "Выжимка полезной информации из собственного опыта. Заметки, статьи и черновики."
+title: "Blog"
+rss: "/atom.xml"
 
 # About
 author:
-  name:  "Valentin Popov"
-  url:   "https://valentineus.link"
   email: "info@valentineus.link"
+  name: "Valentin Popov"
+  url: "http://valentineus.link"
 
-# Custom vars
-version: 3.4.1
-github:
-  repo: "https://github.com/valentineus/valentineus.github.io"
+# References
+links:
+  github: "https://github.com/valentineus"
+  twitter: "https://twitter.com/valyaha"
 
 # Gems
 plugins:
