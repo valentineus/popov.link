@@ -1,137 +1,170 @@
 ---
-layout:   post
-comments: true
-title:    "Example Content"
-author:   "Valentin Popov"
+description: "Howdy! This is an example blog post that shows several types of HTML content supported in this theme."
+title: "Example Content"
+layout: post
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis. Nullam interdum ultricies nibh quis sollicitudin. Donec ornare fermentum facilisis. Ut at sem ac sem imperdiet varius a eget tortor. Nam eu augue eget orci semper maximus in eget augue. Mauris ornare, nisl ut suscipit consectetur, mi quam interdum tellus, at rutrum quam eros ultrices mi.
+<div class="message">
+    {{ page.description | smartify | strip_html | normalize_whitespace }}
+</div>
 
-# Headers
-{% highlight markdown %}
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-{% endhighlight %}
+Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+*Aenean eu leo quam.*
+Pellentesque ornare sem lacinia quam venenatis vestibulum.
+Sed posuere consectetur est at lobortis.
+Cras mattis consectetur purus sit amet fermentum.
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+> Curabitur blandit tempus porttitor.
+Nullam quis risus eget urna mollis ornare vel eu leo.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-# Text formatting
-{% highlight markdown %}
-- **Bold**
-- _Italics_
-- ~~Strikethrough~~
-- <ins>Underline</ins>
-- <sup>Superscript</sup>
-- <sub>Subscript</sub>
-- Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
-- Citation: <cite>&mdash; Chester How</cite>
-{% endhighlight %}
+Etiam porta **sem malesuada magna** mollis euismod.
+Cras mattis consectetur purus sit amet fermentum.
+Aenean lacinia bibendum nulla sed consectetur.
 
-- **Bold**
-- _Italics_
-- ~~Strikethrough~~
-- <ins>Underline</ins>
-- <sup>Superscript</sup>
-- <sub>Subscript</sub>
-- Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
-- Citation: <cite>&mdash; Chester How</cite>
+## Inline HTML elements
 
-# Lists
-{% highlight markdown %}
-1. Ordered list item 1
-2. Ordered list item 2
-3. Ordered list item 3
+HTML defines a long list of available inline tags, a complete list of which can be found on the
+[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-* Unordered list item 1
-* Unordered list item 2
-* Unordered list item 3
-{% endhighlight %}
+- **To bold text**, use `<strong>`.
+- *To italicize text*, use `<em>`.
+- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
+- Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
+- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
+- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
-1. Ordered list item 1
-2. Ordered list item 2
-3. Ordered list item 3
+Most of these elements are styled by browsers with few modifications on our part.
 
-* Unordered list item 1
-* Unordered list item 2
-* Unordered list item 3
+## Heading
 
-# Links
-{% highlight markdown %}
-Check out tale on [GitHub](https://github.com/chesterhow/tale).
-{% endhighlight %}
+Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.
+Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 
-Check out tale on [GitHub](https://github.com/chesterhow/tale).
+### Code
 
-# Images
-{% highlight markdown %}
-![Placeholder image](https://placehold.it/800x400 "Placeholder image")
-
-![Image with caption](https://placehold.it/700x400 "Image with caption")
-_This is an image with a caption_
-{% endhighlight %}
-
-![Placeholder image](https://placehold.it/800x400 "Placeholder image")
-
-![Image with caption](https://placehold.it/700x400 "Image with caption")
-_This is an image with a caption_
-
-# Code and Syntax Highlighting
-Use back-ticks for `inline code`. Multi-line code snippets are supported too through Pygments.
+Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
 {% highlight js %}
-// Sample javascript code
-var s = "JavaScript syntax highlighting";
-alert(s);
+    // Example can be run directly in your JavaScript console
+
+    // Create a function that takes two arguments and returns the sum of those arguments
+    var adder = new Function("a", "b", "return a + b");
+
+    // Call the function
+    adder(2, 6);
+    // > 8
 {% endhighlight %}
 
-{% highlight python %}
-# Sample python code
-s = "Python syntax highlighting"
-print s
-{% endhighlight %}
+Aenean lacinia bibendum nulla sed consectetur.
+Etiam porta sem malesuada magna mollis euismod.
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
 
-Adding `linenos` to the Pyments tag enables line numbers.
+### Gists via GitHub Pages
 
-{% highlight js  linenos %}
-// Sample javascript code
-var s = "JavaScript syntax highlighting";
-alert(s);
-{% endhighlight %}
+Vestibulum id ligula porta felis euismod semper.
+Nullam quis risus eget urna mollis ornare vel eu leo.
+Donec sed odio dui.
 
-# Blockquotes
-{% highlight markdown %}
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+{% gist 5555251 gist.md %}
 
-{% endhighlight %}
+Aenean eu leo quam.
+Pellentesque ornare sem lacinia quam venenatis vestibulum.
+Nullam quis risus eget urna mollis ornare vel eu leo.
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Donec sed odio dui.
+Vestibulum id ligula porta felis euismod semper.
 
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+### Lists
 
-# Horizontal Rule & Line Break
-{% highlight markdown %}
-Use `<hr>` for horizontal rules
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Aenean lacinia bibendum nulla sed consectetur.
+Etiam porta sem malesuada magna mollis euismod.
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 
-<hr>
+* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+* Donec id elit non mi porta gravida at eget metus.
+* Nulla vitae elit libero, a pharetra augue.
 
-and `<br>` for line breaks.
+Donec ullamcorper nulla non metus auctor fringilla.
+Nulla vitae elit libero, a pharetra augue.
 
-<br>
-{% endhighlight %}
+1. Vestibulum id ligula porta felis euismod semper.
+2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+3. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
-Use `<hr>` for horizontal rules
+Cras mattis consectetur purus sit amet fermentum.
+Sed posuere consectetur est at lobortis.
 
-<hr>
+<dl>
+    <dt>HyperText Markup Language (HTML)</dt>
+    <dd>The language used to describe and define the content of a Web page</dd>
 
-and `<br>` for line breaks.
+    <dt>Cascading Style Sheets (CSS)</dt>
+    <dd>Used to describe the appearance of Web content</dd>
 
-<br>
+    <dt>JavaScript (JS)</dt>
+    <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
 
-_The end_
+Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Nullam quis risus eget urna mollis ornare vel eu leo.
+
+### Images
+
+Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus.
+Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
+
+![placeholder](http://placehold.it/800x400 "Large example image")
+![placeholder](http://placehold.it/400x200 "Medium example image")
+![placeholder](http://placehold.it/200x200 "Small example image")
+
+### Tables
+
+Aenean lacinia bibendum nulla sed consectetur.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Upvotes</th>
+            <th>Downvotes</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>Totals</td>
+            <td>21</td>
+            <td>23</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>Alice</td>
+            <td>10</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>7</td>
+            <td>9</td>
+        </tr>
+    </tbody>
+</table>
+
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Sed posuere consectetur est at lobortis.
+Nullam quis risus eget urna mollis ornare vel eu leo.
+
+-----
+
+Want to see something else added?
+<a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
