@@ -10,7 +10,7 @@ markdown: kramdown
 
 # Compress HTML
 compress_html:
-  blanklines: false
+  blanklines: true
   clippings: all
   comments: all
   endings: false
