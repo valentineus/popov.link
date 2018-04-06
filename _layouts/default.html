@@ -8,12 +8,17 @@ layout: compress
 {% include head.html %}
 
 <body>
-    {% include sidebar.html %}
+    {% include header.html %}
 
-    <div class="content container">
-        {{ content | normalize_whitespace }}
-    </div>
+    {% include icons.html %}
 
+    <section class="main">
+        <div class="container">
+            <div class="content">
+                {{ content | normalize_whitespace }}
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
