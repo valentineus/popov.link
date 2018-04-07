@@ -2,36 +2,36 @@
 layout: default
 ---
 
-<div class="post">
-    <!-- Header -->
-    <h1 class="post-title">
-        {{ page.title | smartify | strip_html | normalize_whitespace }}
-    </h1>
-
-    <!-- Date -->
-    <span class="post-date">{{ page.date | date_to_long_string }}</span>
-
-    <!-- Contents -->
-    {{ content | normalize_whitespace }}
-</div>
-
-<!-- Comments on the post -->
-<div class="comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript" defer>
-        var disqus_config = function() {
-            this.page.identifier = '{{ page.id | slugify }}';
-            this.page.title = '{{ page.title | smartify | strip_html | normalize_whitespace }}';
-            this.page.url = '{{ page.url | absolute_url | uri_escape }}';
-        };
-
-        (function() {
-            var d = document,
-                s = d.createElement('script');
-            s.src = '//valentineus-link.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-
+<div class="post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <!-- Header-->
+            <div class="front-matter">
+                <!-- Title-->
+                <div class="title-container">
+                    <div class="page-heading">
+                        {{ page.title | smartify | strip_html | normalize_whitespace }}
+                    </div>
+                </div>
+                <!-- Date -->
+                <div class="meta">
+                    <div class="date" title="{{ page.date | date_to_xmlschema }}">
+                        {{ page.date | date_to_string }}
+                    </div>
+                    <div class="reading-time">
+                        <!-- <div class="middot"></div> -->
+                        <!-- Expansion -->
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="markdown">
+                {{ content | normalize_whitespace }}
+            </div>
+            <!-- Comments -->
+            <div class="disqus">
+                {% include disqus.html %}
+            </div>
+        </div>
+    </div>
 </div>
