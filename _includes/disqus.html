@@ -1,0 +1,15 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript" defer>
+    var disqus_config = function() {
+        this.page.identifier = '{{ page.id | slugify }}';
+        this.page.title = '{{ page.title | smartify | strip_html | normalize_whitespace }}';
+        this.page.url = '{{ page.url | absolute_url | uri_escape }}';
+    };
+    (function() {
+        var d = document,
+            s = d.createElement('script');
+        s.src = '//valentineus-link.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
