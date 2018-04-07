@@ -3,22 +3,26 @@ permalink: "/index.html"
 layout: default
 ---
 
-<!-- Header -->
-<div class="page-heading">Blog</div>
-<!-- List -->
-<ul>
-    {% for node in site.posts %}
-        <li class="post-item">
-            <!-- Time -->
-            <span class="meta">
-                <time datetime="{{ node.latest_update | default: node.date | date_to_xmlschema }}">
-                    {{ node.latest_update | default: node.date | date_to_string }}
-                </time>
-            </span>
-            <!-- Link -->
-            <a href="{{ node.url | relative_url | uri_escape }}">
-                <span>{{ node.title | smartify | strip_html | normalize_whitespace }}</span>
-            </a>
-        </li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <div class="content">
+        <!-- Header -->
+        <div class="page-heading">Blog</div>
+        <!-- List -->
+        <ul>
+            {% for node in site.posts %}
+                <li class="post-item">
+                    <!-- Time -->
+                    <span class="meta">
+                        <time datetime="{{ node.latest_update | default: node.date | date_to_xmlschema }}">
+                            {{ node.latest_update | default: node.date | date_to_string }}
+                        </time>
+                    </span>
+                    <!-- Link -->
+                    <a href="{{ node.url | relative_url | uri_escape }}">
+                        <span>{{ node.title | smartify | strip_html | normalize_whitespace }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

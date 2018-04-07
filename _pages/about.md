@@ -1,9 +1,8 @@
 ---
 permalink: "/about.html"
-description: "Обо мне"
 title: "About"
-sidebar: true
 layout: page
+show: true
 ---
 
 There is a significant amount of subtle, yet precisely calibrated, styling to ensure that your content is emphasized while still looking aesthetically pleasing.
