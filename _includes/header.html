@@ -2,7 +2,7 @@
   <a href="{{ site.baseurl | uri_escape }}" class="navigation-title">Home</a>
   <ul class="navigation-list float-right">
     <li class="navigation-item">
-      {% for item in site.pages %}
+      {% for item in site.pages reversed %}
         {% if item.show == true %}
           <a href="{{ item.url | relative_url | uri_escape }}" class="navigation-link">
             {{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
