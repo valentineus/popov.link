@@ -2,15 +2,11 @@
 layout: default
 ---
 
-<div class="container">
-    <div class="content">
-        <!-- Header -->
-        <div class="page-heading">
-            {{ page.title | smartify | strip_html | normalize_whitespace }}
-        </div>
-        <!-- Contents -->
-        <div class=markdown>
-            {{ content | normalize_whitespace }}
-        </div>
-    </div>
-</div>
+<section class="container page">
+    <article>
+        <header>
+            <h1>{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h1>
+        </header>
+        {{ content }}
+    </article>
+</section>
