@@ -22,7 +22,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
     <!-- Search engines -->
-    <link rel="canonical" href="{{ site.url | absolute_url | uri_escape }}" />
+    <link rel="canonical" href="{{ page.url | absolute_url | uri_escape }}" />
     <meta name="google-site-verification" content="{{ site.verification.google | strip_newlines | strip_html | strip | normalize_whitespace | cgi_escape }}" />
     <meta name="yandex-verification" content="{{ site.verification.yandex | strip_newlines | strip_html | strip | normalize_whitespace | cgi_escape }}" />
     <meta name="robots" content="index, follow" />
