@@ -9,11 +9,9 @@ layout: default
     <h2>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h2>
     <ul>
       {% for item in site.social_links %}
-        <li>
-          <a href="{{ item[1] | strip_newlines | strip_html | strip | uri_escape }}" target="_blank">
-            {{ item[0] | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-          </a>
-        </li>
+        {% assign title = item[0] | strip_newlines | strip_html | strip | normalize_whitespace | smartify %}
+        {% assign link = item[1] | strip_newlines | strip_html | strip | uri_escape %}
+        <li><a href="{{ link }}" target="_blank">{{ title }}</a></li>
       {% endfor %}
     </ul>
   </div>
