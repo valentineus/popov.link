@@ -1,0 +1,343 @@
+@import 'flexbox';
+@import 'tools';
+
+$monospaced-font: 'Roboto Mono', monospace;
+$sans-serif-font: 'Roboto', sans-serif;
+
+$darker-bg-color: #f8f8f8;
+$darker-fg-color: #000;
+$bg-color: #fefefe;
+$fg-color: #323232;
+
+*,
+*::after,
+*::before {
+  @include borderbox(border-box);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include flexbox();
+
+  background-color: $bg-color;
+  color: $fg-color;
+  font-family: $sans-serif-font;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.8em;
+
+  @include mobile-screen() {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+}
+
+a {
+  color: $fg-color;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $darker-bg-color;
+  font-style: italic;
+  padding-left: 1.6rem;
+}
+
+code {
+  background-color: $darker-bg-color;
+  font-family: $monospaced-font;
+  padding: .4rem .8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $darker-fg-color;
+  font-family: $monospaced-font;
+  letter-spacing: .0625em;
+  margin: 3.2rem 0 1.6rem;
+  text-transform: uppercase;
+}
+
+// Setting the size of headers
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+    font-size: get-font-size-for-pc($i);
+    line-height: get-font-size-for-pc($i);
+
+    @include mobile-screen() {
+      font-size: get-font-size-for-phone($i);
+      line-height: get-font-size-for-phone($i);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ol,
+ul {
+  margin-top: 1.6rem;
+  padding-left: 3.2rem;
+}
+
+p {
+  margin: 1.6rem 0;
+}
+
+pre {
+  margin: 1.6rem 0 1rem;
+  overflow-x: auto;
+  padding: 1.6rem;
+}
+
+table {
+  width: 100%;
+}
+
+.wrapper {
+  @include flexbox();
+  @include flex-direction(column);
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+.navigation {
+  font-family: $monospaced-font;
+  height: 6rem;
+  width: 100%;
+
+  a {
+    display: inline;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: 6rem;
+    text-transform: uppercase;
+
+    @include mobile-screen() {
+      font-size: 1.4rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    li {
+      float: left;
+      margin: 0;
+      position: relative;
+
+      a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.content {
+  @include flex(1);
+
+  margin-bottom: 3.2rem;
+  margin-top: 1.6rem;
+
+  article {
+    header {
+      margin-bottom: 3.2rem;
+      margin-top: 3.2rem;
+
+      h1,
+      h2 {
+        margin: 0;
+      }
+
+      h2 {
+        color: $fg-color;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+
+        @include mobile-screen() {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.list {
+  ul {
+    list-style: none;
+    margin: 3.2rem 0;
+    padding: 0;
+
+    li {
+      font-size: 1.6rem;
+
+      @include mobile-screen() {
+        font-size: 1.4rem;
+        margin: 1.6rem 0;
+      }
+
+      span {
+        display: inline-block;
+        margin-right: 3rem;
+        text-align: right;
+        width: 20rem;
+
+        @include mobile-screen() {
+          display: block;
+          text-align: left;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.pagination {
+  margin-top: 6rem;
+  text-align: center;
+
+  li {
+    display: inline;
+    text-align: center;
+
+    span {
+      margin: 0;
+      text-align: center;
+      width: 3.2rem;
+    }
+
+    a {
+      span {
+        margin: 0;
+        text-align: center;
+        width: 3.2rem;
+      }
+    }
+  }
+}
+
+.centered {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+
+  height: 100%;
+
+  .about {
+    font-family: $monospaced-font;
+    text-align: center;
+
+    h1 {
+      margin-bottom: .5rem;
+      margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: .5rem;
+      margin-top: 1rem;
+
+      @include mobile-screen() {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 3rem 0 1rem;
+      padding: 0;
+
+      li {
+        display: inline;
+        position: relative;
+
+        a {
+          font-size: 1.6rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          text-transform: uppercase;
+
+          @include mobile-screen() {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .error {
+    text-align: center;
+
+    h1 {
+      font-size: 4.6rem;
+      margin-bottom: .5rem;
+      margin-top: 2rem;
+
+      @include mobile-screen() {
+        font-size: 3.2rem;
+      }
+    }
+
+    h2 {
+      font-size: 3.2rem;
+      margin-bottom: 3.2rem;
+      margin-top: 2rem;
+
+      @include mobile-screen() {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+
+.comments {
+  margin-top: 1.6rem;
+}
+
+.highlight {
+  margin: 0;
+}
+
+.footer {
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
