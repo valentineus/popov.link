@@ -1,8 +1,8 @@
 @import 'flexbox';
 @import 'tools';
 
-$monospaced-font: 'Roboto Mono', monospace;
-$sans-serif-font: 'Roboto', sans-serif;
+$monospaced-font: 'PT Mono', monospace;
+$sans-serif-font: 'PT Sans', sans-serif;
 
 $darker-bg-color: #f8f8f8;
 $darker-fg-color: #000;
@@ -16,7 +16,7 @@ $fg-color: #323232;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 70%;
 }
 
 body {
@@ -27,7 +27,6 @@ body {
   font-family: $sans-serif-font;
   font-size: 1.6em;
   font-weight: 400;
-  line-height: 1.8em;
 
   @include mobile-screen() {
     font-size: 1.4em;
@@ -37,7 +36,6 @@ body {
 
 a {
   color: $fg-color;
-  font-weight: 700;
   text-decoration: none;
 
   &:focus,
@@ -126,6 +124,7 @@ table {
 
 .navigation {
   font-family: $monospaced-font;
+  font-weight: 700;
   height: 6rem;
   width: 100%;
 
@@ -254,6 +253,7 @@ table {
 
   .about {
     font-family: $monospaced-font;
+    font-weight: 700;
     text-align: center;
 
     h1 {
