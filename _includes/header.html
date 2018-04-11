@@ -3,10 +3,11 @@
   <ul class="navigation-list float-right">
     <li class="navigation-item">
       {% for item in site.pages reversed %}
+        {% assign title = item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify %}
+        {% assign link = item.url | relative_url | uri_escape %}
+        <!-- Show the link -->
         {% if item.show == true %}
-          <a href="{{ item.url | relative_url | uri_escape }}" class="navigation-link">
-            {{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-          </a>
+          <a href="{{ link }}" class="navigation-link">{{ title }}</a>
         {% endif %}
       {% endfor %}
     </li>
