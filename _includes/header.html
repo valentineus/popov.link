@@ -1,24 +1,14 @@
-<section class="header">
-    <div class="container">
-        <div class="content">
-            <!-- Username -->
-            <a href="{{ site.baseurl | uri_escape }}">
-                <div class="name">{{ site.author.name | smartify | strip_html | normalize_whitespace }}</div>
-            </a>
-            <!-- Navigating -->
-            <nav>
-                <ul>
-                    {% for node in site.pages reversed %}
-                        {% if node.show == true %}
-                            <li class="nav-item">
-                                <a href="{{ node.url | relative_url | uri_escape }}">
-                                    <span>{{ node.title | smartify | strip_html | normalize_whitespace }}</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
-    </div>
+<section class="container">
+  <a href="{{ site.baseurl | uri_escape }}" class="navigation-title">Home</a>
+  <ul class="navigation-list float-right">
+    <li class="navigation-item">
+      {% for item in site.pages %}
+        {% if item.show == true %}
+          <a href="{{ item.url | relative_url | uri_escape }}" class="navigation-link">
+            {{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </li>
+  </ul>
 </section>
