@@ -1,5 +1,5 @@
 ---
-permalink: "/about.html"
+permalink: "about.html"
 title: "About"
 layout: page
 show: true
@@ -12,69 +12,73 @@ All links are easy to
 yet don't detract from the
 [harmony of a paragraph]({{ site.baseurl | uri_escape }}).
 The _same_ goes for italics and __bold__ elements.
-Even the the strikeout works if <del>for some reason you need to update your post</del>.
-For consistency's sake, <ins>The same goes for insertions</ins>, of course.
+Even the the strikeout works if
+<del>for some reason you need to update your post</del>.
+For consistency's sake,
+<ins>The same goes for insertions</ins>,
+of course.
 
 ### Code, with syntax highlighting
 
 Here's an example of some ruby code with line anchors.
 
-{% highlight ruby lineanchors %}
-    # The most awesome of classes
-    class Awesome < ActiveRecord::Base
-        include EvenMoreAwesome
+```ruby
+# The most awesome of classes
+class Awesome < ActiveRecord::Base
+    include EvenMoreAwesome
 
-        validates_presence_of :something
-        validates :email, email_format: true
+    validates_presence_of :something
+    validates :email, email_format: true
 
-        def initialize(email, name = nil)
-            self.email = email
-            self.name = name
-            self.favorite_number = 12
-            puts 'created awesomeness'
-        end
-
-        def email_format
-            email =~ /\S+@\S+\.\S+/
-        end
+    def initialize(email, name = nil)
+        self.email = email
+        self.name = name
+        self.favorite_number = 12
+        puts 'created awesomeness'
     end
-{% endhighlight %}
+
+    def email_format
+        email =~ /\S+@\S+\.\S+/
+    end
+end
+```
 
 Here's some CSS:
 
-{% highlight css %}
-    .foobar {
-        /* Named colors rule */
-        color: tomato;
-    }
-{% endhighlight %}
+```css
+.foobar {
+    /* Named colors rule */
+    color: tomato;
+}
+```
 
 Here's some JavaScript:
 
-{% highlight js %}
-    var isPresent = require('is-present')
+```js
+var isPresent = require('is-present')
 
-    module.exports = function doStuff(things) {
-        if (isPresent(things)) {
-            doOtherStuff(things)
-        }
+module.exports = function doStuff(things) {
+    if (isPresent(things)) {
+        doOtherStuff(things)
     }
-{% endhighlight %}
+}
+```
 
 Here's some HTML:
 
-{% highlight html %}
-    <div class="m0 p0 bg-blue white">
-        <h3 class="h1">Hello, world!</h3>
-    </div>
-{% endhighlight %}
+```html
+<div class="m0 p0 bg-blue white">
+    <h3 class="h1">Hello, world!</h3>
+</div>
+```
 
 # Headings!
 
 They're responsive, and well-proportioned (in `padding`, `line-height`, `margin`, and `font-size`).
-They also heavily rely on the awesome utility, [BASSCSS](http://www.basscss.com/).
+They also heavily rely on the awesome utility,
+[BASSCSS](http://www.basscss.com/).
 
-##### They draw the perfect amount of attention
+#### They draw the perfect amount of attention
 
 This allows your content to have the proper informational and contextual hierarchy.
 Yay.
@@ -132,7 +136,7 @@ I will be working on a way to hopefully sidestep this inconvenience.
 ### There's more being added all the time
 
 Checkout the
-[Github repository](https://github.com/johnotander/pixyll)
+[Github repository](https://github.com/valentineus/valentineus.github.io)
 to request, or add, features.
 
 Happy writing.
