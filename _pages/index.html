@@ -1,28 +1,20 @@
 ---
-permalink: "/index.html"
+permalink: "index.html"
 layout: default
 ---
 
-<div class="container">
-    <div class="content">
-        <!-- Header -->
-        <div class="page-heading">Blog</div>
-        <!-- List -->
-        <ul>
-            {% for node in site.posts %}
-                <li class="post-item">
-                    <!-- Time -->
-                    <span class="meta">
-                        <time datetime="{{ node.latest_update | default: node.date | date_to_xmlschema }}">
-                            {{ node.latest_update | default: node.date | date_to_string }}
-                        </time>
-                    </span>
-                    <!-- Link -->
-                    <a href="{{ node.url | relative_url | uri_escape }}">
-                        <span>{{ node.title | smartify | strip_html | normalize_whitespace }}</span>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+<section class="container centered">
+  <div class="about">
+    <h1>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h1>
+    <h2>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h2>
+    <ul>
+      {% for item in site.links %}
+        <li>
+          <a href="{{ item[1] | strip_newlines | strip_html | strip | uri_escape }}" target="_blank">
+            {{ item[0] | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
