@@ -40,7 +40,7 @@ lang: "ru"
 
 # Website address
 url: "http://valentineus.link"
-baseurl: "/"
+baseurl: ""
 
 # Author
 author:
