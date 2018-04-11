@@ -23,8 +23,8 @@
 
     <!-- Search engines -->
     <link rel="canonical" href="{{ site.url | absolute_url | uri_escape }}" />
-    <meta name="google-site-verification" content="BkBsaYAO1LuQDRceyK2odvcpfuP2al0y04LnBda1uvE" />
-    <meta name="yandex-verification" content="14221e61b87bbd27" />
+    <meta name="google-site-verification" content="{{ site.verification.google | strip_newlines | strip_html | strip | normalize_whitespace | cgi_escape }}" />
+    <meta name="yandex-verification" content="{{ site.verification.yandex | strip_newlines | strip_html | strip | normalize_whitespace | cgi_escape }}" />
     <meta name="robots" content="index, follow" />
 
     <!-- Title / Description -->
