@@ -1,8 +1,8 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript" defer>
     var disqus_config = function() {
-        this.page.identifier = '{{ page.id | slugify }}';
-        this.page.title = '{{ page.title | smartify | strip_html | normalize_whitespace }}';
+        this.page.identifier = '{{ page.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}';
+        this.page.title = '{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}';
         this.page.url = '{{ page.url | absolute_url | uri_escape }}';
     };
     (function() {
