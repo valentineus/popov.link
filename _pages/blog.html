@@ -1,0 +1,26 @@
+---
+permalink: "posts.html"
+layout: default
+title: "Posts"
+show: true
+---
+
+<section class="container list">
+  <h1 class="title">{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h1>
+
+  <ul>
+    {% for item in site.posts %}
+      <li>
+        <span>
+          <time datetime="{{ item.date | date_to_xmlschema }}">
+            {{ item.date | date_to_long_string }}
+          </time>
+        </span>
+
+        <a href="{{ item.url | relative_url | uri_escape }}">
+          {{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+        </a>
+      </li>
+    {% endfor%}
+  </ul>
+</section>
