@@ -1,6 +1,6 @@
 ---
 permalink: "atom.xml"
-layout: null
+layout: compress
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
