@@ -1,0 +1,27 @@
+---
+permalink: "sitemap.xml"
+layout: compress
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="{{ page.permalink | absolute_url | xml_escape }}"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Pages -->
+  {% for item in site.html_pages %}
+    <url>
+      <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {% endfor %}
+  <!-- Posts -->
+  {% for item in site.posts %}
+    <url>
+      <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+      <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+</urlset>
