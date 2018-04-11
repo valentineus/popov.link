@@ -1,12 +1,27 @@
 # Permalinks
-permalink: /:year-:month-:day/:title
+permalink: "/:year-:month-:day/:title"
+
+# Time Zone
+timezone: "Europe/Samara"
 
 # Catalogs
-include: [ "_pages" ]
+include: 
+  - "_pages"
 
-# Dependencies
+# Parsers
 highlighter: rouge
 markdown: kramdown
+
+# Markdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# SASS/SCSS
+sass:
+  sass_dir: "_scss"
+  style: ":compressed"
 
 # Compress HTML
 compress_html:
@@ -17,24 +32,40 @@ compress_html:
   profile: false
   startings: []
 
-# Basic
-baseurl: ""
-url: "http://valentineus.link"
-description: "Выжимка полезной информации из собственного опыта. Заметки, статьи и черновики."
-title: "Blog"
+# Site settings
+description: "Free developer and dreamer"
+title: "Valentin Popov's personal blog"
 rss: "/atom.xml"
+lang: "ru"
 
-# About
+# Website address
+url: "http://valentineus.link"
+baseurl: "/"
+
+# Author
 author:
   email: "info@valentineus.link"
   name: "Valentin Popov"
   url: "http://valentineus.link"
 
-# References
-links:
+# Domain verification
+verification:
+  google: "BkBsaYAO1LuQDRceyK2odvcpfuP2al0y04LnBda1uvE"
+  yandex: "14221e61b87bbd27"
+
+# Social links
+social_links:
+  email: "mailto:info@valentineus.link"
   github: "https://github.com/valentineus"
   twitter: "https://twitter.com/valyaha"
 
-# Gems
+# Plugins
 plugins:
   - "jekyll-paginate"
+
+# Exceptions
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "LICENSE.md"
+  - "README.md"
