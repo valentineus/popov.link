@@ -3,17 +3,20 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site | smartify | strip_html | normalize_whitespace }}">
+<html lang="{{ site.lang | strip_newlines | strip_html | strip | slugify }}">
 
 {% include head.html %}
 
 <body>
-    {% include header.html %}
-    {% include icons.html %}
+    <main class="wrapper">
+        {% include header.html %}
 
-    <section class="main">
-        {{ content | normalize_whitespace }}
-    </section>
+        <div class="content">
+            {{ content }}
+        </div>
+
+        {% include footer.html %}
+    </main>
 </body>
 
 </html>
