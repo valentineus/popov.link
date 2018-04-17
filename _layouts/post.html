@@ -2,24 +2,23 @@
 layout: default
 ---
 
-<section class="container post">
-    <article>
-        <header>
-            <h1 class="title">
-                {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-            </h1>
+<div class="content">
+  {% include navbar.html %}
 
-            <h2 class="date">
-                <time datetime="{{ page.date | date_to_xmlschema }}">
-                    {{ page.date | date_to_long_string }}
-                </time>
-            </h2>
-        </header>
+  <article>
+    <header class="header">
+      <h1 class="header-title">
+        {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </h1>
+      <p class="header-annotation">
+        <time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time>
+      </p>
+    </header>
 
-        {{ content }}
+    {{ content }}
+  </article>
 
-        <div class="comments">
-            {% include disqus.html %}
-        </div>
-    </article>
-</section>
+  <div class="comments">
+    {% include disqus.html %}
+  </div>
+</div>
