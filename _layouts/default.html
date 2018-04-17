@@ -5,22 +5,14 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ site.lang | strip_newlines | strip_html | strip | slugify }}">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
-  <main class="wrapper">
-    <nav class="navigation">
-      {% include header.html %}
-    </nav>
-
-    <div class="content">
+  <body>
+    <main class="container">
       {{ content }}
-    </div>
+    </main>
 
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-  </main>
-</body>
+    {% include footer.html %}
+  </body>
 
 </html>
