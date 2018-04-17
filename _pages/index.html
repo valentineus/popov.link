@@ -1,18 +1,20 @@
 ---
 permalink: "index.html"
-layout: default
+layout: page
 ---
 
-<section class="container centered">
-  <div class="about">
-    <h1>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h1>
-    <h2>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h2>
-    <ul>
-      {% for item in site.social_links %}
-        {% assign title = item[0] | strip_newlines | strip_html | strip | normalize_whitespace | smartify %}
-        {% assign link = item[1] | strip_newlines | strip_html | strip | uri_escape %}
-        <li><a href="{{ link }}" target="_blank">{{ title }}</a></li>
-      {% endfor %}
-    </ul>
+{% for post in site.posts %}
+  <div class="header">
+    <h2 class="header-title">
+      <a href="{{ post.url | relative_url | uri_escape }}">
+        {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </a>
+    </h2>
+    {% if post.description %}
+      <p class="header-annotation">
+        {{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </p>
+    {% endif %}
+    <time>{{ post.date | date_to_long_string }}</time>
   </div>
-</section>
+{% endfor %}
