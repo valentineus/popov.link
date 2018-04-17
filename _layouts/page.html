@@ -2,11 +2,19 @@
 layout: default
 ---
 
-<section class="container page">
-    <article>
-        <header>
-            <h1>{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}</h1>
-        </header>
-        {{ content }}
-    </article>
-</section>
+<div class="content">
+  {% include navbar.html %}
+
+  <article>
+    <header class="header">
+      <h1 class="header-title">
+        {{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </h1>
+      <p class="header-annotation">
+        {{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </p>
+    </header>
+
+    {{ content }}
+  </article>
+</div>
