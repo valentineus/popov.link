@@ -1,345 +1,267 @@
 /*! pygments-css | github.com/richleland/pygments-css */
 
-.highlight {
-  background: #f8f8f8;
+@import 'utilities/base16';
 
-  .hll {
-    background-color: #ffffcc;
+.highlight {
+  background: $base00;
+  color: $base07;
+
+  .bp {
+    color: $base07;
   }
 
   .c {
-    color: #8f5902;
-    font-style: italic;
-  }
-
-  .err {
-    border: 1px solid #ef2929;
-    color: #a40000;
-  }
-
-  .g {
-    color: #000000;
-  }
-
-  .k {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .l {
-    color: #000000;
-  }
-
-  .n {
-    color: #000000;
-  }
-
-  .o {
-    color: #ce5c00;
-    font-weight: bold;
-  }
-
-  .x {
-    color: #000000;
-  }
-
-  .p {
-    color: #000000;
-    font-weight: bold;
-  }
-
-  .ch {
-    color: #8f5902;
-    font-style: italic;
-  }
-
-  .cm {
-    color: #8f5902;
-    font-style: italic;
-  }
-
-  .cp {
-    color: #8f5902;
-    font-style: italic;
-  }
-
-  .cpf {
-    color: #8f5902;
-    font-style: italic;
+    color: $base03;
   }
 
   .c1 {
-    color: #8f5902;
-    font-style: italic;
+    color: $base03;
+  }
+
+  .cm {
+    color: $base03;
+  }
+
+  .cp {
+    color: $base03;
   }
 
   .cs {
-    color: #8f5902;
-    font-style: italic;
+    color: $base03;
+  }
+
+  .err {
+    color: $base08;
   }
 
   .gd {
-    color: #a40000;
+    color: $base08;
   }
 
   .ge {
-    color: #000000;
     font-style: italic;
   }
 
-  .gr {
-    color: #ef2929;
-  }
-
   .gh {
-    color: #000080;
+    color: $base07;
     font-weight: bold;
   }
 
   .gi {
-    color: #00A000;
-  }
-
-  .go {
-    color: #000000;
-    font-style: italic;
+    color: $base0B;
   }
 
   .gp {
-    color: #8f5902;
+    color: $base03;
+    font-weight: bold;
   }
 
   .gs {
-    color: #000000;
     font-weight: bold;
   }
 
   .gu {
-    color: #800080;
+    color: $base0C;
     font-weight: bold;
   }
 
-  .gt {
-    color: #a40000;
-    font-weight: bold;
-  }
-
-  .kc {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .kd {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .kn {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .kp {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .kr {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .kt {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .ld {
-    color: #000000;
-  }
-
-  .m {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .s {
-    color: #4e9a06;
-  }
-
-  .na {
-    color: #c4a000;
-  }
-
-  .nb {
-    color: #204a87;
-  }
-
-  .nc {
-    color: #000000;
-  }
-
-  .no {
-    color: #000000;
-  }
-
-  .nd {
-    color: #5c35cc;
-    font-weight: bold;
-  }
-
-  .ni {
-    color: #ce5c00;
-  }
-
-  .ne {
-    color: #cc0000;
-    font-weight: bold;
-  }
-
-  .nf {
-    color: #000000;
-  }
-
-  .nl {
-    color: #f57900;
-  }
-
-  .nn {
-    color: #000000;
-  }
-
-  .nx {
-    color: #000000;
-  }
-
-  .py {
-    color: #000000;
-  }
-
-  .nt {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .nv {
-    color: #000000;
-  }
-
-  .ow {
-    color: #204a87;
-    font-weight: bold;
-  }
-
-  .w {
-    color: #f8f8f8;
-    text-decoration: underline;
-  }
-
-  .mb {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .mf {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .mh {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .mi {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .mo {
-    color: #0000cf;
-    font-weight: bold;
-  }
-
-  .sa {
-    color: #4e9a06;
-  }
-
-  .sb {
-    color: #4e9a06;
-  }
-
-  .sc {
-    color: #4e9a06;
-  }
-
-  .dl {
-    color: #4e9a06;
-  }
-
-  .sd {
-    color: #8f5902;
-    font-style: italic;
-  }
-
-  .s2 {
-    color: #4e9a06;
-  }
-
-  .se {
-    color: #4e9a06;
-  }
-
-  .sh {
-    color: #4e9a06;
-  }
-
-  .si {
-    color: #4e9a06;
-  }
-
-  .sx {
-    color: #4e9a06;
-  }
-
-  .sr {
-    color: #4e9a06;
-  }
-
-  .s1 {
-    color: #4e9a06;
-  }
-
-  .ss {
-    color: #4e9a06;
-  }
-
-  .bp {
-    color: #3465a4;
-  }
-
-  .fm {
-    color: #000000;
-  }
-
-  .vc {
-    color: #000000;
-  }
-
-  .vg {
-    color: #000000;
-  }
-
-  .vi {
-    color: #000000;
-  }
-
-  .vm {
-    color: #000000;
+  .hll {
+    background-color: $base02;
   }
 
   .il {
-    color: #0000cf;
-    font-weight: bold;
+    color: $base09;
+  }
+
+  .k {
+    color: $base0E;
+  }
+
+  .kc {
+    color: $base0E;
+  }
+
+  .kd {
+    color: $base0E;
+  }
+
+  .kn {
+    color: $base0C;
+  }
+
+  .kp {
+    color: $base0E;
+  }
+
+  .kr {
+    color: $base0E;
+  }
+
+  .kt {
+    color: $base0A;
+  }
+
+  .l {
+    color: $base09;
+  }
+
+  .ld {
+    color: $base0B;
+  }
+
+  .m {
+    color: $base09;
+  }
+
+  .mf {
+    color: $base09;
+  }
+
+  .mh {
+    color: $base09;
+  }
+
+  .mi {
+    color: $base09;
+  }
+
+  .mo {
+    color: $base09;
+  }
+
+  .n {
+    color: $base07;
+  }
+
+  .na {
+    color: $base0D;
+  }
+
+  .nb {
+    color: $base07;
+  }
+
+  .nc {
+    color: $base0A;
+  }
+
+  .nd {
+    color: $base0C;
+  }
+
+  .ne {
+    color: $base08;
+  }
+
+  .nf {
+    color: $base0D;
+  }
+
+  .ni {
+    color: $base07;
+  }
+
+  .nl {
+    color: $base07;
+  }
+
+  .nn {
+    color: $base0A;
+  }
+
+  .no {
+    color: $base08;
+  }
+
+  .nt {
+    color: $base0C;
+  }
+
+  .nv {
+    color: $base08;
+  }
+
+  .nx {
+    color: $base0D;
+  }
+
+  .o {
+    color: $base0C;
+  }
+
+  .ow {
+    color: $base0C;
+  }
+
+  .p {
+    color: $base07;
+  }
+
+  .py {
+    color: $base07;
+  }
+
+  .s {
+    color: $base0B;
+  }
+
+  .s1 {
+    color: $base0B;
+  }
+
+  .s2 {
+    color: $base0B;
+  }
+
+  .sb {
+    color: $base0B;
+  }
+
+  .sc {
+    color: $base07;
+  }
+
+  .sd {
+    color: $base03;
+  }
+
+  .se {
+    color: $base09;
+  }
+
+  .sh {
+    color: $base0B;
+  }
+
+  .si {
+    color: $base09;
+  }
+
+  .sr {
+    color: $base0B;
+  }
+
+  .ss {
+    color: $base0B;
+  }
+
+  .sx {
+    color: $base0B;
+  }
+
+  .vc {
+    color: $base08;
+  }
+
+  .vg {
+    color: $base08;
+  }
+
+  .vi {
+    color: $base08;
+  }
+
+  .w {
+    color: $base07;
   }
 }
