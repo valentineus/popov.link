@@ -3,22 +3,14 @@ layout: default
 ---
 
 <div class="content">
-  {% include navbar.html %}
-
   <article>
-    <header class="header">
-      <h1 class="header-title">
-        {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-      </h1>
-      <p class="header-annotation">
-        <time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time>
-      </p>
+    <header>
+      <small><time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time></small>
+      <h1>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | capitalize }}</h1>
     </header>
 
     {{ content }}
-  </article>
 
-  <div class="comments">
     {% include disqus.html %}
-  </div>
+  </article>
 </div>
