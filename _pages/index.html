@@ -3,18 +3,26 @@ permalink: "index.html"
 layout: page
 ---
 
-{% for post in site.posts %}
-  <div class="header">
-    <h2 class="header-title">
-      <a href="{{ post.url | relative_url | uri_escape }}">
-        {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-      </a>
-    </h2>
-    {% if post.description %}
-      <p class="header-annotation">
-        {{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-      </p>
-    {% endif %}
-    <time>{{ post.date | date_to_long_string }}</time>
-  </div>
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<!-- Links to social networks -->
+{% include sociallinks.html %}
+
+{% for year in postsByYear %}
+  <h2>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}</h2>
+
+  {% for post in year.items %}
+    <div class="post-item">
+      <small><time datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date_to_long_string }}</time></small>
+      <h4>
+        <a href="{{ post.url | relative_url | uri_escape }}">
+          {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | capitalize }}
+        </a>
+      </h4>
+
+      {% if post.description %}
+        <p>{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
 {% endfor %}
