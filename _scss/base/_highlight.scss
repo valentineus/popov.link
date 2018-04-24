@@ -1,267 +1,358 @@
 /*! pygments-css | github.com/richleland/pygments-css */
 
-@import 'utilities/base16';
+// Tango theme
+$color01: #000;
+$color02: #000080;
+$color03: #0000cf;
+$color04: #00a000;
+$color05: #204a87;
+$color06: #3465a4;
+$color07: #4e9a06;
+$color08: #5c35cc;
+$color09: #800080;
+$color10: #8f5902;
+$color11: #a40000;
+$color12: #c4a000;
+$color13: #c00;
+$color14: #ce5c00;
+$color15: #ef2929;
+$color16: #f57900;
+$color17: #f8f8f8;
 
 .highlight {
-  background: $base00;
-  color: $base07;
-
-  .bp {
-    color: $base07;
-  }
-
   .c {
-    color: $base03;
-  }
-
-  .c1 {
-    color: $base03;
-  }
-
-  .cm {
-    color: $base03;
-  }
-
-  .cp {
-    color: $base03;
-  }
-
-  .cs {
-    color: $base03;
-  }
-
-  .err {
-    color: $base08;
-  }
-
-  .gd {
-    color: $base08;
-  }
-
-  .ge {
+    color: $color10;
     font-style: italic;
   }
 
+  .err {
+    border: 1px solid $color15;
+    color: $color11;
+  }
+
+  .g {
+    color: $color01;
+  }
+
+  .k {
+    color: $color05;
+    font-weight: bold;
+  }
+
+  .l {
+    color: $color01;
+  }
+
+  .n {
+    color: $color01;
+  }
+
+  .o {
+    color: $color14;
+    font-weight: bold;
+  }
+
+  .x {
+    color: $color01;
+  }
+
+  .p {
+    color: $color01;
+    font-weight: bold;
+  }
+
+  .ch {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .cm {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .cp {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .cpf {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .c1 {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .cs {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .gd {
+    color: $color11;
+  }
+
+  .ge {
+    color: $color01;
+    font-style: italic;
+  }
+
+  .gr {
+    color: $color15;
+  }
+
   .gh {
-    color: $base07;
+    color: $color02;
     font-weight: bold;
   }
 
   .gi {
-    color: $base0B;
+    color: $color04;
+  }
+
+  .go {
+    color: $color01;
+    font-style: italic;
   }
 
   .gp {
-    color: $base03;
-    font-weight: bold;
+    color: $color10;
   }
 
   .gs {
+    color: $color01;
     font-weight: bold;
   }
 
   .gu {
-    color: $base0C;
+    color: $color09;
     font-weight: bold;
   }
 
-  .hll {
-    background-color: $base02;
-  }
-
-  .il {
-    color: $base09;
-  }
-
-  .k {
-    color: $base0E;
+  .gt {
+    color: $color11;
+    font-weight: bold;
   }
 
   .kc {
-    color: $base0E;
+    color: $color05;
+    font-weight: bold;
   }
 
   .kd {
-    color: $base0E;
+    color: $color05;
+    font-weight: bold;
   }
 
   .kn {
-    color: $base0C;
+    color: $color05;
+    font-weight: bold;
   }
 
   .kp {
-    color: $base0E;
+    color: $color05;
+    font-weight: bold;
   }
 
   .kr {
-    color: $base0E;
+    color: $color05;
+    font-weight: bold;
   }
 
   .kt {
-    color: $base0A;
-  }
-
-  .l {
-    color: $base09;
+    color: $color05;
+    font-weight: bold;
   }
 
   .ld {
-    color: $base0B;
+    color: $color01;
   }
 
   .m {
-    color: $base09;
-  }
-
-  .mf {
-    color: $base09;
-  }
-
-  .mh {
-    color: $base09;
-  }
-
-  .mi {
-    color: $base09;
-  }
-
-  .mo {
-    color: $base09;
-  }
-
-  .n {
-    color: $base07;
-  }
-
-  .na {
-    color: $base0D;
-  }
-
-  .nb {
-    color: $base07;
-  }
-
-  .nc {
-    color: $base0A;
-  }
-
-  .nd {
-    color: $base0C;
-  }
-
-  .ne {
-    color: $base08;
-  }
-
-  .nf {
-    color: $base0D;
-  }
-
-  .ni {
-    color: $base07;
-  }
-
-  .nl {
-    color: $base07;
-  }
-
-  .nn {
-    color: $base0A;
-  }
-
-  .no {
-    color: $base08;
-  }
-
-  .nt {
-    color: $base0C;
-  }
-
-  .nv {
-    color: $base08;
-  }
-
-  .nx {
-    color: $base0D;
-  }
-
-  .o {
-    color: $base0C;
-  }
-
-  .ow {
-    color: $base0C;
-  }
-
-  .p {
-    color: $base07;
-  }
-
-  .py {
-    color: $base07;
+    color: $color03;
+    font-weight: bold;
   }
 
   .s {
-    color: $base0B;
+    color: $color07;
   }
 
-  .s1 {
-    color: $base0B;
+  .na {
+    color: $color12;
   }
 
-  .s2 {
-    color: $base0B;
+  .nb {
+    color: $color05;
   }
 
-  .sb {
-    color: $base0B;
+  .nc {
+    color: $color01;
   }
 
-  .sc {
-    color: $base07;
+  .no {
+    color: $color01;
   }
 
-  .sd {
-    color: $base03;
+  .nd {
+    color: $color08;
+    font-weight: bold;
   }
 
-  .se {
-    color: $base09;
+  .ni {
+    color: $color14;
   }
 
-  .sh {
-    color: $base0B;
+  .ne {
+    color: $color13;
+    font-weight: bold;
   }
 
-  .si {
-    color: $base09;
+  .nf {
+    color: $color01;
   }
 
-  .sr {
-    color: $base0B;
+  .nl {
+    color: $color16;
   }
 
-  .ss {
-    color: $base0B;
+  .nn {
+    color: $color01;
   }
 
-  .sx {
-    color: $base0B;
+  .nx {
+    color: $color01;
   }
 
-  .vc {
-    color: $base08;
+  .py {
+    color: $color01;
   }
 
-  .vg {
-    color: $base08;
+  .nt {
+    color: $color05;
+    font-weight: bold;
   }
 
-  .vi {
-    color: $base08;
+  .nv {
+    color: $color01;
+  }
+
+  .ow {
+    color: $color05;
+    font-weight: bold;
   }
 
   .w {
-    color: $base07;
+    color: $color17;
+    text-decoration: underline;
+  }
+
+  .mb {
+    color: $color03;
+    font-weight: bold;
+  }
+
+  .mf {
+    color: $color03;
+    font-weight: bold;
+  }
+
+  .mh {
+    color: $color03;
+    font-weight: bold;
+  }
+
+  .mi {
+    color: $color03;
+    font-weight: bold;
+  }
+
+  .mo {
+    color: $color03;
+    font-weight: bold;
+  }
+
+  .sa {
+    color: $color07;
+  }
+
+  .sb {
+    color: $color07;
+  }
+
+  .sc {
+    color: $color07;
+  }
+
+  .dl {
+    color: $color07;
+  }
+
+  .sd {
+    color: $color10;
+    font-style: italic;
+  }
+
+  .s2 {
+    color: $color07;
+  }
+
+  .se {
+    color: $color07;
+  }
+
+  .sh {
+    color: $color07;
+  }
+
+  .si {
+    color: $color07;
+  }
+
+  .sx {
+    color: $color07;
+  }
+
+  .sr {
+    color: $color07;
+  }
+
+  .s1 {
+    color: $color07;
+  }
+
+  .ss {
+    color: $color07;
+  }
+
+  .bp {
+    color: $color06;
+  }
+
+  .fm {
+    color: $color01;
+  }
+
+  .vc {
+    color: $color01;
+  }
+
+  .vg {
+    color: $color01;
+  }
+
+  .vi {
+    color: $color01;
+  }
+
+  .vm {
+    color: $color01;
+  }
+
+  .il {
+    color: $color03;
+    font-weight: bold;
   }
 }
