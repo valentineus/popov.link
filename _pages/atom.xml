@@ -19,9 +19,9 @@ layout: compress
 
     <!-- Author -->
     <author>
-        <email>{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
-        <name>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
-        <uri>{{ site.author.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
+        <email>{{ site.data.author_info.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
+        <name>{{ site.data.author_info.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
+        <uri>{{ site.data.author_info.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
     </author>
 
     {% for item in site.posts %}
@@ -39,9 +39,9 @@ layout: compress
 
             <!-- Author -->
             <author>
-                <email>{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
-                <name>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
-                <uri>{{ site.author.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
+                <email>{{ site.data.author_info.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
+                <name>{{ site.data.author_info.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
+                <uri>{{ site.data.author_info.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
             </author>
 
             <!-- Content -->
