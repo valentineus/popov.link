@@ -1,3 +1,5 @@
+@import 'utilities/borderradius';
+
 .button,
 button,
 input[type='button'],
@@ -5,7 +7,6 @@ input[type='reset'],
 input[type='submit'] {
   background-color: $color-primary;
   border: .1rem solid $color-primary;
-  border-radius: .4rem;
   color: $color-initial;
   cursor: pointer;
   display: inline-block;
@@ -19,6 +20,8 @@ input[type='submit'] {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+
+  @include borderradius(.4rem);
 
   &:focus,
   &:hover {

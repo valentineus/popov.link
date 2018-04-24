@@ -1,5 +1,7 @@
 @import 'utilities/appearance';
+@import 'utilities/borderradius';
 @import 'utilities/boxshadow';
+@import 'utilities/boxsizing';
 
 input:not([type]),
 input[type='color'],
@@ -19,14 +21,14 @@ select,
 textarea {
   background-color: transparent;
   border: .1rem solid $color-quaternary;
-  border-radius: .4rem;
-  box-sizing: inherit;
   height: 3.8rem;
   padding: .6rem 1rem;
   width: 100%;
 
   @include appearance(none);
+  @include borderradius(.4rem);
   @include boxshadow(none);
+  @include boxsizing(inherit);
 
   &:focus {
     border-color: $color-primary;
