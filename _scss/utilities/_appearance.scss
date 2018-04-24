@@ -1,0 +1,13 @@
+// Appearance
+//
+// The appearance property is used to display an element using a platform-native styling based on the users' operating system's theme.
+//
+// Values: auto | none
+// Default: auto
+//
+// http://www.w3.org/TR/css3-ui/#appearance
+@mixin appearance($value: auto) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+          appearance: $value;
+}
