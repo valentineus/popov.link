@@ -1,9 +1,0 @@
-<p class="social-links">
-  {% for item in site.social_links %}
-    <a href="{{ item[1] | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">
-      {{ item[0] | strip_newlines | strip_html | strip | normalize_whitespace | smartify | downcase | capitalize }}
-    </a>
-    <!-- Separation trait -->
-    {% unless forloop.last %}|{% endunless %}
-  {% endfor %}
-</p>
