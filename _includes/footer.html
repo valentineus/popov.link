@@ -1,6 +1,6 @@
 <footer class="footer">
   <small>
-    {% for link in site.data.footer %}
+    {% for link in site.data.footer_links %}
       <a href="{{ link.path | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
         {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
       </a>
