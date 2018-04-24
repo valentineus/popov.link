@@ -1,6 +1,6 @@
-{% assign alternative = include.alt | strip_newlines | strip_html | strip | normalize_whitespace | smartify | downcase | capitalize %}
+{% assign alternative = include.alt | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
 {% assign identifier = include.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify %}
-{% assign source = include.src | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape %}
+{% assign source = include.src | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape %}
 
 <a href="#{{ identifier }}">
   <img alt="{{ alternative }}" src="{{ source }}" />

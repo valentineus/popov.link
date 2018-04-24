@@ -1,7 +1,7 @@
 <p class="social-links">
   {% for link in site.data.external_links %}
     <a href="{{ link.url | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">
-      {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
     </a>
     <!-- Separation -->
     {% unless forloop.last %}

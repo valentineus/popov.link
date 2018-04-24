@@ -13,9 +13,9 @@
   {% endfor %}
 
   <!-- Title / Description -->
-  <meta name="application-name" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | downcase | capitalize }}" />
-  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 }}" />
-  <title>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 64 }}</title>
+  <meta name="application-name" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 | xml_escape }}" />
+  <title>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 64 | xml_escape }}</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url | uri_escape }}" />

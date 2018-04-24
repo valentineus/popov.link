@@ -3,8 +3,8 @@
   <script type="text/javascript" defer>
     var disqus_config = function () {
       this.page.identifier = '{{ page.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}';
-      this.page.title = '{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}';
-      this.page.url = '{{ page.url | absolute_url | uri_escape }}';
+      this.page.title = '{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}';
+      this.page.url = '{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | absolute_url | uri_escape }}';
     };
 
     (function () {

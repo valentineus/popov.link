@@ -4,8 +4,8 @@
   <a href="{{ site.url | uri_escape }}">Home</a>
 
   {% for page in pages %}
-    <a href="{{ page.url | relative_url | uri_escape }}">
-      {{ page.title | default: "Page" | strip_newlines | strip_html | strip | normalize_whitespace | smartify | capitalize }}
+    <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+      {{ page.title | default: "Page" | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
     </a>
   {% endfor %}
 </nav>

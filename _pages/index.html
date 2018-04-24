@@ -15,14 +15,12 @@ layout: page
     <div class="post-item">
       <small><time datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date_to_long_string }}</time></small>
       <h4>
-        <a href="{{ post.url | relative_url | uri_escape }}">
-          {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | capitalize }}
+        <a href="{{ post.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+          {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
         </a>
       </h4>
 
-      {% if post.description %}
-        <p>{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 }}</p>
-      {% endif %}
+      <p>{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 | xml_escape }}</p>
     </div>
   {% endfor %}
 {% endfor %}
