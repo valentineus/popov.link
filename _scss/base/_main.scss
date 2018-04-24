@@ -1,0 +1,27 @@
+@import 'components/variables';
+
+// Basic styles
+@import 'components/core/basis';
+@import 'components/core/grid';
+
+// Styles of the main theme
+@import 'components/theme/background';
+@import 'components/theme/blockquote';
+@import 'components/theme/buttons';
+@import 'components/theme/code';
+@import 'components/theme/divider';
+@import 'components/theme/form';
+@import 'components/theme/image';
+@import 'components/theme/link';
+@import 'components/theme/list';
+@import 'components/theme/spacing';
+@import 'components/theme/table';
+@import 'components/theme/typography';
+
+// Individual styles
+@import 'components/elements/comments';
+@import 'components/elements/content';
+@import 'components/elements/footer';
+@import 'components/elements/listposts';
+@import 'components/elements/navigation';
+@import 'components/elements/sociallinks';
