@@ -1,3 +1,9 @@
-<section class="container">
-  &copy; {{ site.time | date: "%Y" }}. All rights reserved.
-</section>
+<footer class="footer">
+  <small>
+    <a href="mailto:{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">Contact</a>
+    <span>|</span>
+    <a href="{{ site.rss | relative_url | uri_escape }}">Subscription</a>
+    <span>|</span>
+    <a href="{{ '/sitemap.xml' | relative_url | uri_escape }}">Site Map</a>
+  </small>
+</footer>
