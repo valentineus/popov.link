@@ -12,19 +12,12 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Title / Description -->
-  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}" />
-  <meta name="application-name" content="{{ title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}" />
-  <title>
-    {% if page.title %}{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }} &middot;{% endif %}
-    {{ site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
-  </title>
-
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro" />
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 }}" />
+  <meta name="application-name" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | capitalize }}" />
+  <title>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 64 }}</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url | uri_escape }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/highlight.css' | relative_url | uri_escape }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url | uri_escape }}" />
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | uri_escape }}" />
 
   <!-- Favicon -->
@@ -34,4 +27,8 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ site.rss | relative_url | uri_escape }}" />
+
+  <!--[if lte IE 9]>
+    <script type="text/javascript" src="{{ '/assets/javascript/html5shiv.min.js' | relative_url | uri_escape }}"></script>
+  <![endif]-->
 </head>
