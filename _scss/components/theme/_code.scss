@@ -7,7 +7,7 @@ code {
   padding: .2rem .5rem;
   white-space: nowrap;
 
-  @include borderradius(.4rem);
+  @include border-radius(.4rem);
 }
 
 pre {
@@ -20,6 +20,6 @@ pre {
     padding: 1rem 1.5rem;
     white-space: pre;
 
-    @include borderradius(0);
+    @include border-radius(0);
   }
 }

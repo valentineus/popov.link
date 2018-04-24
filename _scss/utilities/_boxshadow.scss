@@ -6,7 +6,7 @@
 // Default: none
 //
 // https://www.w3.org/TR/css-backgrounds-3/#propdef-box-shadow
-@mixin boxshadow($value: none) {
+@mixin box-shadow($value: none) {
   -webkit-box-shadow: $value;
      -moz-box-shadow: $value;
           box-shadow: $value;

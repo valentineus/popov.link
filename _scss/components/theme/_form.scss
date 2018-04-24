@@ -26,9 +26,9 @@ textarea {
   width: 100%;
 
   @include appearance(none);
-  @include borderradius(.4rem);
-  @include boxshadow(none);
-  @include boxsizing(inherit);
+  @include border-radius(.4rem);
+  @include box-shadow(none);
+  @include box-sizing(inherit);
 
   &:focus {
     border-color: $color-primary;

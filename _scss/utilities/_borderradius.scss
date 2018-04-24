@@ -6,7 +6,7 @@
 // Default: 0
 //
 // https://www.w3.org/TR/css-backgrounds-3/#propdef-border-radius
-@mixin borderradius($value: 0) {
+@mixin border-radius($value: 0) {
   -webkit-border-radius: $value;
      -moz-border-radius: $value;
           border-radius: $value;

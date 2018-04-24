@@ -7,7 +7,7 @@
 // Default: content-box
 //
 // https://www.w3.org/TR/css-ui-3/#box-sizing
-@mixin boxsizing($value: content-box) {
+@mixin box-sizing($value: content-box) {
   -webkit-box-sizing: $value;
      -moz-box-sizing: $value;
       -ms-box-sizing: $value;
