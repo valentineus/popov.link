@@ -1,0 +1,27 @@
+@import 'utilities/boxsizing';
+@import 'utilities/textsizeadjust';
+
+*,
+*::after,
+*::before {
+  @include box-sizing(border-box);
+  @include text-size-adjust(100%);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+body {
+  color: $color-secondary;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Cantarell, 'Droid Sans', 'Fira Sans', Helvetica, 'Helvetica Neue', 'Helvetica Neue', Oxygen, 'Segoe UI', Ubuntu, sans-serif;
+  font-size: 16px;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 128rem;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+}
