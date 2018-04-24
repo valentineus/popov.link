@@ -2,4 +2,6 @@
 # Loading site styles.
 ---
 
-@import 'main';
+@import 'base/normalize';
+@import 'base/highlight';
+@import 'base/main';
