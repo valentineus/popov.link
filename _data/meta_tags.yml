@@ -1,0 +1,8 @@
+- name: "google-site-verification"
+  content: "BkBsaYAO1LuQDRceyK2odvcpfuP2al0y04LnBda1uvE"
+
+- name: "yandex-verification"
+  content: "14221e61b87bbd27"
+
+- name: "robots"
+  content: "index, follow"
