@@ -5,7 +5,7 @@ permalink: "/:year-:month-:day/:title"
 timezone: "Europe/Samara"
 
 # Catalogs
-include: 
+include:
   - "_pages"
 
 # Parsers
@@ -27,37 +27,20 @@ sass:
 compress_html:
   blanklines: false
   clippings: all
-  comments: all
+  comments: ["<!-- ", " -->"]
   endings: []
   profile: false
   startings: []
-
-# Site settings
-description: "Free developer and dreamer"
-title: "Valentin Popov's personal blog"
-rss: "/atom.xml"
-lang: "ru"
 
 # Website address
 url: "http://valentineus.link"
 baseurl: ""
 
-# Author
-author:
-  email: "info@valentineus.link"
-  name: "Valentin Popov"
-  url: "http://valentineus.link"
-
-# Domain verification
-verification:
-  google: "BkBsaYAO1LuQDRceyK2odvcpfuP2al0y04LnBda1uvE"
-  yandex: "14221e61b87bbd27"
-
-# Social links
-social_links:
-  email: "mailto:info@valentineus.link"
-  github: "https://github.com/valentineus"
-  twitter: "https://twitter.com/valyaha"
+# Site description
+description: "Free developer and dreamer"
+title: "Personal blog"
+rss: "/atom.xml"
+lang: "ru"
 
 # Plugins
 plugins:
