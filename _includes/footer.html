@@ -1,9 +1,13 @@
 <footer class="footer">
   <small>
-    <a href="mailto:{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">Contact</a>
-    <span>|</span>
-    <a href="{{ site.rss | relative_url | uri_escape }}">Subscription</a>
-    <span>|</span>
-    <a href="{{ '/sitemap.xml' | relative_url | uri_escape }}">Site Map</a>
+    {% for link in site.data.footer %}
+      <a href="{{ link.path | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+        {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
+      </a>
+      <!-- Separation -->
+      {% unless forloop.last %}
+        <span>|</span>
+      {% endunless %}
+    {% endfor %}
   </small>
 </footer>
