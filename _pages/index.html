@@ -6,7 +6,7 @@ layout: page
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 <!-- Links to external resources -->
-{% include additional_links.html %}
+{% include external_links.html %}
 
 {% for year in postsByYear %}
   <h2>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}</h2>

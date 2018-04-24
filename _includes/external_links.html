@@ -1,9 +1,9 @@
 <p class="social-links">
-  {% for link in site.data.additional_links %}
+  {% for link in site.data.external_links %}
     <a href="{{ link.url | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">
       {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify }}
     </a>
-    <!-- Separation trait -->
+    <!-- Separation -->
     {% unless forloop.last %}
       <span>|</span>
     {% endunless %}
