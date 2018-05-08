@@ -1,11 +1,16 @@
 {% assign pages = site.pages | where: "show", true %}
 
-<nav class="navigation">
-  <a href="{{ site.url | uri_escape }}">Home</a>
-
-  {% for page in pages %}
-    <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-      {{ page.title | default: "Page" | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-    </a>
-  {% endfor %}
+<nav class="bg-light navbar navbar-expand navbar-light sticky-top" role="navigation">
+  <div class="container">
+    <a class="mr-auto navbar-brand" href="#">{{ site.title }}</a>
+    <ul class="navbar-nav">
+      {% for page in pages %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+            {{ page.title | default: "Page" | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>
