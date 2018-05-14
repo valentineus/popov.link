@@ -4,10 +4,11 @@ title: "Error 404"
 layout: default
 ---
 
-<section class="container centered">
-    <div class="error">
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-        <p>Sorry, this page does not exist.<br/>You can head back to <a href="{{ site.baseurl | uri_escape }}">homepage</a>.</p>
-    </div>
-</section>
+<div class="jumbotron text-center">
+  <h1>404: Not Found</h1>
+  <p>Sorry, this page does not exist.</p>
+  <p>
+    <a class="btn btn-lg btn-primary" role="button" href="/">Home page</a>
+    <a class="btn btn-lg btn-default" role="button" href="mailto:{{ site.data.author_info.email | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">Contact</a>
+  </p>
+</div>
