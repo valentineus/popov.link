@@ -18,7 +18,19 @@
 
     <!-- List of pages -->
     <div class="collapse navbar-collapse" id="navbar">
+      <!-- Left side -->
       <ul class="nav navbar-nav">
+        {% for link in site.data.local_links %}
+          <li>
+            <a href="{{ link.path | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">
+              {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Right side -->
+      <ul class="nav navbar-nav navbar-right">
         {% for page in pages %}
           <li>
             <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
