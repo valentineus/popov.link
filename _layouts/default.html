@@ -3,18 +3,18 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | strip_newlines | strip_html | strip | slugify }}">
+<html class="no-js" lang="{{ site.lang | strip_newlines | strip_html | strip | slugify }}">
 
   {% include head.html %}
 
   <body>
     {% include navbar.html %}
 
-    <main>
+    <main class="container" role="main">
       {{ content }}
     </main>
 
-    {% include footer.html %}
+    {% include javascript.html %}
   </body>
 
 </html>
