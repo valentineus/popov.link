@@ -5,22 +5,29 @@ layout: page
 
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
-<!-- Links to external resources -->
-{% include external_links.html %}
-
 {% for year in postsByYear %}
   <h2>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}</h2>
 
-  {% for post in year.items %}
-    <div class="post-item">
-      <small><time datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date_to_long_string }}</time></small>
-      <h4>
-        <a href="{{ post.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-          {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-        </a>
-      </h4>
+  <table class="table table-striped">
+    {% for post in year.items %}
+      <tr>
+        <!-- Date -->
+        <td>
+          <time datetime="{{ post.date | date_to_xmlschema}}">{{ post.date | date_to_long_string }}</time>
+        </td>
 
-      <p>{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 | xml_escape }}</p>
-    </div>
-  {% endfor %}
+        <!-- Title -->
+        <td>
+          <a href="{{ post.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+            {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+          </a>
+        </td>
+
+        <!-- Description -->
+        <td>
+          {{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 | xml_escape }}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
 {% endfor %}
