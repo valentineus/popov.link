@@ -2,12 +2,10 @@
 layout: default
 ---
 
-<div class="content">
-  <article>
-    <header>
-      <h1>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</h1>
-    </header>
+<article>
+  <header>
+    <h1>{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</h1>
+  </header>
 
-    {{ content }}
-  </article>
-</div>
+  {{ content }}
+</article>
