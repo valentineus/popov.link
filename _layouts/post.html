@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div class="content">
-  <article>
-    <header>
-      <small><time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time></small>
-      <h1>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</h1>
-    </header>
+<article>
+  <header>
+    <h1>
+      {{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+      <p>
+        <small><time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time></small>
+      </p>
+    </h1>
+  </header>
 
-    {{ content }}
+  {{ content }}
 
-    {% include disqus.html %}
-  </article>
-</div>
+  {% include disqus.html %}
+</article>
