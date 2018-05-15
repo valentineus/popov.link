@@ -1,8 +1,0 @@
-- name: "Contact"
-  path: "mailto:info@valentineus.link"
-
-- name: "Subscription"
-  path: "/atom.xml"
-
-- name: "Site Map"
-  path: "/sitemap.xml"
