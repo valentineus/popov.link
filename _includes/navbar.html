@@ -1,44 +1,16 @@
 {% assign pages = site.pages | where: "show", true %}
 
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <!-- Name of the site -->
-      <a class="navbar-brand" href="/">
-        {{ site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 64 | xml_escape }}
-      </a>
-    </div>
-
-    <!-- List of pages -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <!-- Left side -->
-      <ul class="nav navbar-nav">
-        {% for link in site.data.local_links %}
-          <li>
-            <a href="{{ link.path | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">
-              {{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-
-      <!-- Right side -->
-      <ul class="nav navbar-nav navbar-right">
-        {% for page in pages %}
-          <li>
-            <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-              {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation"><a href="/">Home</a></li>
+      {% for page in pages %}
+        <li role="presentation">
+          <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+            {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </nav>
