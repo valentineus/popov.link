@@ -1,0 +1,18 @@
+@import 'utilities/boxsizing';
+@import 'utilities/textsizeadjust';
+
+*,
+*::after,
+*::before {
+  @include box-sizing(border-box);
+  @include text-size-adjust(100%);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
