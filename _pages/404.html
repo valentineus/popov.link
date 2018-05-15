@@ -9,6 +9,6 @@ layout: default
   <p>Sorry, this page does not exist.</p>
   <p>
     <a class="btn btn-lg btn-primary" role="button" href="/">Home page</a>
-    <a class="btn btn-lg btn-default" role="button" href="mailto:{{ site.data.author_info.email | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">Contact</a>
+    <a class="btn btn-lg btn-default" role="button" href="mailto:{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | uri_escape }}">Contact</a>
   </p>
 </div>

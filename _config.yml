@@ -42,6 +42,12 @@ title: "Personal blog"
 rss: "/atom.xml"
 lang: "ru"
 
+# About the author
+author:
+  email: "info@valentineus.link"
+  name: "Valentin Popov"
+  url: "http://valentineus.link"
+
 # Plugins
 plugins:
   - "jekyll-paginate"
