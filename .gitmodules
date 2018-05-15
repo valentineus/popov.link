@@ -1,0 +1,4 @@
+[submodule "bootstrap"]
+	path = _scss/bootstrap
+	url = https://github.com/twbs/bootstrap-sass.git
+	branch = 3.3-stable
