@@ -8,48 +8,48 @@ show: true
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <!-- Identifiers and references -->
-    <link href="{{ site.rss | absolute_url | xml_escape }}" rel="self" type="application/atom+xml" />
-    <link href="{{ site.url | xml_escape }}" rel="alternate" type="text/html" />
-    <id>{{ site.url | strip_newlines | strip_html | strip | normalize_whitespace | slugify | xml_escape }}</id>
+  <!-- Identifiers and references -->
+  <link href="{{ site.rss | absolute_url | xml_escape }}" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url | xml_escape }}" rel="alternate" type="text/html" />
+  <id>{{ site.url | strip_newlines | strip_html | strip | normalize_whitespace | slugify | xml_escape }}</id>
 
-    <!-- Description and name -->
-    <icon>{{ "/assets/apple-touch-icon.png" | absolute_url | xml_escape }}</icon>
-    <title>{{ site.title | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</title>
-    <subtitle>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</subtitle>
-    <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <!-- Description and name -->
+  <icon>{{ "/assets/apple-touch-icon.png" | absolute_url | xml_escape }}</icon>
+  <title>{{ site.title | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</title>
+  <subtitle>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
 
-    <!-- Author -->
-    <author>
+  <!-- Author -->
+  <author>
+    <email>{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
+    <name>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
+    <uri>{{ site.author.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
+  </author>
+
+  {% for item in site.posts %}
+    <!-- Full size record -->
+    <entry>
+      <!-- Identifiers and references -->
+      <link href="{{ item.url | absolute_url | xml_escape }}" rel="alternate" type="text/html" />
+      <id>{{ item.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify | xml_escape }}</id>
+
+      <!-- Description and name -->
+      <title>{{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</title>
+      <summary>{{ item.description | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</summary>
+      <updated>{{ item.latest_update | default: item.date | date_to_xmlschema }}</updated>
+      <published>{{ item.date | date_to_xmlschema }}</published>
+
+      <!-- Author -->
+      <author>
         <email>{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
         <name>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
         <uri>{{ site.author.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
-    </author>
+      </author>
 
-    {% for item in site.posts %}
-        <!-- Full size record -->
-        <entry>
-            <!-- Identifiers and references -->
-            <link href="{{ item.url | absolute_url | xml_escape }}" rel="alternate" type="text/html" />
-            <id>{{ item.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify | xml_escape }}</id>
-
-            <!-- Description and name -->
-            <title>{{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</title>
-            <summary>{{ item.description | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</summary>
-            <updated>{{ item.latest_update | default: item.date | date_to_xmlschema }}</updated>
-            <published>{{ item.date | date_to_xmlschema }}</published>
-
-            <!-- Author -->
-            <author>
-                <email>{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</email>
-                <name>{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</name>
-                <uri>{{ site.author.url | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}</uri>
-            </author>
-
-            <!-- Content -->
-            <content type="html" xml:base="{{ item.url | absolute_url | xml_escape }}">
-                {{ item.content | strip_newlines | strip | xml_escape }}
-            </content>
-        </entry>
-    {% endfor %}
+      <!-- Content -->
+      <content type="html" xml:base="{{ item.url | absolute_url | xml_escape }}">
+        {{ item.content | strip_newlines | strip | xml_escape }}
+      </content>
+    </entry>
+  {% endfor %}
 </feed>
