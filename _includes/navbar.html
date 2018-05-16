@@ -2,15 +2,21 @@
 
 <nav role="navigation">
   <div class="container">
-    <ul class="nav nav-pills pull-right">
-      <li role="presentation"><a href="/">Home</a></li>
-      {% for page in pages %}
-        <li role="presentation">
-          <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-            {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-          </a>
-        </li>
-      {% endfor %}
+    <ul class="nav nav-pills">
+      {% unless page.url == "/index.html" %}
+        <li role="presentation"><a href="/">&lt;&lt; Home</a></li>
+      {% endunless %}
+
+      <!-- Right side -->
+      <ul class="nav nav-pills pull-right">
+        {% for page in pages %}
+          <li role="presentation">
+            <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+              {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </ul>
   </div>
 </nav>
