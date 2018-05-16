@@ -56,5 +56,5 @@ plugins:
 exclude:
   - "Gemfile"
   - "Gemfile.lock"
-  - "LICENSE.md"
+  - "LICENSE.txt"
   - "README.md"
