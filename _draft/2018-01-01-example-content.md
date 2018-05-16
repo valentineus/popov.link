@@ -4,10 +4,6 @@ title: "Example Content"
 layout: post
 ---
 
-<div class="message">
-    {{ page.description | smartify | strip_html | normalize_whitespace }}
-</div>
-
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
 *Aenean eu leo quam.*
 Pellentesque ornare sem lacinia quam venenatis vestibulum.
@@ -46,16 +42,16 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 
 Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
-{% highlight js %}
-    // Example can be run directly in your JavaScript console
+```js
+// Example can be run directly in your JavaScript console
 
-    // Create a function that takes two arguments and returns the sum of those arguments
-    var adder = new Function("a", "b", "return a + b");
+// Create a function that takes two arguments and returns the sum of those arguments
+var adder = new Function("a", "b", "return a + b");
 
-    // Call the function
-    adder(2, 6);
-    // > 8
-{% endhighlight %}
+// Call the function
+adder(2, 6);
+// > 8
+```
 
 Aenean lacinia bibendum nulla sed consectetur.
 Etiam porta sem malesuada magna mollis euismod.
@@ -98,14 +94,14 @@ Cras mattis consectetur purus sit amet fermentum.
 Sed posuere consectetur est at lobortis.
 
 <dl>
-    <dt>HyperText Markup Language (HTML)</dt>
-    <dd>The language used to describe and define the content of a Web page</dd>
+  <dt>HyperText Markup Language (HTML)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
 
-    <dt>Cascading Style Sheets (CSS)</dt>
-    <dd>Used to describe the appearance of Web content</dd>
+  <dt>Cascading Style Sheets (CSS)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
 
-    <dt>JavaScript (JS)</dt>
-    <dd>The programming language used to build advanced Web sites and applications</dd>
+  <dt>JavaScript (JS)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
 </dl>
 
 Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -126,38 +122,38 @@ Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
 Aenean lacinia bibendum nulla sed consectetur.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Upvotes</th>
-            <th>Downvotes</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <td>Totals</td>
-            <td>21</td>
-            <td>23</td>
-        </tr>
-    </tfoot>
-    <tbody>
-        <tr>
-            <td>Alice</td>
-            <td>10</td>
-            <td>11</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>4</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>Charlie</td>
-            <td>7</td>
-            <td>9</td>
-        </tr>
-    </tbody>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upvotes</th>
+      <th>Downvotes</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Totals</td>
+      <td>21</td>
+      <td>23</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+  </tbody>
 </table>
 
 Nullam id dolor id nibh ultricies vehicula ut id elit.
