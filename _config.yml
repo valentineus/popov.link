@@ -33,7 +33,7 @@ compress_html:
   startings: []
 
 # Website address
-url: "http://valentineus.link"
+url: "https://valentineus.link"
 baseurl: ""
 
 # Site description
@@ -46,7 +46,7 @@ lang: "ru"
 author:
   email: "info@valentineus.link"
   name: "Valentin Popov"
-  url: "http://valentineus.link"
+  url: "https://valentineus.link"
 
 # Plugins
 plugins:
