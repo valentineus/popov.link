@@ -1,6 +1,6 @@
 <div class="comments">
   <div id="disqus_thread"></div>
-  <script type="text/javascript" defer>
+  <script defer type="text/javascript">
     var disqus_config = function () {
       this.page.identifier = '{{ page.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}';
       this.page.title = '{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}';
