@@ -5,9 +5,5 @@ layout: null
 
 User-agent: *
 Allow: {{ site.baseurl | relative_url | uri_escape }}
-
-{% for link in site.data.robots_disallow %}
-  Disallow: {{ link.path | relative_url | uri_escape }}
-{% endfor %}
-
+Disallow: {{ "/404.html" | relative_url | uri_escape }}
 Sitemap: {{ "sitemap.xml" | absolute_url | uri_escape }}
