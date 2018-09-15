@@ -12,6 +12,9 @@
           content="{{ tag.content | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}" />
   {% endfor %}
 
+  <!-- Open Graph -->
+  {% include opengraph.html %}
+
   <!-- Title / Description -->
   <meta name="application-name" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
   <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 | xml_escape }}" />
