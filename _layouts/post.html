@@ -2,15 +2,32 @@
 layout: default
 ---
 
-<article>
+<article itemtype="http://schema.org/Article" itemscope>
+  <link itemprop="mainEntityOfPage" itemscope href="{{ page.url | absolute_url | uri_escape }}" />
+  <link itemprop="image" itemscope href="{{ page.image | default: site.image | absolute_url | uri_escape }}" />
+
+  <!-- Header -->
   <header class="page-header">
     <h1 class="text-muted">
-      {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-      <p><small><time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time></small></p>
+      <span itemprop="headline">{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</span>
+      <p><small><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></small></p>
     </h1>
   </header>
 
-  {{ content }}
+  <!-- Description -->
+  <meta itemprop="description" content="{{ page.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
 
+  <!-- Author -->
+  <section itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="email" content="{{ site.author.email | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
+    <meta itemprop="name" content="{{ site.author.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
+  </section>
+
+  <!-- Content -->
+  <section itemprop="articleBody">
+    {{ content }}
+  </section>
+
+  <!-- Comments -->
   {% include disqus.html %}
 </article>
