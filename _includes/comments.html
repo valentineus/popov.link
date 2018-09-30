@@ -25,7 +25,7 @@
   <script defer type="text/javascript">
     window.addEventListener("load", function () {
       Github.getComments(
-        "{{ site.repos | strip_newlines | strip_html | strip | normalize_whitespace | slugify | xml_escape }}",
+        "{{ site.repos | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}",
         "{{ page.issue | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape | round }}",
         function (error, comments) {
           if (error) { throw new Error(error); }
