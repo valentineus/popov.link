@@ -37,8 +37,9 @@ url: "https://valentineus.link"
 baseurl: ""
 
 # Site description
-description: "Free developer and dreamer"
 title: "Personal blog"
+description: "Free developer and dreamer"
+repos: "valentineus/valentineus.github.io"
 rss: "/atom.xml"
 lang: "ru"
 

@@ -2,6 +2,7 @@
 description: "Настройка SELinux в операционной системе Fedora для корректной работы Moodle."
 title: "Установка Moodle в Fedora"
 layout: post
+issue: 1
 ---
 
 Во время установки Moodle, сталкиваешься со следующими проблемами:
