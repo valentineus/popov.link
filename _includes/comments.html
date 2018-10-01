@@ -1,4 +1,8 @@
+{% assign repos = site.repos | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+{% assign issue = page.issue | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape | round %}
+
 {% raw %}
+<!-- Template -->
 <script type="text/html" id="template">
   <div class="panel panel-default">
     <!-- Title -->
@@ -13,26 +17,32 @@
 </script>
 {% endraw %}
 
+<!-- Header -->
 <h2>Comments</h2>
-<div id="comments">
-  <noscript>
-    <div class="alert alert-warning" role="alert">
-      <span>Activate JavaScript to display comments</span>
-    </div>
-  </noscript>
 
-  <!-- Script loading comments -->
-  <script defer type="text/javascript">
-    window.addEventListener("load", function () {
-      Github.getComments(
-        "{{ site.repos | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}",
-        "{{ page.issue | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape | round }}",
-        function (error, comments) {
-          if (error) { throw new Error(error); }
-          comments.forEach(function (comment) {
-            Github.addComment("#comments", comment);
-          });
+<!-- List of comments -->
+<div id="comments"></div>
+
+<!-- Script loading comments -->
+<script defer type="text/javascript">
+  window.addEventListener("load", function () {
+    Github.getComments("{{ repos }}", "{{ issue }}",
+      function (error, comments) {
+        if (error) { throw new Error(error); }
+        comments.forEach(function (comment) {
+          Github.addComment("#comments", comment);
         });
-    });
-  </script>
-</div>
+      });
+  });
+</script>
+
+<noscript>
+  <div class="alert alert-warning" role="alert">
+    <span>Activate JavaScript to display comments</span>
+  </div>
+</noscript>
+
+<!-- Button -->
+<a href="https://github.com/{{ repos }}/issues/{{ issue }}" class="btn btn-default btn-block" role="button">
+  <span>Add a comment</span>
+</a>
