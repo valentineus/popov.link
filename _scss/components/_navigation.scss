@@ -1,0 +1,42 @@
+.nav-pills {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+
+  li {
+    float: left;
+    padding: .5em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.nav-link {
+  text-align: center;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    border: 0;
+    text-decoration: underline;
+  }
+}
+
+.nav-right {
+  float: right;
+}
+
+@media (max-width: 382px) {
+  .nav-right,
+  .nav-pills li {
+    float: none;
+  }
+}
