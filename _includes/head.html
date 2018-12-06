@@ -1,42 +1,45 @@
+{% assign description = page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+{% assign title = page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+
 <head>
-  <!-- Meta tags -->
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, width=device-width" />
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="canonical" href="{{ page.url | absolute_url | uri_escape }}" />
-  <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <!-- Meta tags -->
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="{{ page.url | absolute_url | uri_escape }}" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-  <!-- Advanced meta tags -->
-  {% for tag in site.data.meta_tags %}
-    <meta name="{{ tag.name | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}"
-          content="{{ tag.content | strip_newlines | strip_html | strip | normalize_whitespace | xml_escape }}" />
-  {% endfor %}
+    <!-- Advanced meta tags -->
+    {% for tag in site.data.meta_tags %}
+        <meta name="{{ tag.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}"
+            content="{{ tag.content | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
+    {% endfor %}
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
-  <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 | xml_escape }}" />
-  <meta property="og:type" content="{{ page.layout | replace: 'post', 'article' | replace: 'page', 'website' | default: 'website' }}" />
-  <meta property="og:image" content="{{ page.image | absolute_url | uri_escape }}" />
-  <meta property="og:url" content="{{ page.url | absolute_url | uri_escape }}" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:type" content="{{ page.layout | replace: 'post', 'article' | replace: 'page', 'website' | default: 'website' }}" />
+    <meta property="og:image" content="{{ page.image | absolute_url | uri_escape }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url | uri_escape }}" />
 
-  <!-- Title / Description -->
-  <meta name="application-name" content="{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
-  <meta name="description" content="{{ page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 100 | xml_escape }}" />
-  <title>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncate: 64 | xml_escape }}</title>
+    <!-- Title / Description -->
+    <meta name="application-name" content="{{ title }}" />
+    <meta name="description" content="{{ description }}" />
+    <title>{{ title }}</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url | uri_escape }}" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url | uri_escape }}" />
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url | uri_escape }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | relative_url | uri_escape }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url | uri_escape }}" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url | uri_escape }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | relative_url | uri_escape }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url | uri_escape }}" />
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ site.rss | relative_url | uri_escape }}" />
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ site.rss | absolute_url | uri_escape }}" />
 
-  <!--[if lte IE 9]>
-    <script defer type="text/javascript" src="{{ '/assets/javascript/html5shiv-3.7.3.min.js' | relative_url | uri_escape }}"></script>
-    <script defer type="text/javascript" src="{{ '/assets/javascript/respond-1.4.2.min.js' | relative_url | uri_escape }}"></script>
-  <![endif]-->
+    <!--[if lte IE 9]>
+        <script defer type="text/javascript" src="{{ '/assets/javascript/html5shiv-3.7.3.min.js' | relative_url | uri_escape }}"></script>
+        <script defer type="text/javascript" src="{{ '/assets/javascript/respond-1.4.2.min.js' | relative_url | uri_escape }}"></script>
+    <![endif]-->
 </head>
