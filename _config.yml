@@ -57,11 +57,11 @@ author:
 
 # Plugins
 plugins:
-  - "jekyll-paginate"
   - "octopress-autoprefixer"
 
 # Exceptions
 exclude:
+  - ".*"
   - "Gemfile"
   - "Gemfile.lock"
   - "LICENSE.txt"
