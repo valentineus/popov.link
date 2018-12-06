@@ -23,6 +23,12 @@ sass:
   sass_dir: "_scss"
   style: ":compressed"
 
+# AutoPrefixer
+autoprefixer:
+  browsers:
+    - "> 1%"
+    - "last 10 versions"
+
 # Compress HTML
 compress_html:
   blanklines: false
@@ -52,6 +58,7 @@ author:
 # Plugins
 plugins:
   - "jekyll-paginate"
+  - "octopress-autoprefixer"
 
 # Exceptions
 exclude:
