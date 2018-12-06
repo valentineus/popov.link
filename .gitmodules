@@ -1,8 +1,0 @@
-[submodule "bootstrap"]
-	path = _scss/bootstrap
-	url = https://github.com/twbs/bootstrap-sass.git
-	branch = 3.3-stable
-[submodule "bootswatch"]
-	path = _scss/bootswatch
-	url = https://github.com/thomaspark/bootswatch.git
-	branch = master

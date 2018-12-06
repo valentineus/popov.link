@@ -1,7 +1,8 @@
 ---
-# Loading site styles.
+# Loading site styles
 ---
 
-@import 'base/bootstrap';
+@import 'base/normalize';
 @import 'base/highlight';
+@import 'base/sakura';
 @import 'base/main';
