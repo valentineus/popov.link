@@ -1,0 +1,16 @@
+<div id="disqus_thread"></div>
+<script defer type="text/javascript">
+    var disqus_config = function () {
+        this.page.identifier = '{{ page.id | strip_newlines | strip_html | strip | normalize_whitespace | slugify }}';
+        this.page.title = '{{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}';
+        this.page.url = '{{ page.url | absolute_url | uri_escape }}';
+    };
+
+    (function () {
+        var d = document,
+            s = d.createElement('script');
+        s.src = '//valentineus-link.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
