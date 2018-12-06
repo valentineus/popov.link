@@ -6,11 +6,13 @@ layout: default
 
     <!-- Header -->
     <header>
-        <h1>{{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</h1>
+        <h1 aria-level="1" role="heading">
+            {{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+        </h1>
     </header>
 
     <!-- Content -->
-    <section>
+    <section role="article">
         {{ content }}
     </section>
 
