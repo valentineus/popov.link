@@ -4,7 +4,9 @@
     <ul class="nav-pills">
         {% unless page.url == "/index.html" %}
             <li role="presentation">
-                <a class="nav-link" href="/">Home</a>
+                <strong>
+                    <a class="nav-link" href="/">Home</a>
+                </strong>
             </li>
         {% endunless %}
 
@@ -12,9 +14,11 @@
         <ul class="nav-pills nav-right">
             {% for page in pages %}
                 <li role="presentation">
-                    <a class="nav-link" href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-                        {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-                    </a>
+                    <strong>
+                        <a class="nav-link" href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+                            {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+                        </a>
+                    </strong>
                 </li>
             {% endfor %}
         </ul>

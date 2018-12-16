@@ -8,26 +8,19 @@
   li {
     float: left;
     padding: .5em;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
   }
 }
 
 .nav-link {
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   &:active,
   &:focus,
   &:hover {
     border: 0;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
