@@ -81,9 +81,11 @@ a {
   color: $color-blossom;
   text-decoration: none;
 
+  &:active,
+  &:focus,
   &:hover {
-    border-bottom: 2px solid $color-text;
     color: $color-fade;
+    text-decoration: none;
   }
 }
 
