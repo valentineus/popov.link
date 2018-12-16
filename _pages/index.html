@@ -1,36 +1,32 @@
 ---
-permalink: "index.html"
-title: "Home"
 layout: page
+permalink: "index.html"
+title: "Список всех постов"
 ---
 
-{% assign amount = 0 %}
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year in postsByYear %}
-  {% capture amount %}{{ amount | plus: 1 }}{% endcapture %}
+    <section>
+        <!-- Header -->
+        <h3>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | slugify }}</h3>
 
-  <h2>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | slugify }}</h2>
+        <ul>
+            {% for post in year.items %}
+                <li>
+                    <!-- Title / Link -->
+                    <a href="{{ post.url | relative_url | uri_escape }}">
+                        {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+                    </a>
 
-  <table itemtype="http://schema.org/BreadcrumbList" itemscope class="table table-striped">
-    {% for post in year.items %}
-      <tr itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope>
-        <!-- Position -->
-        <td itemprop="position" style="display: none;" hidden>{{ amount }}</td>
-
-        <!-- Date -->
-        <td><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time></td>
-
-        <!-- Title -->
-        <td>
-          <a itemprop="item" href="{{ post.url | relative_url | uri_escape }}">
-            <span itemprop="name">{{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</span>
-          </a>
-        </td>
-
-        <!-- Description -->
-        <td itemprop="description">{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | truncatewords: 32 | xml_escape }}</td>
-      </tr>
-    {% endfor %}
-  </table>
+                    <small>
+                        <!-- Date of publication -->
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            <em>{{ post.date | date: '- %b %d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</em>
+                        </time>
+                    </small>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endfor %}
