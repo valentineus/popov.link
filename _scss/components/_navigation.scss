@@ -35,25 +35,6 @@
   float: right;
 }
 
-@media(min-width: 382px) {
-  .nav-pills {
-    li {
-      display: inline-block;
-      transform: perspective(1px) translateZ(0);
-      transition-duration: .3s;
-      transition-property: transform;
-      transition-timing-function: ease-out;
-      vertical-align: middle;
-
-      &:active,
-      &:focus,
-      &:hover {
-        transform: translateY(8px);
-      }
-    }
-  }
-}
-
 @media (max-width: 382px) {
   .nav-right,
   .nav-pills li {
