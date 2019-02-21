@@ -1,0 +1,11 @@
+$background-border: rgba(0, 0, 0, .09);
+$background-image: '/assets/background.svg';
+
+html {
+  background: $color-bg url($background-image) repeat fixed;
+}
+
+body {
+  border-left: 1px solid $background-border;
+  border-right: 1px solid $background-border;
+}
