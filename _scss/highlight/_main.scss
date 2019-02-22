@@ -1,263 +1,217 @@
-.highlight {
-  background: $color-01;
-  color: $color-08;
-
-  .bp {
-    color: $color-08;
-  }
-
-  .c {
-    color: $color-05;
-  }
-
-  .c1 {
-    color: $color-05;
-  }
-
-  .cm {
-    color: $color-05;
-  }
-
-  .cp {
-    color: $color-05;
-  }
-
-  .cs {
-    color: $color-05;
-  }
-
-  .err {
-    color: $color-09;
-  }
-
-  .gd {
-    color: $color-09;
-  }
-
-  .ge {
-    font-style: italic;
-  }
-
-  .gh {
-    color: $color-08;
-    font-weight: bold;
-  }
-
-  .gi {
-    color: $color-07;
-  }
-
-  .gp {
-    color: $color-05;
-    font-weight: bold;
-  }
-
-  .gs {
-    font-weight: bold;
-  }
-
-  .gu {
-    color: $color-04;
-    font-weight: bold;
-  }
-
-  .hll {
-    background-color: $color-02;
-  }
-
-  .il {
-    color: $color-10;
-  }
-
-  .k {
-    color: $color-06;
-  }
-
-  .kc {
-    color: $color-06;
-  }
-
-  .kd {
-    color: $color-06;
-  }
-
-  .kn {
-    color: $color-04;
-  }
-
-  .kp {
-    color: $color-06;
-  }
-
-  .kr {
-    color: $color-06;
-  }
-
-  .kt {
-    color: $color-11;
-  }
-
-  .l {
-    color: $color-10;
-  }
-
-  .ld {
-    color: $color-07;
-  }
-
-  .m {
-    color: $color-10;
-  }
-
-  .mf {
-    color: $color-10;
-  }
-
-  .mh {
-    color: $color-10;
-  }
-
-  .mi {
-    color: $color-10;
-  }
-
-  .mo {
-    color: $color-10;
-  }
-
-  .n {
-    color: $color-08;
-  }
-
-  .na {
-    color: $color-03;
-  }
-
-  .nb {
-    color: $color-08;
-  }
-
-  .nc {
-    color: $color-11;
-  }
-
-  .nd {
-    color: $color-04;
-  }
-
-  .ne {
-    color: $color-09;
-  }
-
-  .nf {
-    color: $color-03;
-  }
-
-  .ni {
-    color: $color-08;
-  }
-
-  .nl {
-    color: $color-08;
-  }
-
-  .nn {
-    color: $color-11;
-  }
-
-  .no {
-    color: $color-09;
-  }
-
-  .nt {
-    color: $color-04;
-  }
-
-  .nv {
-    color: $color-09;
-  }
-
-  .nx {
-    color: $color-03;
-  }
-
-  .o {
-    color: $color-04;
-  }
-
-  .ow {
-    color: $color-04;
-  }
-
-  .p {
-    color: $color-08;
-  }
-
-  .py {
-    color: $color-08;
-  }
-
-  .s {
-    color: $color-07;
-  }
-
-  .s1 {
-    color: $color-07;
-  }
-
-  .s2 {
-    color: $color-07;
-  }
-
-  .sb {
-    color: $color-07;
-  }
-
-  .sc {
-    color: $color-08;
-  }
-
-  .sd {
-    color: $color-05;
-  }
-
-  .se {
-    color: $color-10;
-  }
-
-  .sh {
-    color: $color-07;
-  }
-
-  .si {
-    color: $color-10;
-  }
-
-  .sr {
-    color: $color-07;
-  }
-
-  .ss {
-    color: $color-07;
-  }
-
-  .sx {
-    color: $color-07;
-  }
-
-  .vc {
-    color: $color-09;
-  }
-
-  .vg {
-    color: $color-09;
-  }
-
-  .vi {
-    color: $color-09;
-  }
-
-  .w {
-    color: $color-08;
-  }
+$color01: #000;
+$color02: #000080;
+$color03: #00f;
+$color04: #008080;
+$color05: #080;
+$color06: #555;
+$color07: #800080;
+$color08: #888;
+$color09: #999;
+$color10: #a61717;
+$color11: #a00;
+$color12: #aaa;
+$color13: #bbb;
+$color14: #dfd;
+$color15: #e3d2d2;
+$color16: #f00;
+$color17: #fdd;
+$color18: #ffc;
+
+.highlight.hll {
+  background-color: $color18;
+}
+
+.highlight .c {
+  color: $color05;
+  font-style: italic;
+}
+
+.highlight .err {
+  background-color: $color15;
+  color: $color10;
+}
+
+.highlight .k {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .cm {
+  color: $color05;
+  font-style: italic;
+}
+
+.highlight .cp {
+  color: $color04;
+}
+
+.highlight .c1 {
+  color: $color05;
+  font-style: italic;
+}
+
+.highlight .cs {
+  color: $color05;
+  font-weight: bold;
+}
+
+.highlight .gd {
+  background-color: $color17;
+  color: $color01;
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gr {
+  color: $color11;
+}
+
+.highlight .gh {
+  color: $color09;
+}
+
+.highlight .gi {
+  background-color: $color14;
+  color: $color01;
+}
+
+.highlight .go {
+  color: $color08;
+}
+
+.highlight .gp {
+  color: $color06;
+}
+
+.highlight .gs {
+  font-weight: bold;
+}
+
+.highlight .gu {
+  color: $color12;
+}
+
+.highlight .gt {
+  color: $color11;
+}
+
+.highlight .kc {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .kd {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .kn {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .kp {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .kr {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .kt {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .m {
+  color: $color03;
+}
+
+.highlight .s {
+  color: $color03;
+}
+
+.highlight .na {
+  color: $color16;
+}
+
+.highlight .nt {
+  color: $color02;
+  font-weight: bold;
+}
+
+.highlight .ow {
+  font-weight: bold;
+}
+
+.highlight .w {
+  color: $color13;
+}
+
+.highlight .mf {
+  color: $color03;
+}
+
+.highlight .mh {
+  color: $color03;
+}
+
+.highlight .mi {
+  color: $color03;
+}
+
+.highlight .mo {
+  color: $color03;
+}
+
+.highlight .sb {
+  color: $color03;
+}
+
+.highlight .sc {
+  color: $color07;
+}
+
+.highlight .sd {
+  color: $color03;
+}
+
+.highlight .s2 {
+  color: $color03;
+}
+
+.highlight .se {
+  color: $color03;
+}
+
+.highlight .sh {
+  color: $color03;
+}
+
+.highlight .si {
+  color: $color03;
+}
+
+.highlight .sx {
+  color: $color03;
+}
+
+.highlight .sr {
+  color: $color03;
+}
+
+.highlight .s1 {
+  color: $color03;
+}
+
+.highlight .ss {
+  color: $color03;
+}
+
+.highlight .il {
+  color: $color03;
 }
