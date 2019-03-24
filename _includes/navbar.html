@@ -1,7 +1,9 @@
 {% assign pages = site.pages | where: "show", true %}
 
 <div class="navigation-container">
-    <h1 class="navigation-header">Header</h1>
+    <h1 class="navigation-header">
+        {{ page.title | default: site.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape }}
+    </h1>
 
     <input id="toggle-button" class="toggle-button" type="checkbox" />
 
@@ -12,6 +14,24 @@
     </label>
 
     <nav class="navigation" role="navigation">
-        <ul class="navigation-pills"></ul>
+        <ul class="navigation-footer">
+            {% for item in site.data.social_links %}
+                <li>
+                    <a target="_blank" href="{{ item.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+                        {{ item.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <ul class="navigation-pills">
+            {% for page in pages%}
+                <li class="navigation-item" role="presentation">
+                    <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
+                        {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
     </nav>
 </div>
