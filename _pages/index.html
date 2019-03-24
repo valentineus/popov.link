@@ -1,7 +1,8 @@
 ---
-layout: page
+title: "Posts list"
 permalink: "index.html"
-title: "Список всех постов"
+layout: page
+show: false
 ---
 
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}

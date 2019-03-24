@@ -25,6 +25,10 @@
         </ul>
 
         <ul class="navigation-pills">
+            <li class="navigation-item" role="presentation">
+                <a href="/">Home</a>
+            </li>
+
             {% for page in pages%}
                 <li class="navigation-item" role="presentation">
                     <a href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
