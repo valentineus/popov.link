@@ -3,21 +3,12 @@ layout: default
 ---
 
 <article>
+    <hr />
 
-    <!-- Header -->
-    <header>
-        <h1 aria-level="1" role="heading">
-            {{ page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-            <hr />
-        </h1>
-    </header>
-
-    <!-- Content -->
     <section role="article">
         {{ content }}
     </section>
 
     <!-- Comments -->
     {% include disqus.html %}
-
 </article>
