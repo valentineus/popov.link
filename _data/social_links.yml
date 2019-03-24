@@ -1,11 +1,14 @@
-- name: "GitHub"
+- title: "E-Mail"
+  url: "mailto:info@valentineus.link"
+
+- title: "GitHub"
   url: "https://github.com/valentineus"
 
-- name: "Instagram"
+- title: "Instagram"
   url: "https://www.instagram.com/valentius.p"
 
-- name: "Twitter"
+- title: "Twitter"
   url: "https://twitter.com/valyaha"
 
-- name: "VK"
+- title: "VK"
   url: "https://vk.com/valentineus"
