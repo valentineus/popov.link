@@ -37,6 +37,22 @@
   text-transform: uppercase;
 }
 
+.navigation-pills {
+  height: 100%;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation-item {
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
 .toggle-button {
   display: none;
 
