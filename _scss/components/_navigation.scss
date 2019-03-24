@@ -37,9 +37,36 @@
   text-transform: uppercase;
 }
 
+.navigation-footer {
+  bottom: 0;
+  list-style-type: none;
+  margin: auto;
+  max-width: 52em;
+  padding: 20px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+
+  li {
+    border-right: 1px solid;
+    display: inline;
+    padding: 0 20px;
+
+    @media (max-width: 684px) {
+      padding: 0 10px;
+    }
+  }
+
+  li:last-child {
+    border-right: 0;
+  }
+}
+
 .navigation-pills {
   height: 100%;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
   width: 100%;
 }
