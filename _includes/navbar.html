@@ -1,26 +1,15 @@
 {% assign pages = site.pages | where: "show", true %}
 
-<nav role="navigation">
-    <ul class="nav-pills">
-        {% unless page.url == "/index.html" %}
-            <li role="presentation">
-                <strong>
-                    <a class="nav-link" href="/">Home</a>
-                </strong>
-            </li>
-        {% endunless %}
+<div class="navigation-container">
+    <input id="toggle-button" class="toggle-button" type="checkbox" />
 
-        <!-- Right side -->
-        <ul class="nav-pills nav-right">
-            {% for page in pages %}
-                <li role="presentation">
-                    <strong>
-                        <a class="nav-link" href="{{ page.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}">
-                            {{ page.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-                        </a>
-                    </strong>
-                </li>
-            {% endfor %}
-        </ul>
-    </ul>
-</nav>
+    <label class="toggle-label" for="toggle-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="navigation" role="navigation">
+        <ul class="navigation-pills"></ul>
+    </nav>
+</div>

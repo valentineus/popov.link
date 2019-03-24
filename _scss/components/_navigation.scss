@@ -1,36 +1,87 @@
-.nav-pills {
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
+.navigation-container {
+  background: $color-bg;
+  border-left: 1px solid $color-bg-alt;
+  border-right: 1px solid $color-bg-alt;
+  height: 100px;
+  left: 0;
+  margin: auto;
+  max-width: 52em;
   padding: 0;
-  text-align: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
 
-  li {
-    float: left;
-    padding: .5em;
+.toggle-button {
+  display: none;
+
+  &:checked ~ .navigation {
+    transform: none;
+    transition: all .1s;
+  }
+
+  &:checked ~ .toggle-label {
+    span {
+      opacity: 0;
+      top: 50%;
+    }
+
+    span:first-child {
+      opacity: 1;
+      transform: rotate(405deg);
+    }
+
+    span:last-child {
+      opacity: 1;
+      transform: rotate(-405deg);
+    }
   }
 }
 
-.nav-link {
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:active,
-  &:focus,
-  &:hover {
-    border: 0;
-    text-decoration: none;
-  }
-}
-
-.nav-right {
+.toggle-label {
   float: right;
+  height: 20px;
+  position: relative;
+  right: 40px;
+  top: 40px;
+  width: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    background: $color-text;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    &:first-child {
+      top: 3px;
+    }
+
+    &:last-child {
+      top: 16px;
+    }
+  }
 }
 
-@media (max-width: 382px) {
-  .nav-right,
-  .nav-pills li {
-    float: none;
-  }
+.navigation {
+  background: $color-bg;
+  border-left: 1px solid $color-bg-alt;
+  border-right: 1px solid $color-bg-alt;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  max-width: 52em;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  transform: scale(.1, 0);
+  transform-origin: 100% 0%;
+  transition: none;
+  width: 100%;
 }
