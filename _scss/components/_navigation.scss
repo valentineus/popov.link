@@ -32,9 +32,18 @@
 }
 
 .navigation-header {
-  margin: 30px;
-  position: fixed;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 100px;
+  padding-top: 32px;
+  position: absolute;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .navigation-footer {
