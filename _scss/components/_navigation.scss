@@ -13,6 +13,30 @@
   width: 100%;
 }
 
+.navigation {
+  background: $color-bg;
+  border-left: 1px solid $color-bg-alt;
+  border-right: 1px solid $color-bg-alt;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  max-width: 52em;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  transform: scale(.1, 0);
+  transform-origin: 100% 0%;
+  transition: none;
+  width: 100%;
+}
+
+.navigation-header {
+  margin: 30px;
+  position: fixed;
+  text-transform: uppercase;
+}
+
 .toggle-button {
   display: none;
 
@@ -42,9 +66,8 @@
 .toggle-label {
   float: right;
   height: 20px;
+  margin: 40px;
   position: relative;
-  right: 40px;
-  top: 40px;
   width: 15px;
 
   &:hover {
@@ -66,22 +89,4 @@
       top: 16px;
     }
   }
-}
-
-.navigation {
-  background: $color-bg;
-  border-left: 1px solid $color-bg-alt;
-  border-right: 1px solid $color-bg-alt;
-  height: 100%;
-  left: 0;
-  margin: auto;
-  max-width: 52em;
-  padding: 0;
-  position: fixed;
-  right: 0;
-  top: 100px;
-  transform: scale(.1, 0);
-  transform-origin: 100% 0%;
-  transition: none;
-  width: 100%;
 }
