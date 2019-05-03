@@ -1,25 +1,24 @@
 ---
+layout: null
 permalink: "sitemap.xml"
-layout: compress
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<!-- Pages -->
 {% for item in site.html_pages %}
-  <url>
-    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  </url>
+    <url>
+        <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    </url>
 {% endfor %}
 
-<!-- Posts -->
 {% for item in site.posts %}
-  <url>
-    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
-    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
-  </url>
+    <url>
+        <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+        <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+    </url>
 {% endfor %}
 
 </urlset>
