@@ -1,18 +1,16 @@
 ---
-permalink: "index.html"
 layout: page
+permalink: "index.html"
 ---
 
 {% for post in site.posts %}
 <section>
     <h4>
-        <small>
+        <span>
             <time datetime="{{ post.date | date_to_xmlschema }}">
                 {{ post.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
             </time>
-        </small>
-
-        <a href="{{ post.url | relative_url | uri_escape }}">
+        </span> | <a href="{{ post.url | relative_url | uri_escape }}">
             {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
         </a>
     </h4>
