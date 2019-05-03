@@ -1,33 +1,22 @@
 ---
-title: "Posts list"
 permalink: "index.html"
 layout: page
-show: false
 ---
 
-{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for post in site.posts %}
+<section>
+    <h4>
+        <small>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+            </time>
+        </small>
 
-{% for year in postsByYear %}
-    <section>
-        <!-- Header -->
-        <h3>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | slugify }}</h3>
+        <a href="{{ post.url | relative_url | uri_escape }}">
+            {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+        </a>
+    </h4>
 
-        <ul>
-            {% for post in year.items %}
-                <li>
-                    <!-- Title / Link -->
-                    <a href="{{ post.url | relative_url | uri_escape }}">
-                        {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-                    </a>
-
-                    <small>
-                        <!-- Date of publication -->
-                        <time datetime="{{ post.date | date_to_xmlschema }}">
-                            <em>{{ post.date | date: '- %b %d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</em>
-                        </time>
-                    </small>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+    <p>{{ post.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</p>
+</section>
 {% endfor %}

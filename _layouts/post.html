@@ -2,13 +2,22 @@
 layout: default
 ---
 
-<article>
-    <hr />
+<article class="container" role="main">
+    <header>
+        <h1>{{ page.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape }}</h1>
 
-    <section role="article">
-        {{ content }}
-    </section>
+        <small>
+            Published <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
+            </time> on <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">
+                {{ site.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape }}
+            </a> | <a href="{{ page.url | absolute_url | uri_escape }}" target="_blank">
+                Permalink
+            </a>
+        </small>
+    </header>
 
-    <!-- Comments -->
+    {{ content }}
+
     {% include disqus.html %}
 </article>

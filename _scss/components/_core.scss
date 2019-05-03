@@ -13,7 +13,31 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: row;
   min-height: 100%;
-  padding-bottom: 20px;
-  padding-top: 100px;
+}
+
+.container {
+  flex: 75%;
+  padding-right: 32px;
+}
+
+.sidebar {
+  flex: 25%;
+}
+
+@media (max-width: 684px) {
+  body {
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 100%;
+    padding-right: 0;
+  }
+
+  .sidebar {
+    flex: 100%;
+  }
 }
