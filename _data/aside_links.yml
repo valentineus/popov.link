@@ -1,0 +1,15 @@
+- name: 'e-mail'
+  tag: 'info@valentineus.link'
+  url: 'mailto:info@valentineus.link'
+
+- name: 'github'
+  tag: '@valentineus'
+  url: 'https://github.com/valentineus'
+
+- name: 'pgp'
+  tag: 'A90A8EA3'
+  url: '/publickey.txt'
+
+- name: 'twitter'
+  tag: '@valyaha'
+  url: 'https://twitter.com/valyaha'

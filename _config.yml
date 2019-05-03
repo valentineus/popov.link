@@ -1,12 +1,12 @@
 # Permalinks
-permalink: "/:year-:month-:day/:title"
+permalink: '/:year-:month-:day/:title'
 
 # Time Zone
-timezone: "Europe/Samara"
+timezone: 'Europe/Samara'
 
 # Catalogs
 include:
-  - "_pages"
+  - '_pages'
 
 # Parsers
 highlighter: rouge
@@ -20,49 +20,50 @@ kramdown:
 
 # SASS/SCSS
 sass:
-  sass_dir: "_scss"
-  style: ":compressed"
+  sass_dir: '_scss'
+  style: ':compressed'
 
 # AutoPrefixer
 autoprefixer:
   browsers:
-    - "> 1%"
-    - "last 10 versions"
+    - '> 1%'
+    - 'last 10 versions'
 
 # Compress HTML
 compress_html:
   blanklines: false
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: ['<!-- ', ' -->']
   endings: []
   profile: false
   startings: []
 
 # Website address
-url: "https://valentineus.link"
-baseurl: ""
+url: 'https://valentineus.link'
+baseurl: ''
 
 # Site description
-title: "Personal blog"
-description: "Free developer and dreamer"
-repos: "valentineus/valentineus.github.io"
-rss: "/atom.xml"
-lang: "ru"
+title: 'Personal blog'
+description: 'Free developer and dreamer'
+avatar: 'https://www.gravatar.com/avatar/989fb5288ac482414a6d13acc329cc38?s=148'
+repos: 'https://github.com/valentineus/valentineus.github.io'
+rss: '/atom.xml'
+lang: 'ru'
 
 # About the author
 author:
-  email: "info@valentineus.link"
-  name: "Valentin Popov"
-  url: "https://valentineus.link"
+  email: 'info@valentineus.link'
+  name: 'Valentin Popov'
+  url: 'https://valentineus.link'
 
 # Plugins
 plugins:
-  - "octopress-autoprefixer"
+  - 'octopress-autoprefixer'
 
 # Exceptions
 exclude:
-  - ".*"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "LICENSE.txt"
-  - "README.md"
+  - '.*'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'LICENSE.txt'
+  - 'README.md'
