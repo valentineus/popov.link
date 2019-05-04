@@ -1,20 +1,4 @@
-$color00: #000000;
-$color01: #000080;
-$color02: #0000FF;
-$color03: #008080;
-$color04: #008800;
-$color05: #555555;
-$color06: #800080;
-$color07: #888888;
-$color08: #999999;
-$color09: #a61717;
-$color10: #aa0000;
-$color11: #aaaaaa;
-$color12: #bbbbbb;
-$color13: #ddffdd;
-$color14: #e3d2d2;
-$color15: #FF0000;
-$color16: #ffdddd;
-$color17: #ffffcc;
+$color00: rgb(255, 0, 0);
+$color01: rgb(255, 255, 204);
 
 @import 'highlight/main';

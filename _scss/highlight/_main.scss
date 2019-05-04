@@ -1,36 +1,22 @@
 .highlight {
   .c {
-    color: $color04;
     font-style: italic;
   }
 
   .c1 {
-    color: $color04;
     font-style: italic;
   }
 
   .cm {
-    color: $color04;
     font-style: italic;
   }
 
-  .cp {
-    color: $color03;
-  }
-
   .cs {
-    color: $color04;
-    font-weight: bold;
+    font-style: italic;
   }
 
   .err {
-    background-color: $color14;
-    color: $color09;
-  }
-
-  .gd {
-    background-color: $color16;
-    color: $color00;
+    border: 1px solid $color00;
   }
 
   .ge {
@@ -38,107 +24,62 @@
   }
 
   .gh {
-    color: $color08;
-  }
-
-  .gi {
-    background-color: $color13;
-    color: $color00;
-  }
-
-  .go {
-    color: $color07;
+    font-weight: bold;
   }
 
   .gp {
-    color: $color05;
-  }
-
-  .gr {
-    color: $color10;
+    font-weight: bold;
   }
 
   .gs {
     font-weight: bold;
   }
 
-  .gt {
-    color: $color10;
-  }
-
   .gu {
-    color: $color11;
+    font-weight: bold;
   }
 
   .hll {
-    background-color: $color17;
-  }
-
-  .il {
-    color: $color02;
+    background-color: $color01;
   }
 
   .k {
-    color: $color01;
     font-weight: bold;
   }
 
   .kc {
-    color: $color01;
     font-weight: bold;
   }
 
   .kd {
-    color: $color01;
     font-weight: bold;
   }
 
   .kn {
-    color: $color01;
-    font-weight: bold;
-  }
-
-  .kp {
-    color: $color01;
     font-weight: bold;
   }
 
   .kr {
-    color: $color01;
     font-weight: bold;
   }
 
-  .kt {
-    color: $color01;
+  .nc {
     font-weight: bold;
   }
 
-  .m {
-    color: $color02;
+  .ne {
+    font-weight: bold;
   }
 
-  .mf {
-    color: $color02;
+  .ni {
+    font-weight: bold;
   }
 
-  .mh {
-    color: $color02;
-  }
-
-  .mi {
-    color: $color02;
-  }
-
-  .mo {
-    color: $color02;
-  }
-
-  .na {
-    color: $color15;
+  .nn {
+    font-weight: bold;
   }
 
   .nt {
-    color: $color01;
     font-weight: bold;
   }
 
@@ -147,54 +88,52 @@
   }
 
   .s {
-    color: $color02;
+    font-style: italic;
   }
 
   .s1 {
-    color: $color02;
+    font-style: italic;
   }
 
   .s2 {
-    color: $color02;
+    font-style: italic;
   }
 
   .sb {
-    color: $color02;
+    font-style: italic;
   }
 
   .sc {
-    color: $color06;
+    font-style: italic;
   }
 
   .sd {
-    color: $color02;
+    font-style: italic;
   }
 
   .se {
-    color: $color02;
+    font-style: italic;
+    font-weight: bold;
   }
 
   .sh {
-    color: $color02;
+    font-style: italic;
   }
 
   .si {
-    color: $color02;
+    font-style: italic;
+    font-weight: bold;
   }
 
   .sr {
-    color: $color02;
+    font-style: italic;
   }
 
   .ss {
-    color: $color02;
+    font-style: italic;
   }
 
   .sx {
-    color: $color02;
-  }
-
-  .w {
-    color: $color12;
+    font-style: italic;
   }
 }

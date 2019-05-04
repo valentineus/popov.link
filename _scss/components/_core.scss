@@ -8,6 +8,8 @@
 }
 
 html {
+  background-color: $color-html;
+  background-image: url('/assets/background.svg');
   height: 100%;
   overflow-y: scroll;
 }
