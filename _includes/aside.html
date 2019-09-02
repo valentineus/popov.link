@@ -24,7 +24,7 @@
                 {{ post.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
             </time>
         </small>
-
+        &raquo;
         <a href="{{ post.url | relative_url | uri_escape }}">
             {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
         </a>
