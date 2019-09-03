@@ -1,139 +1,310 @@
 .highlight {
+  .bp {
+    color: $color05;
+  }
+
   .c {
+    color: $color09;
     font-style: italic;
   }
 
   .c1 {
+    color: $color09;
     font-style: italic;
   }
 
   .cm {
+    color: $color09;
+    font-style: italic;
+  }
+
+  .cp {
+    color: $color09;
     font-style: italic;
   }
 
   .cs {
+    color: $color09;
     font-style: italic;
   }
 
   .err {
-    border: 1px solid $color00;
+    border: 1px solid $color14;
+    color: $color10;
+  }
+
+  .g {
+    color: $color00;
+  }
+
+  .gd {
+    color: $color10;
   }
 
   .ge {
+    color: $color00;
     font-style: italic;
   }
 
   .gh {
+    color: $color01;
     font-weight: bold;
+  }
+
+  .gi {
+    color: $color03;
+  }
+
+  .go {
+    color: $color00;
+    font-style: italic;
   }
 
   .gp {
-    font-weight: bold;
+    color: $color09;
+  }
+
+  .gr {
+    color: $color14;
   }
 
   .gs {
+    color: $color00;
+    font-weight: bold;
+  }
+
+  .gt {
+    color: $color10;
     font-weight: bold;
   }
 
   .gu {
+    color: $color08;
     font-weight: bold;
   }
 
   .hll {
-    background-color: $color01;
+    background-color: $color17;
+  }
+
+  .il {
+    color: $color02;
+    font-weight: bold;
   }
 
   .k {
+    color: $color04;
     font-weight: bold;
   }
 
   .kc {
+    color: $color04;
     font-weight: bold;
   }
 
   .kd {
+    color: $color04;
     font-weight: bold;
   }
 
   .kn {
+    color: $color04;
+    font-weight: bold;
+  }
+
+  .kp {
+    color: $color04;
     font-weight: bold;
   }
 
   .kr {
+    color: $color04;
     font-weight: bold;
   }
 
+  .kt {
+    color: $color04;
+    font-weight: bold;
+  }
+
+  .l {
+    color: $color00;
+  }
+
+  .ld {
+    color: $color00;
+  }
+
+  .m {
+    color: $color02;
+    font-weight: bold;
+  }
+
+  .mf {
+    color: $color02;
+    font-weight: bold;
+  }
+
+  .mh {
+    color: $color02;
+    font-weight: bold;
+  }
+
+  .mi {
+    color: $color02;
+    font-weight: bold;
+  }
+
+  .mo {
+    color: $color02;
+    font-weight: bold;
+  }
+
+  .n {
+    color: $color00;
+  }
+
+  .na {
+    color: $color11;
+  }
+
+  .nb {
+    color: $color04;
+  }
+
   .nc {
+    color: $color00;
+  }
+
+  .nd {
+    color: $color07;
     font-weight: bold;
   }
 
   .ne {
+    color: $color12;
     font-weight: bold;
+  }
+
+  .nf {
+    color: $color00;
   }
 
   .ni {
-    font-weight: bold;
+    color: $color13;
+  }
+
+  .nl {
+    color: $color15;
   }
 
   .nn {
-    font-weight: bold;
+    color: $color00;
+  }
+
+  .no {
+    color: $color00;
   }
 
   .nt {
+    color: $color04;
+    font-weight: bold;
+  }
+
+  .nv {
+    color: $color00;
+  }
+
+  .nx {
+    color: $color00;
+  }
+
+  .o {
+    color: $color13;
     font-weight: bold;
   }
 
   .ow {
+    color: $color04;
     font-weight: bold;
   }
 
+  .p {
+    color: $color00;
+    font-weight: bold;
+  }
+
+  .py {
+    color: $color00;
+  }
+
   .s {
-    font-style: italic;
+    color: $color06;
   }
 
   .s1 {
-    font-style: italic;
+    color: $color06;
   }
 
   .s2 {
-    font-style: italic;
+    color: $color06;
   }
 
   .sb {
-    font-style: italic;
+    color: $color06;
   }
 
   .sc {
-    font-style: italic;
+    color: $color06;
   }
 
   .sd {
+    color: $color09;
     font-style: italic;
   }
 
   .se {
-    font-style: italic;
-    font-weight: bold;
+    color: $color06;
   }
 
   .sh {
-    font-style: italic;
+    color: $color06;
   }
 
   .si {
-    font-style: italic;
-    font-weight: bold;
+    color: $color06;
   }
 
   .sr {
-    font-style: italic;
+    color: $color06;
   }
 
   .ss {
-    font-style: italic;
+    color: $color06;
   }
 
   .sx {
-    font-style: italic;
+    color: $color06;
+  }
+
+  .vc {
+    color: $color00;
+  }
+
+  .vg {
+    color: $color00;
+  }
+
+  .vi {
+    color: $color00;
+  }
+
+  .w {
+    color: $color16;
+    text-decoration: underline;
+  }
+
+  .x {
+    color: $color00;
   }
 }
