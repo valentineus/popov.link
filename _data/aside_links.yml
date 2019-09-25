@@ -9,7 +9,3 @@
 - name: 'pgp'
   tag: 'A90A8EA3'
   url: '/publickey.txt'
-
-- name: 'twitter'
-  tag: '@valyaha'
-  url: 'https://twitter.com/valyaha'
