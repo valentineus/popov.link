@@ -44,7 +44,7 @@ baseurl: ''
 
 # Site description
 title: 'Personal blog'
-description: 'I create software. Sometimes I write in this blog.'
+description: 'Full-Stack Web Developer.'
 avatar: 'https://www.gravatar.com/avatar/989fb5288ac482414a6d13acc329cc38?s=148'
 repos: 'https://github.com/valentineus/valentineus.github.io'
 rss: '/atom.xml'

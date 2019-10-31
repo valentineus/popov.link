@@ -3,6 +3,8 @@
         <img alt="[Avatar]" src="{{ site.avatar | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}" />
     </div>
 
+    <p>{{ site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</p>
+
     {% for link in site.data.aside_links %}
     <p>
         <span>{{ link.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</span>
