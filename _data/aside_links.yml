@@ -1,3 +1,7 @@
+- name: 'telegram'
+  tag: '@valentineus'
+  url: 'https://t.me/valentineus'
+
 - name: 'e-mail'
   tag: 'info@valentineus.link'
   url: 'mailto:info@valentineus.link'
