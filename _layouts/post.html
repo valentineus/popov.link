@@ -2,20 +2,25 @@
 layout: default
 ---
 
-<article class="container">
-    <header>
-        <h1>{{ page.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape }}</h1>
+{% assign date = page.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+{% assign title = site.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape %}
 
-        <small>
-            Published <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: '%Y-%m-%d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-            </time> on <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">
-                {{ site.title | strip_newlines | strip_html| strip | normalize_whitespace | smartify | xml_escape }}
-            </a> | <a href="{{ page.url | absolute_url | uri_escape }}" target="_blank">
-                Permalink
-            </a>
-        </small>
+<article class="container">
+    <small>
+        <span>Published</span>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ date }}</time>
+        <span>on</span>
+        <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">{{ title }}</a>
+        <span>|</span>
+        <a href="{{ page.url | absolute_url | uri_escape }}" target="_blank">Permalink</a>
+    </small>
+
+    <header>
+        <h1>{{ title }}</h1>
     </header>
 
     {{ content }}
 </article>
+
+{% assign date = "" %}
+{% assign title = "" %}
