@@ -3,9 +3,9 @@
 <ul>
     {% for link in site.data.links %}
     <li>
-        <a href="{{ link.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape }}" target="_blank">{{ link.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</a>
+        <a href="{{ link.url | relative_url | uri_escape }}" target="_blank">{{ link.title | strip | normalize_whitespace | xml_escape }}</a>
         <span>—</span>
-        <span>{{ link.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</span>
+        <span>{{ link.description | strip | normalize_whitespace | xml_escape }}</span>
     </li>
     {% endfor %}
 </ul>
