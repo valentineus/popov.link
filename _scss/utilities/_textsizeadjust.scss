@@ -1,13 +1,14 @@
 // Text Size Adjust
 //
-// The text-size-adjust CSS property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.
+// The text-size-adjust CSS property controls the text inflation algorithm used
+// on some smartphones and tablets. Other browsers will ignore this property.
 //
 // Values: none | auto | <percentage>
 // Default: none
 //
 // https://drafts.csswg.org/css-size-adjust/#adjustment-control
 @mixin text-size-adjust($value: none) {
+  -moz-text-size-adjust: $value;
+  -ms-text-size-adjust: $value;
   -webkit-text-size-adjust: $value;
-     -moz-text-size-adjust: $value;
-      -ms-text-size-adjust: $value;
 }

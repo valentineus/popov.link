@@ -26,7 +26,7 @@ body {
   }
 }
 
-@mixin word-wrap() {
+@mixin word-wrap {
   hyphens: auto;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -40,6 +40,7 @@ h4,
 h5,
 h6 {
   @include word-wrap;
+
   font-weight: 700;
   line-height: 1.1;
 }
@@ -126,7 +127,7 @@ code {
   white-space: pre-wrap;
 }
 
-pre>code {
+pre > code {
   background-color: transparent;
   padding: 0;
   white-space: pre;
@@ -159,9 +160,9 @@ textarea {
 
 .button,
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   background-color: $color-blossom;
   border: 1px solid $color-blossom;
   border-radius: 1px;
@@ -206,7 +207,7 @@ input[type] {
   }
 }
 
-input[type="checkbox"]:focus {
+input[type='checkbox']:focus {
   outline: 1px dotted $color-blossom;
 }
 
