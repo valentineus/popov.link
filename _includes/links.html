@@ -1,0 +1,19 @@
+<h2>Related links</h2>
+
+<ul>
+    {% for link in site.data.links %}
+    <li>
+        {% assign description = link.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+        {% assign title = link.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+        {% assign url = link.url | strip_newlines | strip_html | strip | normalize_whitespace | relative_url | uri_escape %}
+
+        <a href="{{ url }}" target="_blank">{{ title }}</a>
+        <span>—</span>
+        <span>{{ description }}</span>
+    </li>
+    {% endfor %}
+</ul>
+
+{% assign description = "" %}
+{% assign title = "" %}
+{% assign url = "" %}

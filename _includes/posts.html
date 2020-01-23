@@ -1,0 +1,18 @@
+<h2>Posts</h2>
+
+<ul>
+    {% for post in site.posts %}
+    <li>
+        {% assign date = post.date | date: '%d-%m-%Y' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+        {% assign title = post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
+        {% assign url = post.url | relative_url | uri_escape %}
+
+        <a href="{{ url }}">{{ title }}</a>
+        (<time datetime="{{ post.date | date_to_xmlschema }}">{{ date }}</time>)
+    </li>
+    {% endfor %}
+</ul>
+
+{% assign date = "" %}
+{% assign title = "" %}
+{% assign url = "" %}
