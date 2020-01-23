@@ -4,47 +4,11 @@
 *::after,
 *::before {
   @include text-size-adjust(100%);
+
   box-sizing: border-box;
 }
 
 html {
   background-color: $color-html;
-  height: 100%;
   overflow-y: scroll;
-}
-
-body {
-  display: flex;
-  flex-direction: row;
-  min-height: 100%;
-}
-
-.container {
-  flex: 75%;
-  padding-right: 16px;
-}
-
-.sidebar {
-  border-left: 1px solid $color-bg-alt;
-  flex: 25%;
-  height: 100%;
-  padding-left: 16px;
-}
-
-@media (max-width: 684px) {
-  body {
-    flex-direction: column;
-  }
-
-  .container {
-    flex: 100%;
-    padding-right: 0;
-  }
-
-  .sidebar {
-    border: 0;
-    display: none;
-    flex: 100%;
-    padding-left: 0;
-  }
 }

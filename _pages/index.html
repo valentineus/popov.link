@@ -4,26 +4,6 @@ permalink: "index.html"
 title: ""
 ---
 
-{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-
-{% for year in postsByYear %}
-<section>
-    <h3>{{ year.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | slugify }}</h3>
-
-    <ul>
-        {% for post in year.items %}
-        <li>
-            <a href="{{ post.url | relative_url | uri_escape }}">
-                {{ post.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}
-            </a>
-
-            <small>
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <em>{{ post.date | date: '- %b %d' | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}</em>
-                </time>
-            </small>
-        </li>
-        {% endfor %}
-    </ul>
-</section>
-{% endfor %}
+{% include contacts.html %}
+{% include links.html %}
+{% include posts.html %}

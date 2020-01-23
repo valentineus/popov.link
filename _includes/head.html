@@ -1,6 +1,3 @@
-{% assign description = page.description | default: site.description | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
-{% assign title = page.title | default: site.title | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape %}
-
 <head>
     <!-- Meta tags -->
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, shrink-to-fit=no, width=device-width" />
@@ -11,21 +8,20 @@
 
     <!-- Advanced meta tags -->
     {% for tag in site.data.meta_tags %}
-        <meta name="{{ tag.name | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}"
-            content="{{ tag.content | strip_newlines | strip_html | strip | normalize_whitespace | smartify | xml_escape }}" />
+    <meta name="{{ tag.name | strip | normalize_whitespace | xml_escape }}" content="{{ tag.content | strip | normalize_whitespace | xml_escape }}" />
     {% endfor %}
 
     <!-- Open Graph -->
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:title" content="{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description | strip | normalize_whitespace | xml_escape }}" />
     <meta property="og:type" content="{{ page.layout | replace: 'post', 'article' | replace: 'page', 'website' | default: 'website' }}" />
     <meta property="og:image" content="{{ page.image | absolute_url | uri_escape }}" />
     <meta property="og:url" content="{{ page.url | absolute_url | uri_escape }}" />
 
     <!-- Title / Description -->
-    <meta name="application-name" content="{{ title }}" />
-    <meta name="description" content="{{ description }}" />
-    <title>{{ title }}</title>
+    <meta name="application-name" content="{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}" />
+    <meta name="description" content="{{ page.description | default: site.description | strip | normalize_whitespace | xml_escape }}" />
+    <title>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url | uri_escape }}" />

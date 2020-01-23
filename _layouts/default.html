@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | strip_newlines | strip_html | strip | slugify }}">
+<html lang="{{ site.lang | strip | slugify | xml_escape }}">
     {% include head.html %}
 
     <body>
