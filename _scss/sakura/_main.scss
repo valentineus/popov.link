@@ -7,22 +7,16 @@ body {
   background-color: $color-bg;
   color: $color-text;
   font-size: $font-size-base;
-  line-height: 1.6em;
+  line-height: 1.4em;
   margin: auto;
-  max-width: 72em;
-  padding: 32px;
+  max-width: 64em;
+  padding: 4em;
 }
 
 @media (max-width: 684px) {
   body {
     font-size: $font-size-base * .85;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 382px) {
-  body {
-    font-size: $font-size-base * .75;
+    padding: 2em;
   }
 }
 
@@ -81,13 +75,11 @@ hr {
 
 a {
   color: $color-blossom;
-  text-decoration: none;
 
   &:active,
   &:focus,
   &:hover {
     color: $color-fade;
-    text-decoration: none;
   }
 }
 
@@ -170,7 +162,7 @@ input[type='button'] {
   color: $color-bg;
   cursor: pointer;
   display: inline-block;
-  padding: 5px 10px;
+  padding: 1em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -198,8 +190,8 @@ input[type] {
   box-shadow: none;
   box-sizing: border-box;
   color: $color-text;
-  margin-bottom: 10px;
-  padding: 6px 10px;
+  margin: .5em;
+  padding: 1em;
 
   &:focus {
     border: 1px solid $color-blossom;
