@@ -7,7 +7,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
     <!-- Advanced meta tags -->
-    {% for tag in site.data.meta_tags %}
+    {% for tag in site.data.meta %}
     <meta name="{{ tag.name | strip | normalize_whitespace | xml_escape }}" content="{{ tag.content | strip | normalize_whitespace | xml_escape }}" />
     {% endfor %}
 
