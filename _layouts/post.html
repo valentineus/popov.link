@@ -7,13 +7,13 @@ layout: default
         <span>Published</span>
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' | strip | normalize_whitespace | xml_escape }}</time>
         <span>on</span>
-        <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">{{ site.title | strip | normalize_whitespace | xml_escape }}</a>
+        <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</a>
         <span>|</span>
         <a href="{{ page.url | absolute_url | uri_escape }}" target="_blank">Permalink</a>
     </small>
 
     <header>
-        <h1>{{ site.title | strip | normalize_whitespace | xml_escape }}</h1>
+        <h1>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</h1>
     </header>
 
     {{ content }}
