@@ -2,6 +2,10 @@
   description: "Code repositories"
   url: "https://code.valentineus.link"
 
+- title: "gist.valentineus.link"
+  description: "PrivateBin"
+  url: "https://gist.valentineus.link/"
+
 - title: "@valentineus"
   description: "GitHub"
   url: "https://github.com/valentineus"
