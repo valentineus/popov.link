@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Meta tags -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, width=device-width" name="viewport" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+    <!-- CSS -->
+    <link href="{{ get_url(path='styles.css', trailing_slash=false, cachebust=true) | safe }}" rel="stylesheet" />
+
+    {% block rss %}
+    <!-- RSS -->
+    <link href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" rel="alternate" title="RSS" type="application/atom+xml" />
+    {% endblock %}
+
+    <title>Valentine's website</title>
+</head>
+
+<body>
+    <header>
+        <!-- header -->
+    </header>
+
+    <article>
+        {% block content %}{% endblock %}
+    </article>
+
+    <footer>
+        <!-- footer -->
+    </footer>
+</body>
+
+</html>

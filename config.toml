@@ -1,0 +1,93 @@
+# The base URL of the site; the only required configuration variable.
+base_url = "https://popov.link"
+
+# The site title and description; used in feeds by default.
+title = ""
+description = ""
+
+# The default language; used in feeds.
+default_language = "ru"
+
+# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
+output_dir = "public"
+
+# When set to "true", the Sass files in the `sass` directory in the site root are compiled.
+# Sass files in theme directories are always compiled.
+compile_sass = true
+
+# When set to "true", the generated HTML files are minified.
+minify_html = true
+
+# When set to "true", a feed is automatically generated.
+generate_feed = true
+
+# The filename to use for the feed. Used as the template filename, too.
+# Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filename = "atom.xml"
+
+# The number of articles to include in the feed. All items are included if
+# this limit is not set (the default).
+feed_limit = 20
+
+# When set to "true", files in the `static` directory are hard-linked. Useful for large
+# static files. Note that for this to work, both `static` and the
+# output directory need to be on the same filesystem. Note that the theme's `static`
+# files are always copied, regardless of this setting.
+hard_link_static = false
+
+# When set to "true", a search index is built from the pages and section
+# content for `default_language`.
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = true
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = true
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = true
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = true
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[extra]
+# Put all your custom variables here
+
+projects = [
+  { name = "Laravel Notification Channels: GreenSMS", links = [
+    { title = "Source", url = "https://git.popov.link/laravel/notification-channels-greensms" },
+  ] },
+  { name = "Moodle Webhooks", links = [
+    { title = "Homepage", url = "https://moodle.org/plugins/local_webhooks" },
+    { title = "Source", url = "https://git.popov.link/moodle/webhooks" },
+    { title = "Source (GitHub)", url = "https://github.com/valentineus/moodle-webhooks" },
+  ] },
+  { name = "Electron Hot Reload", links = [
+    { title = "Source", url = "https://git.popov.link/electron-js/hot-reload/" },
+    { title = "Source (GitHub)", url = "https://github.com/valentineus/electron-hot-reload" },
+  ] },
+]

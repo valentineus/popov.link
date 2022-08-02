@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome!</h1>
+
+<p>Hi there! My name is Valentin Popov. I'm a software architect and developer from Russia. I'm also Linux and OpenSource enthusiast.</p>
+
+<section>
+    <h2>Projects</h2>
+
+    <ul>
+        {% for project in config.extra.projects %}
+        <li>
+            <span>{{ project.name | safe }}</span>
+            {% for link in project.links %}
+            <span>|</span>
+            <a href="{{ link.url | safe }}" rel="nofollow" target="_blank">{{ link.title | safe }}</a>
+            {% endfor %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div>
+        &hellip;More projects in my
+        <a href="https://git.popov.link" rel="nofollow" target="_blank">git-server</a>.
+    </div>
+</section>
+
+<section>
+    {% set blog = get_section(path='blog/_index.md') %}
+    <h2>Recent posts</h2>
+
+    <ul>
+        {% for page in blog.pages | slice(end=5) %}
+        <li>
+            <time datetime="{{ page.date | date(format='%+') | safe }}">{{ page.date | date(format='%Y/%m/%d') | safe }}</time>
+            <span>&ndash;</span>
+            <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock content %}

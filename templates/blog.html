@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ section.title | safe }}</h1>
+
+{% for year, posts in section.pages | group_by(attribute='year') %}
+<section>
+    <h2>{{ year | safe }}</h2>
+
+    <ul>
+        {% for page in posts %}
+        <li>
+            <time datetime="{{ page.date | date(format='%+') | safe }}">{{ page.date | date(format='%Y/%m/%d') | safe }}</time>
+            <span>&ndash;</span>
+            <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endfor %}
+{% endblock content %}

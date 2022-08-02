@@ -1,0 +1,247 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+
+html {
+  font-family: $font-family-base;
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  direction: ltr;
+  font-size: $font-size-base;
+  font-synthesis: none;
+  line-height: 1.4em;
+  margin: auto;
+  max-width: 60em;
+  padding: 4em;
+  text-rendering: "optimizeLegibility";
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: $font-size-base * 0.85;
+    padding: 2em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include word-wrap;
+
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+small,
+sub,
+sup {
+  font-size: 75%;
+}
+
+hr {
+  border-color: $color-blossom;
+}
+
+a {
+  color: $color-blossom;
+  text-decoration: inherit;
+  transition: color 0.25s;
+
+  &:visited {
+    color: $color-blossom;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $color-fade;
+  }
+}
+
+ul {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  background-color: $color-bg-alt;
+  border-left: 5px solid $color-blossom;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.8em 0.8em 0.8em 1em;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+img,
+video {
+  height: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  max-width: 100%;
+}
+
+pre {
+  background-color: $color-bg-alt;
+  border-radius: 4px;
+  border: 1px solid $color-bg-alt;
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code,
+kbd,
+samp {
+  background-color: $color-bg-code;
+  border-radius: 4px;
+  font-size: 0.9em;
+  padding: 0 0.2em;
+  white-space: pre-wrap;
+}
+
+pre > code {
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+  white-space: pre;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: justify;
+  width: 100%;
+}
+
+td,
+th {
+  border-bottom: 1px dashed $color-blossom;
+  padding: 0.5em;
+}
+
+input,
+textarea {
+  border: 1px solid $color-text;
+
+  &:focus {
+    border: 1px solid $color-blossom;
+  }
+}
+
+textarea {
+  width: 100%;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background-color: $color-blossom;
+  border: 1px solid $color-blossom;
+  border-radius: 1px;
+  box-sizing: border-box;
+  color: $color-bg;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus:enabled,
+  &:hover:enabled {
+    background-color: $color-fade;
+    border-color: $color-fade;
+    color: $color-bg;
+    outline: 0;
+  }
+}
+
+textarea,
+select,
+input {
+  background-color: $color-bg-alt;
+  border: 1px solid $color-bg-alt;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: $color-text;
+  margin-bottom: 10;
+  padding: 6px 10;
+
+  &:focus {
+    border: 1px solid $color-blossom;
+    outline: 0;
+  }
+}
+
+input[type="checkbox"]:focus {
+  outline: 1px dotted $color-blossom;
+}
+
+label,
+legend,
+fieldset {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
