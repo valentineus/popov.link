@@ -15,6 +15,10 @@ nav {
   a {
     color: $color-text;
     padding: 0 1rem;
+
+    &:visited {
+      color: $color-text;
+    }
   }
 }
 
