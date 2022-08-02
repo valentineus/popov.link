@@ -1,0 +1,25 @@
+nav {
+  backdrop-filter: saturate(50%) blur(8px);
+  background: #242424b3;
+  left: 0;
+  line-height: 4em;
+  margin: auto;
+  max-width: 60em;
+  padding: 0 4em;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  top: 0;
+  width: 100%;
+
+  a {
+    color: $color-text;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 684px) {
+  nav {
+    padding: 2em;
+  }
+}
