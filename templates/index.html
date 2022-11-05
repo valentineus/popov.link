@@ -24,27 +24,6 @@
 </a>
 
 <section>
-    <h2>Projects</h2>
-
-    <ul>
-        {% for project in config.extra.projects %}
-        <li>
-            <span>{{ project.name | safe }}</span>
-            {% for link in project.links %}
-            <span>|</span>
-            <a href="{{ link.url | safe }}" rel="nofollow" target="_blank">{{ link.title | safe }}</a>
-            {% endfor %}
-        </li>
-        {% endfor %}
-    </ul>
-
-    <div>
-        &hellip;More projects in my
-        <a href="https://git.popov.link" rel="nofollow" target="_blank">git-server</a>.
-    </div>
-</section>
-
-<section>
     {% set blog = get_section(path='blog/_index.md') %}
     <h2>Recent posts</h2>
 

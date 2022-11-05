@@ -76,18 +76,3 @@ anchors = "on"
 
 [extra]
 # Put all your custom variables here
-
-projects = [
-  { name = "Laravel Notification Channels: GreenSMS", links = [
-    { title = "Source", url = "https://git.popov.link/laravel/notification-channels-greensms" },
-  ] },
-  { name = "Moodle Webhooks", links = [
-    { title = "Homepage", url = "https://moodle.org/plugins/local_webhooks" },
-    { title = "Source", url = "https://git.popov.link/moodle/webhooks" },
-    { title = "Source (GitHub)", url = "https://github.com/valentineus/moodle-webhooks" },
-  ] },
-  { name = "Electron Hot Reload", links = [
-    { title = "Source", url = "https://git.popov.link/electron-js/hot-reload/" },
-    { title = "Source (GitHub)", url = "https://github.com/valentineus/electron-hot-reload" },
-  ] },
-]
