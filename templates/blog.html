@@ -11,7 +11,7 @@
         {% for page in posts %}
         <li>
             <time datetime="{{ page.date | date(format='%+') | safe }}">{{ page.date | date(format='%Y/%m/%d') | safe }}</time>
-            <span>&ndash;</span>
+            <span>&mdash;</span>
             <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
         </li>
         {% endfor %}
