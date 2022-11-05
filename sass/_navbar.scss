@@ -1,20 +1,21 @@
-nav {
-  backdrop-filter: saturate(50%) blur(8px);
-  background: #242424b3;
+header {
+  background-color: $color-header;
   left: 0;
   line-height: 4em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav {
   margin: auto;
   max-width: 60em;
   padding: 0 4em;
-  position: fixed;
-  right: 0;
   text-align: right;
-  top: 0;
-  width: 100%;
 
   a {
     color: $color-text;
-    padding: 0 1rem;
+    padding: 0 1em;
 
     &:visited {
       color: $color-text;
@@ -24,7 +25,6 @@ nav {
 
 @media (max-width: 684px) {
   nav {
-    line-height: 2em;
     padding: 0 2em;
   }
 }

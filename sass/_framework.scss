@@ -14,20 +14,20 @@ html {
 body {
   background-color: $color-bg;
   color: $color-text;
-  direction: ltr;
+  font-feature-settings: $font-feature;
   font-size: $font-size-base;
   font-synthesis: none;
-  line-height: 1.4em;
+  line-height: 1.54;
   margin: auto;
   max-width: 60em;
-  padding: 4em;
+  padding: 6em 4em 4em 4em;
   text-rendering: "optimizeLegibility";
 }
 
 @media (max-width: 684px) {
   body {
     font-size: $font-size-base * 0.85;
-    padding: 2em;
+    padding: 4em 2em 2em 2em;
   }
 }
 
@@ -96,7 +96,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: $color-fade;
+    opacity: .5;
   }
 }
 
