@@ -76,3 +76,11 @@ anchors = "on"
 
 [extra]
 # Put all your custom variables here
+
+contacts = [
+  { title = "GitHub", name = "@valentineus", url = "https://github.com/valentineus" },
+  { title = "SourceHut", name = "~valentineus", url = "https://sr.ht/~valentineus/" },
+  { title = "Telegram", name = "@valentineus", url = "https://t.me/valentineus" },
+  { title = "E-Mail", name = "hi@popov.link", url = "mailto:hi@popov.link" },
+  { title = "PGP", name = "AE3CE523DAAA8401", url = "/public.asc" },
+]
