@@ -19,6 +19,20 @@
 </section>
 
 <section>
+    <h2>Useful links</h2>
+
+    <ul>
+        {% for link in config.extra.links %}
+        <li>
+            <a href="{{ link.url | safe }}" rel="nofollow" target="_blank">{{ link.title | safe }}</a>
+            <span>&mdash;</span>
+            <span>{{ link.description | safe }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section>
     {% set blog = get_section(path='blog/_index.md') %}
     <h2>Recent posts</h2>
 
