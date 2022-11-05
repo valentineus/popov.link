@@ -29,6 +29,16 @@
     <article>
         {% block content %}{% endblock %}
     </article>
+
+    <footer>
+        <small>
+            <span>{{ now() | date(format='%Y') | safe }}</span>
+            <span>&#169;</span>
+            <a href="mailto:hi@popov.link">Valentin Popov</a>
+            <span>|</span>
+            <a href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">RSS</a>
+        </small>
+    </footer>
 </body>
 
 </html>
