@@ -1,5 +1,6 @@
 header {
   background-color: $color-header;
+  box-shadow: 0 5px 5px $color-header;
   left: 0;
   line-height: 3.5em;
   position: absolute;
@@ -24,6 +25,10 @@ nav {
 }
 
 @media (max-width: 684px) {
+  header {
+    box-shadow: none;
+  }
+
   nav {
     padding: 0 2em;
   }
