@@ -11,8 +11,7 @@
     <ul>
         {% for contact in config.extra.contacts %}
         <li>
-            <span>{{ contact.title | safe }}</span>
-            <span>&mdash;</span>
+            <span>{{ contact.title | safe }}:</span>
             <a href="{{ contact.url | safe }}" rel="nofollow" target="_blank">{{ contact.name | safe }}</a>
         </li>
         {% endfor %}
