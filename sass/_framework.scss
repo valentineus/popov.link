@@ -8,7 +8,6 @@
 html {
   font-family: $font-family-base;
   font-size: 62.5%;
-  height: 100%;
   overflow-y: scroll;
 }
 
@@ -18,7 +17,6 @@ body {
   font-feature-settings: $font-feature;
   font-size: $font-size-base;
   font-synthesis: none;
-  height: 100%;
   line-height: 1.54;
   margin: auto;
   max-width: 60em;
@@ -246,24 +244,4 @@ fieldset {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-}
-
-article {
-  min-height: 100%;
-}
-
-@media (max-width: 684px) {
-  article {
-    min-height: auto;
-  }
-}
-
-footer {
-  text-align: left;
-}
-
-@media (max-width: 684px) {
-  footer {
-    display: none;
-  }
 }
