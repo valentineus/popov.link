@@ -23,8 +23,10 @@
         <nav>
             <a href="/">Home</a>
             <a href="/blog">Blog</a>
-            <span>|</span>
-            <a href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">RSS</a>
+            <span>
+                <span>|</span>
+                <a href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">RSS</a>
+            </span>
         </nav>
     </header>
 
