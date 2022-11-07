@@ -15,7 +15,7 @@
     <link href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" rel="alternate" title="RSS" type="application/atom+xml" />
     {% endblock %}
 
-    <title>Valentine's website</title>
+    <title>{{ config.title | safe }}</title>
 </head>
 
 <body>
