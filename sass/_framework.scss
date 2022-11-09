@@ -125,6 +125,7 @@ blockquote p {
 
 img,
 video {
+  display: block;
   height: auto;
   margin-bottom: 2.5rem;
   margin-top: 0;
@@ -153,7 +154,7 @@ samp {
   white-space: pre-wrap;
 }
 
-pre > code {
+pre>code {
   background-color: transparent;
   font-size: 1em;
   padding: 0;

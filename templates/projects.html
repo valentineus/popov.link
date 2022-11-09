@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ section.title | safe }}</h1>
+
+{% for year, projects in section.pages | group_by(attribute='year') %}
+
+<section>
+    <h2>{{ year | safe }}</h2>
+
+    <div class="projects">
+        {% for project in projects %}
+
+        <div class="project">
+            <a href="{{ project.permalink | safe }}">
+                {% set preview = resize_image(path=project.extra.preview, width=292, height=219, op='fit') %}
+                <img src="{{ preview.url | safe }}" alt="preview" width="292" height="219">
+            </a>
+
+            <a href="{{ project.permalink | safe }}">
+                <div>{{ project.summary | safe }}</div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}
+
+{% endblock content %}

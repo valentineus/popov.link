@@ -1,0 +1,21 @@
+.projects {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 684px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.project {
+  a {
+    color: $color-text;
+
+    &:visited {
+      color: $color-text;
+    }
+  }
+}
