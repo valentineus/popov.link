@@ -7,15 +7,16 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
 
-    <!-- CSS -->
-    <link href="{{ get_url(path='styles.css', trailing_slash=false, cachebust=true) | safe }}" rel="stylesheet" />
-
     {% block rss %}
     <!-- RSS -->
     <link href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" rel="alternate" title="RSS" type="application/atom+xml" />
     {% endblock %}
 
     <title>{{ config.title | safe }}</title>
+
+    <!-- CSS -->
+    {% set css = load_data(path='styles.css') %}
+    <style>{{ css | safe }}</style>
 </head>
 
 <body>
