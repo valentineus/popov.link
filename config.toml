@@ -80,6 +80,7 @@ anchors = "on"
 contacts = [
   { title = "GitHub", name = "@valentineus", url = "https://github.com/valentineus" },
   { title = "SourceHut", name = "~valentineus", url = "https://sr.ht/~valentineus/" },
+  { title = "LinkedIn", name = "valentineus", url = "https://www.linkedin.com/in/valentineus/" },
   { title = "Telegram", name = "@valentineus", url = "https://t.me/valentineus" },
   { title = "E-Mail", name = "hi@popov.link", url = "mailto:hi@popov.link" },
   { title = "PGP", name = "AE3CE523DAAA8401", url = "/public.asc" },
