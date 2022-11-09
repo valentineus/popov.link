@@ -6,7 +6,8 @@
     <p>Page not found.</p>
 
     <small>
-        <p>If you see this message, please <a href="mailto:hi@popov.link?subject=I%20found%20a%20broken%20page">let me know</a>.</p>
+        {% set subject = 'I found a broken page' %}
+        <p>If you see this message, please <a href="mailto:hi@popov.link?subject={{ subject | urlencode | safe }}">let me know</a>.</p>
     </small>
 </div>
 

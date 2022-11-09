@@ -9,7 +9,7 @@
     <span>Published</span>
     <time datetime="{{ page.date | date(format='%+') | safe }}">{{ page.date | safe }}</time>
     <span>|</span>
-    <a href="mailto:hi@popov.link?subject={{ page.title | safe }}">Feedback</a>
+    <a href="mailto:hi@popov.link?subject={{ page.title | urlencode | safe }}">Feedback</a>
     <span>|</span>
     <a href="{{ page.permalink | safe }}">Permalink</a>
 </small>
