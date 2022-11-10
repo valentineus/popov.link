@@ -1,0 +1,8 @@
+<ul>
+    {% for contact in config.extra.contacts %}
+    <li>
+        <span>{{ contact.title | trim }}:</span>
+        <a href="{{ contact.url | trim }}" rel="nofollow" target="_blank">{{ contact.name | trim }}</a>
+    </li>
+    {% endfor %}
+</ul>
