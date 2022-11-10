@@ -21,16 +21,7 @@
 
 <body>
     <header>
-        <nav>
-            {% for link in config.extra.navbar %}
-            <a href="{{ link.path | trim }}">{{ link.title | trim }}</a>
-            {% endfor %}
-
-            <span>
-                <span>|</span>
-                <a href="{{ get_url(path='atom.xml', trailing_slash=false) | trim }}">RSS</a>
-            </span>
-        </nav>
+        {% include 'includes/navbar.html' %}
     </header>
 
     <article>
