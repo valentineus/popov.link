@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ page.title | safe }}</h1>
+<h1>{{ page.title | trim }}</h1>
 
 {{ page.content | safe }}
 
 <small>
     <span>Published</span>
-    <time datetime="{{ page.date | date(format='%+') | safe }}">{{ page.date | safe }}</time>
+    <time datetime="{{ page.date | date(format='%+') | trim }}">{{ page.date | trim }}</time>
     <span>|</span>
-    <a href="mailto:hi@popov.link?subject={{ page.title | urlencode | safe }}">Feedback</a>
+    <a href="mailto:hi@popov.link?subject={{ page.title | urlencode | trim }}">Feedback</a>
     <span>|</span>
-    <a href="{{ page.permalink | safe }}">Permalink</a>
+    <a href="{{ page.permalink | trim }}">Permalink</a>
 </small>
 {% endblock content %}

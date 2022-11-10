@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ page.title | safe }}</h1>
+<h1>{{ page.title | trim }}</h1>
 
 <section>
     {{ page.content | safe }}

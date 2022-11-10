@@ -9,10 +9,10 @@
 
     {% block rss %}
     <!-- RSS -->
-    <link href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" rel="alternate" title="RSS" type="application/atom+xml" />
+    <link href="{{ get_url(path='atom.xml', trailing_slash=false) | trim }}" rel="alternate" title="RSS" type="application/atom+xml" />
     {% endblock %}
 
-    <title>{{ config.title | safe }}</title>
+    <title>{{ config.title | trim }}</title>
 
     <!-- CSS -->
     {% set css = load_data(path='styles.css') %}
@@ -23,12 +23,12 @@
     <header>
         <nav>
             {% for link in config.extra.navbar %}
-            <a href="{{ link.path | safe }}">{{ link.title | safe }}</a>
+            <a href="{{ link.path | trim }}">{{ link.title | trim }}</a>
             {% endfor %}
 
             <span>
                 <span>|</span>
-                <a href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">RSS</a>
+                <a href="{{ get_url(path='atom.xml', trailing_slash=false) | trim }}">RSS</a>
             </span>
         </nav>
     </header>

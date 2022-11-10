@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: {{ get_url(path='sitemap.xml') | safe }}
+Sitemap: {{ get_url(path='sitemap.xml', trailing_slash=false) | trim }}
