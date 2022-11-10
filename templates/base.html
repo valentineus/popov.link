@@ -15,7 +15,7 @@
     <title>{{ config.title | trim }}</title>
 
     <!-- CSS -->
-    {% set css = load_data(path='styles.css') %}
+    {% set css = load_data(path='styles.css', format='plain') %}
     <style>{{ css | safe }}</style>
 </head>
 

@@ -8,4 +8,4 @@ preview = "projects/beryl/preview.jpg"
 
 Beryl is a service created for a large regional internet provider.
 <!-- more -->
-TODO: Add a description😇
+TODO: Add a description:smile:
