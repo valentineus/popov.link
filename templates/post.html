@@ -9,7 +9,8 @@
     <span>Published</span>
     <time datetime="{{ page.date | date(format='%+') | trim }}">{{ page.date | trim }}</time>
     <span>|</span>
-    <a href="mailto:hi@popov.link?subject={{ page.title | urlencode | trim }}">Feedback</a>
+    {% set email = config.extra.author.email | trim %}
+    <a href="mailto:{{ email }}?subject={{ page.title | urlencode | trim }}">Feedback</a>
     <span>|</span>
     <a href="{{ page.permalink | trim }}">Permalink</a>
 </small>

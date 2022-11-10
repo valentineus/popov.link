@@ -77,6 +77,8 @@ anchors = "on"
 [extra]
 # Put all your custom variables here
 
+author = { email = "hi@popov.link" }
+
 contacts = [
   { title = "GitHub", name = "@valentineus", url = "https://github.com/valentineus" },
   { title = "SourceHut", name = "~valentineus", url = "https://sr.ht/~valentineus/" },
