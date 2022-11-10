@@ -1,0 +1,9 @@
+{% if page.title %}
+{% set title = page.title ~ ' | ' ~ config.title %}
+{% endif %}
+
+{% if section.title %}
+{% set title = section.title ~ ' | ' ~ config.title %}
+{% endif %}
+
+<title>{{ title | default(value=config.title) | trim }}</title>

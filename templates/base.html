@@ -12,7 +12,7 @@
     <link href="{{ get_url(path='atom.xml', trailing_slash=false) | trim }}" rel="alternate" title="RSS" type="application/atom+xml" />
     {% endblock %}
 
-    <title>{{ config.title | trim }}</title>
+    {% include 'includes/title.html' %}
 
     <!-- CSS -->
     {% set css = load_data(path='styles.css', format='plain') %}
