@@ -6,4 +6,4 @@
 {% set title = section.title ~ ' | ' ~ config.title %}
 {% endif %}
 
-<title>{{ title | default(value=config.title) | trim }}</title>
+<title>{{ title | default(value=config.title) | trim | safe }}</title>
