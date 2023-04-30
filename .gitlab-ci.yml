@@ -4,6 +4,9 @@ stages:
 deploy-job:
   stage: deploy
 
+  only:
+    - master
+
   script:
     - zola build
-    - rsync --archive --checksum --delete --verbose ./public /var/www
+    - rsync --archive --checksum --delete --verbose ./public/ /var/www
