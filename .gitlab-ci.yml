@@ -5,4 +5,5 @@ deploy-job:
   stage: deploy
 
   script:
-    - echo "Hello, World!"
+    - zola build
+    - rsync --archive --checksum --delete --verbose ./public /var/www
