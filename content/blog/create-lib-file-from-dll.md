@@ -1,5 +1,5 @@
 +++
-title = "Create \".lib\" file from \".dll\""
+title = "Create \".lib\" file from \".dll\" (copy)"
 date = 2023-05-04
 +++
 
