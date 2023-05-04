@@ -1,0 +1,2 @@
+{% set url = current_url | default(value='/') %}
+<link href="{{ url | trim | safe }}" rel="canonical" />
