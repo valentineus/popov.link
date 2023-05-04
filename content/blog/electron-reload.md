@@ -1,5 +1,6 @@
 +++
 title = "Горячая перезагрузка ElectronJS приложения"
+authors = ["Valentin Popov"]
 date = 2019-08-15
 +++
 

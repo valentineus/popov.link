@@ -1,5 +1,6 @@
 +++
 title = "Установка Moodle в Fedora"
+authors = ["Valentin Popov"]
 date = 2018-07-23
 +++
 

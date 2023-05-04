@@ -1,5 +1,6 @@
 +++
 title = "Create \".lib\" file from \".dll\" (copy)"
+authors = ["Adrian Henke"]
 date = 2023-05-04
 +++
 
