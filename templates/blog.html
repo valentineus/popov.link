@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ section.title | trim }}</h1>
-
 {% for year, posts in section.pages | group_by(attribute='year') %}
 <section>
     <h2>{{ year | trim }}</h2>
