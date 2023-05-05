@@ -8,5 +8,6 @@ deploy-job:
     - master
 
   script:
+    - zola check
     - zola build
     - rsync --archive --checksum --delete --verbose ./public/ /var/www

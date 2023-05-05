@@ -4,7 +4,7 @@ authors = ["Valentin Popov"]
 date = 2012-01-30
 +++
 
-> Перенос [оригинальной статьи](http://adeptus-mechanicus.blogspot.com/2012/01/chromium-projects.html) 2012 года из моего [старого блога](http://adeptus-mechanicus.blogspot.com/) ([зеркало](https://web.archive.org/web/20160217052148/http://adeptus-mechanicus.blogspot.com/)).
+> Перенос [оригинальной статьи](https://adeptus-mechanicus.blogspot.com/2012/01/chromium-projects.html) 2012 года из моего [старого блога](https://adeptus-mechanicus.blogspot.com/) ([зеркало](https://web.archive.org/web/20160217052148/http://adeptus-mechanicus.blogspot.com/)).
 
 __Добрый день, уважаемые читатели!__
 
