@@ -1,6 +1,12 @@
 # Personal website
 
-Mirrors of the site:
+URLs of the site:
 
-- [GitHub Pages](https://valentineus.github.io/);
-- [Netlify](https://valentineus.netlify.app/);
+- [https://popov.link/](https://popov.link/) (main);
+- [https://valentineus.github.io/](https://valentineus.github.io/) (mirror);
+- [https://valentineus.netlify.app/](https://valentineus.netlify.app/) (mirror);
+
+Source code of the site:
+
+- [https://git.popov.link/valentineus/homepage](https://git.popov.link/valentineus/homepage) (main);
+- [https://github.com/valentineus/valentineus.github.io](https://github.com/valentineus/valentineus.github.io) (mirror);
