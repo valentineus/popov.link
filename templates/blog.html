@@ -3,14 +3,14 @@
 {% block content %}
 {% for year, posts in section.pages | group_by(attribute='year') %}
 <section>
-    <h2>{{ year | trim }}</h2>
+    <h2>{{ year | trim | safe }}</h2>
 
     <ul>
         {% for page in posts %}
         <li>
-            <time datetime="{{ page.date | date(format='%+') | trim }}">{{ page.date | date(format='%Y/%m/%d') | trim }}</time>
+            <time datetime="{{ page.date | date(format='%+') | trim | safe }}">{{ page.date | date(format='%Y/%m/%d') | trim | safe }}</time>
             <span>&mdash;</span>
-            <a href="{{ page.permalink | trim }}">{{ page.title | trim }}</a>
+            <a href="{{ page.path | trim | safe }}">{{ page.title | trim | safe }}</a>
         </li>
         {% endfor %}
     </ul>
