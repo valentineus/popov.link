@@ -16,7 +16,7 @@ body {
   color: $color-text;
   font-feature-settings: $font-feature;
   font-size: $font-size-base;
-  font-synthesis: none;
+  font-synthesis: weight style small-caps;
   line-height: 1.54;
   margin: auto;
   max-width: 60em;
