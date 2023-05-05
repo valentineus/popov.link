@@ -1,36 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome!</h1>
+<style>
+    .photo {
+        border-radius: 50%;
+        width: 256px;
+        height: 256px;
+        float: left;
+        margin: 0 [x] [y] 0;
+    }
+
+    .text {
+        /* clear: left; */
+    }
+
+    .wrapper {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
 
 <section>
-    <p>Hi there! Thanks for stopping by my website!</p>
+    <div>
+        <img class="photo" src="/photo.jpg" alt="" align="middle">
 
-    <p>
-        My name is Valentin Popov, and I'm a Software Developer and Team Leader at
-        <a href="https://digineat.com/" target="_blank">DigiNeat LLC</a>. I love all things OpenSource and have a
-        particular interest in ethical hacking, building electronic gadgets, and 3D printing. I'm a pro at working with
-        languages like JavaScript, TypeScript, Rust, Go and PHP, and I'm always looking to learn more and improve my
-        skills.
-    </p>
-
-    <p>
-        I'm excited to share my experiences and knowledge with you through this website, so I hope you find the content
-        helpful and informative.
-    </p>
+        <div class="text">
+            <h1>Website</h1>
+        </div>
+    </div>
 </section>
 
-<section>
-    {% include 'includes/contacts.html' %}
-</section>
-
-<section>
-    <h2>Useful links</h2>
-    {% include 'includes/useful_links.html' %}
-</section>
-
-<section>
-    <h2>Recent posts</h2>
-    {% include 'includes/recent_posts.html' %}
-</section>
 {% endblock content %}
