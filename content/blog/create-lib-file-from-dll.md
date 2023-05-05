@@ -1,18 +1,18 @@
 +++
-title = "Create \".lib\" file from \".dll\" (copy)"
+title = "Create \".lib\" file from \".dll\" (archive)"
 authors = ["Adrian Henke"]
 date = 2023-05-04
 +++
 
-> This's a copy of an existing post.
-> The original article [is here](https://web.archive.org/web/20160228170508/https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/).
+> This's a copy of a non-my post.
+> The original article [is here](https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/) ([archive](https://web.archive.org/web/20161118122539/https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/)).
 
-When working with 3rd party win dll's you sometimes miss the according to the ".lib" file required to compile against it.
-There is an [MS KB](https://jeffpar.github.io/kbarchive/kb/131/Q131313/) article showing how to generate a ".lib" file from a ".dll" however the required steps are not described detailed enough I think.
+When working with 3rd party win dll's you sometimes miss the according to the `*.lib` file required to compile against it.
+There is an [MS KB Q131313](http://support.microsoft.com/?scid=kb%3Ben-us%3B131313&x=1&y=15) ([archive](https://jeffpar.github.io/kbarchive/kb/131/Q131313/)) article showing how to generate a `*.lib` file from a `*.dll` however the required steps are not described detailed enough I think.
 So here is my quick guide.
 
-Open the Visual Studio Command Prompt, you find its shortcut in _"Start -> Programs -> Microsoft Visual Studio Tools"_.
-Now run the "dumpbin" command to get a list of all exported functions of your dll:
+Open the "Visual Studio Command Prompt", you find its shortcut in "_Start_" -> "_Programs_" -> "_Microsoft Visual Studio Tools_".
+Now run the `dumpbin` command to get a list of all exported functions of your dll:
 
 ```shell
 dumpbin /exports C:\\yourpath\\yourlib.dll
@@ -34,8 +34,8 @@ ordinal hint RVA      name
 ```
 
 Now copy all those function names (only the names!) and paste them into a new text file.
-Name the next file "yourlib.def" and put the line "EXPORTS" at its top.
-My "yourlib.def" file looks like this:
+Name the next file `yourlib.def` and put the line "EXPORTS" at its top.
+My `yourlib.def` file looks like this:
 
 ```
 EXPORTS
@@ -48,8 +48,8 @@ jinit_c_coef_controller
 ...
 ```
 
-Now from that definition file, we can finally create the ".lib" file.
-We use the "lib" tool for this, so run this command in your Visual Studio Command Prompt:
+Now from that definition file, we can finally create the `*.lib` file.
+We use the `lib` tool for this, so run this command in your "Visual Studio Command Prompt":
 
 ```shell
 lib /def:C:\\mypath\\mylib.def /OUT:C:\\mypath\\mylib.lib
