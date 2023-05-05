@@ -8,7 +8,7 @@ date = 2023-05-04
 > The original article [is here](https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/) ([archive](https://web.archive.org/web/20161118122539/https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/)).
 
 When working with 3rd party win dll's you sometimes miss the according to the `*.lib` file required to compile against it.
-There is an [MS KB Q131313](http://support.microsoft.com/?scid=kb%3Ben-us%3B131313&x=1&y=15) ([archive](https://jeffpar.github.io/kbarchive/kb/131/Q131313/)) article showing how to generate a `*.lib` file from a `*.dll` however the required steps are not described detailed enough I think.
+There is an [Microsoft KB-Q131313](http://support.microsoft.com/?scid=kb%3Ben-us%3B131313&x=1&y=15) ([archive](https://jeffpar.github.io/kbarchive/kb/131/Q131313/)) article showing how to generate a `*.lib` file from a `*.dll` however the required steps are not described detailed enough I think.
 So here is my quick guide.
 
 Open the "Visual Studio Command Prompt", you find its shortcut in "_Start_" -> "_Programs_" -> "_Microsoft Visual Studio Tools_".
