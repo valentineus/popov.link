@@ -1,14 +1,15 @@
 on: push
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
       - name: 'checkout'
         uses: actions/checkout@v3.0.0
-      - name: 'build_and_deploy'
+      - name: 'build and deploy'
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
           BUILD_FLAGS: --base-url ${{ secrets.DOMAIN }}
-          PAGES_BRANCH: gh-pages
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_BRANCH: master
+          REPOSITORY: ${{ secrets.REPOSITORY }}
+          TOKEN: ${{ secrets.TOKEN }}
