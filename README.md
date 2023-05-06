@@ -9,4 +9,4 @@ URLs of the site:
 Source code of the site:
 
 - [https://git.popov.link/valentineus/homepage](https://git.popov.link/valentineus/homepage) (main);
-- [https://github.com/valentineus/valentineus.github.io](https://github.com/valentineus/valentineus.github.io) (mirror);
+- [https://github.com/valentineus/homepage](https://github.com/valentineus/homepage) (mirror);
