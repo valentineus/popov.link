@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ page.title | trim }}</h1>
+<section>
+    <h1>{{ page.title | trim | safe }}</h1>
+</section>
 
-{{ page.content | safe }}
+<section>
+    {{ page.content | safe }}
+</section>
 
-<small>
-    <span>Published</span>
-    <time datetime="{{ page.date | date(format='%+') | trim }}">{{ page.date | trim }}</time>
-    <span>|</span>
-    {% set email = config.extra.author.email | trim %}
-    <a href="mailto:{{ email }}?subject={{ page.title | urlencode | trim }}">Feedback</a>
-    <span>|</span>
-    <a href="{{ page.permalink | trim }}">Permalink</a>
-</small>
+<section>
+    {% include 'includes/comments.html' %}
+</section>
 {% endblock content %}
