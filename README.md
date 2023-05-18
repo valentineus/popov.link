@@ -3,7 +3,6 @@
 URLs of the site:
 
 - [https://popov.link/](https://popov.link/) (main);
-- [https://valentineus.github.io/](https://valentineus.github.io/) (mirror);
 - [https://valentineus.netlify.app/](https://valentineus.netlify.app/) (mirror);
 
 Source code of the site:
