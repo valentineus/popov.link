@@ -9,7 +9,9 @@
     {{ page.content | safe }}
 </section>
 
+{% if page.permalink is not containing('.onion') %}
 <section>
     {% include 'includes/comments.html' %}
 </section>
+{% endif %}
 {% endblock content %}
