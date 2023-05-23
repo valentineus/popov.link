@@ -14,7 +14,7 @@ So here is my quick guide.
 Open the "Visual Studio Command Prompt", you find its shortcut in "_Start_" -> "_Programs_" -> "_Microsoft Visual Studio Tools_".
 Now run the `dumpbin` command to get a list of all exported functions of your dll:
 
-```shell
+```bash
 dumpbin /exports C:\\yourpath\\yourlib.dll
 ```
 
@@ -51,7 +51,7 @@ jinit_c_coef_controller
 Now from that definition file, we can finally create the `*.lib` file.
 We use the `lib` tool for this, so run this command in your "Visual Studio Command Prompt":
 
-```shell
+```bash
 lib /def:C:\\mypath\\mylib.def /OUT:C:\\mypath\\mylib.lib
 ```
 
