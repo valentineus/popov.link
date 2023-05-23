@@ -91,7 +91,7 @@ external_level = "warn"
 [extra]
 # Put all your custom variables here
 
-author = { email = "hi@popov.link" }
+author = { email = "valentin@popov.link" }
 
 contacts = [
   { title = "GitHub", name = "@valentineus", url = "https://github.com/valentineus" },
