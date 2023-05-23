@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://popov.link"
+base_url = "http://popov.link"
 
 # The site title and description; used in feeds by default.
 title = "Valentin Popov's Technology Blog"
