@@ -1,5 +1,6 @@
 +++
 title = "Create \".lib\" file from \".dll\" (archive)"
+description = "Learn how to generate a *.lib file from a *.dll with this comprehensive guide. Using the Visual Studio Command Prompt and Microsoft's recommended tools, this article walks you through the steps for a seamless process. Perfect for developers working with 3rd party win dll's."
 authors = ["Adrian Henke"]
 date = 2023-05-04
 +++

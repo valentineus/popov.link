@@ -1,0 +1,13 @@
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+{% if page.description %}
+{% set description = page.description %}
+{% endif %}
+
+{% if section.description %}
+{% set description = section.description %}
+{% endif %}
+
+<meta name="description" content="{{ description | default(value=config.description) | trim | safe }}" />

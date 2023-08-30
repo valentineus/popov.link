@@ -1,5 +1,6 @@
 +++
 title = "Горячая перезагрузка ElectronJS приложения"
+description = "Руководство по автоматической перезагрузке приложений на Electron с помощью пакетов electron-reload и electron-webpack. Обход проблем с совместимостью и использование HMR для renderer процесса."
 authors = ["Valentin Popov"]
 date = 2019-08-15
 +++
