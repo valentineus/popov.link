@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section>
+<section class="post_header">
     <h1>{{ page.title | trim | safe }}</h1>
+
+    <p>
+        <small>
+            Posted
+            <time datetime="{{ page.date | date(format='%+') | trim | safe }}">{{ page.date | date(format='%B %e, %Y', timezone='Europe/Moscow') }}</time>
+            by <a href="mailto:valentin@popov.link?subject={{ page.title | trim | safe | urlencode }}">Valentin Popov</a>&nbsp;&hyphen;
+            <strong>{{ page.reading_time | safe }}&nbsp;min read</strong>
+        </small>
+    </p>
 </section>
 
 <section>
