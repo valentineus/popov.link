@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section>
+    <h1>Latest posts</h1>
+</section>
+
 {% for year, posts in section.pages | group_by(attribute='year') %}
 <section>
     <h2>{{ year | trim | safe }}</h2>
