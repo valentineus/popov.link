@@ -1,9 +1,11 @@
 header {
-  background-color: $color-header;
-  box-shadow: 0 5px 5px $color-header;
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-header;
+  box-shadow: 0 5px 5px $color-bg;
   left: 0;
   line-height: 3.5em;
-  position: absolute;
+  opacity: .975;
+  position: fixed;
   right: 0;
   top: 0;
 }
