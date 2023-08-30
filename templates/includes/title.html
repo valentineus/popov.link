@@ -1,9 +1,9 @@
 {% if page.title %}
-{% set title = page.title %}
+{% set title = page.title ~ ' | VPTB' %}
 {% endif %}
 
 {% if section.title %}
-{% set title = section.title %}
+{% set title = section.title ~ ' | VPTB' %}
 {% endif %}
 
 <title>{{ title | default(value=config.title) | trim | safe }}</title>
