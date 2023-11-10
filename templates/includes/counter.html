@@ -1,5 +1,5 @@
 {% set url = current_url | default(value='/') %}
 
 {% if url is not containing('.onion') %}
-<script async data-website-id="c3d1c4c4-3d33-4523-8829-90eb352fc3aa" src="https://analytics.umami.is/script.js"></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e99c0f2068c344eab04215551857e916"}'></script>
 {% endif %}
