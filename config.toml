@@ -102,10 +102,6 @@ contacts = [
   { title = "PGP", name = "AE3CE523DAAA8401", url = "/public.asc" },
 ]
 
-links = [
-  { title = "Nokia N900 archives", url = "https://disk.yandex.ru/d/L-NZ3c4qc7Uizw", description = "Official firmware, tools and images for N900." },
-]
-
 navbar = [
   { title = "Home", path = "/" },
   { title = "Blog", path = "/blog/" },

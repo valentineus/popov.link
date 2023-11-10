@@ -1,9 +1,0 @@
-<ul>
-    {% for link in config.extra.links %}
-    <li>
-        <a href="{{ link.url | trim }}" target="_blank">{{ link.title | trim }}</a>
-        <span>&mdash;</span>
-        <span>{{ link.description | trim }}</span>
-    </li>
-    {% endfor %}
-</ul>
