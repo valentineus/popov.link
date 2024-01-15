@@ -95,8 +95,8 @@ author = { email = "valentin@popov.link" }
 
 contacts = [
   { title = "GitHub", name = "@valentineus", url = "https://github.com/valentineus" },
-  { title = "SourceHut", name = "~valentineus", url = "https://sr.ht/~valentineus/" },
   { title = "LinkedIn", name = "valentineus", url = "https://www.linkedin.com/in/valentineus/" },
+  { title = "Mastodon", name = "valentineus", url = "https://mastodon.social/@valentineus" },
   { title = "Telegram", name = "@valentineus", url = "https://t.me/valentineus" },
   { title = "E-Mail", name = "valentin@popov.link", url = "mailto:valentin@popov.link" },
   { title = "PGP", name = "AE3CE523DAAA8401", url = "/public.asc" },
