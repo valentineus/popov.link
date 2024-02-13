@@ -1,9 +1,8 @@
 ---
-# Loading site styles
 ---
 
-@import 'base/normalize';
-@import 'base/highlight';
-@import 'base/sakura';
-@import 'base/main';
-@import 'base/fonts';
+@import "reset";
+@import "variables";
+@import "framework";
+@import "navbar";
+@import "print";
