@@ -1,12 +1,12 @@
 # Permalinks
-permalink: "/:year/:month/:day/:title"
+permalink: "/blog/:title"
 
 # Time Zone
-timezone: "Europe/Samara"
+timezone: "Europe/Moscow"
 
 # Catalogs
 include:
-  - "_pages"
+    - "_pages"
 
 # Parsers
 highlighter: "rouge"
@@ -14,54 +14,44 @@ markdown: "kramdown"
 
 # Markdown
 kramdown:
-  input: "GFM"
-  hard_wrap: false
-  syntax_highlighter: "rouge"
+    input: "GFM"
+    hard_wrap: false
+    syntax_highlighter: "rouge"
 
 # SASS/SCSS
 sass:
-  sass_dir: "_scss"
-  style: ":compressed"
-
-# AutoPrefixer
-autoprefixer:
-  browsers:
-    - "> 1%"
-    - "last 10 versions"
+    sass_dir: "_scss"
+    sourcemap: "never"
+    style: ":compressed"
 
 # Compress HTML
 compress_html:
-  blanklines: false
-  clippings: "all"
-  comments: ["<!-- ", " -->"]
-  endings: []
-  profile: false
-  startings: []
+    blanklines: false
+    clippings: "all"
+    comments: ["<!-- ", " -->"]
+    endings: []
+    profile: false
+    startings: []
 
 # Website address
-url: "https://valentineus.link"
+url: "https://valentineus.github.io"
 baseurl: ""
 
 # Site description
-title: "My homepage"
-description: "I'm Full-Stack Web Developer"
+title: "Valentin Popov's Technology Blog"
+description: "Tech insights and coding best practices from an OpenSource enthusiast and ethical hacker."
+email: "valentin@popov.link"
 rss: "/atom.xml"
 lang: "ru"
 
-# About the author
-author:
-  email: "info@valentineus.link"
-  name: "Valentin Popov"
-  url: "https://valentineus.link"
-
 # Plugins
 plugins:
-  - "octopress-autoprefixer"
+    - jekyll-sitemap
 
 # Exceptions
 exclude:
-  - ".*"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "LICENSE.txt"
-  - "README.md"
+    - ".*"
+    - "Gemfile"
+    - "Gemfile.lock"
+    - "LICENSE.txt"
+    - "README.md"

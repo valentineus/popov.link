@@ -1,7 +1,13 @@
 ---
 layout: page
-permalink: "404.html"
-title: "404: Not Found"
+permalink: /404.html
 ---
 
-<p>Sorry, this page doesn't exist.</p>
+<div style="text-align:center;">
+    <h1>404</h1>
+    <p><strong>Page not found.</strong></p>
+
+    <small>
+        <p>If you see this message, please <a href="mailto:{{ site.email | strip | url_encode }}?subject={{ 'I found a broken page' | strip | normalize_whitespace | xml_escape }}">let me know</a>.</p>
+    </small>
+</div>

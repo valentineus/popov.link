@@ -2,10 +2,4 @@
 layout: default
 ---
 
-<main class="container">
-    <header>
-        <h1>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</h1>
-    </header>
-
-    {{ content }}
-</main>
+{{ content }}

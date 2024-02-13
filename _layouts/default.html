@@ -4,10 +4,19 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="{{ site.lang | strip | slugify | xml_escape }}">
-    {% include head.html %}
 
-    <body>
+{% include head.html %}
+
+<body>
+    <header>
+        {% include navbar.html %}
+    </header>
+
+    <article>
         {{ content }}
-    </body>
+    </article>
+
+    {% include counter.html %}
+</body>
 
 </html>

@@ -1,9 +1,9 @@
 ---
-permalink: "robots.txt"
 layout: null
+permalink: /robots.txt
 ---
 
 User-agent: *
-Allow: {{ site.baseurl | relative_url | uri_escape }}
 Disallow: {{ "/404.html" | relative_url | uri_escape }}
+Allow: /
 Sitemap: {{ "sitemap.xml" | absolute_url | uri_escape }}

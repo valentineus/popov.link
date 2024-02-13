@@ -2,19 +2,25 @@
 layout: default
 ---
 
-<article class="container">
-    <small>
-        <span>Published</span>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' | strip | normalize_whitespace | xml_escape }}</time>
-        <span>on</span>
-        <a href="{{ site.url | absolute_url | uri_escape }}" target="_self">{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</a>
-        <span>|</span>
-        <a href="{{ page.url | absolute_url | uri_escape }}" target="_blank">Permalink</a>
-    </small>
+<section style="text-align: center;">
+    <h1>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</h1>
 
-    <header>
-        <h1>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</h1>
-    </header>
+    <p>
+        <small>
+            Posted
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %e, %Y' | strip | normalize_whitespace | xml_escape }}</time>
+            by
+            <a href="mailto:{{ site.email | strip | url_encode }}?subject={{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}">Valentin Popov</a>
+            &nbsp;&hyphen;
+            <strong>{% include reading-time.html %}</strong>
+        </small>
+    </p>
+</section>
 
+<section>
     {{ content }}
-</article>
+</section>
+
+<section>
+    {% include comments.html %}
+</section>
