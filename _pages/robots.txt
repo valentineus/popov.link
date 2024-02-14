@@ -4,6 +4,6 @@ permalink: /robots.txt
 ---
 
 User-agent: *
-Disallow: {{ "/404.html" | relative_url | uri_escape }}
+Disallow: {{- "/404.html" | relative_url | uri_escape -}}
 Allow: /
-Sitemap: {{ "sitemap.xml" | absolute_url | uri_escape }}
+Sitemap: {{- "sitemap.xml" | absolute_url | uri_escape -}}

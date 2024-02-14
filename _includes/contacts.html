@@ -1,11 +1,11 @@
 <h2>Contacts</h2>
 
 <ul>
-    {% for contact in site.data.contacts %}
+    {%- for contact in site.data.contacts -%}
     <li>
-        <a href="{{ contact.url | relative_url | uri_escape }}" target="_blank">{{ contact.title | strip | normalize_whitespace | xml_escape }}</a>
+        <a href="{{- contact.url | relative_url | uri_escape -}}" target="_blank">{{- contact.title | strip | normalize_whitespace | xml_escape -}}</a>
         <span>—</span>
-        <span>{{ contact.description | strip | normalize_whitespace | xml_escape }}</span>
+        <span>{{- contact.description | strip | normalize_whitespace | xml_escape -}}</span>
     </li>
-    {% endfor %}
+    {%- endfor -%}
 </ul>

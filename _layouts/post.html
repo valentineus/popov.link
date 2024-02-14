@@ -3,24 +3,24 @@ layout: default
 ---
 
 <section style="text-align: center;">
-    <h1>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</h1>
+    <h1>{{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}</h1>
 
     <p>
         <small>
             Posted
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %e, %Y' | strip | normalize_whitespace | xml_escape }}</time>
+            <time datetime="{{- page.date | date_to_xmlschema -}}">{{- page.date | date: '%B %e, %Y' | strip | normalize_whitespace | xml_escape -}}</time>
             by
-            <a href="mailto:{{ site.email | strip | url_encode }}?subject={{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}">Valentin Popov</a>
+            <a href="mailto:{{- site.email | strip | url_encode -}}?subject={{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}">Valentin Popov</a>
             &nbsp;&hyphen;
-            <strong>{% include reading-time.html %}</strong>
+            <strong>{%- include reading-time.html -%}</strong>
         </small>
     </p>
 </section>
 
 <section>
-    {{ content }}
+    {{- content -}}
 </section>
 
 <section>
-    {% include comments.html %}
+    {%- include comments.html -%}
 </section>

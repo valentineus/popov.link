@@ -9,12 +9,12 @@ permalink: /blog.html
 
 <section>
     <ul>
-        {% for post in site.posts %}
+        {%- for post in site.posts -%}
         <li>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y/%m/%d' | strip | normalize_whitespace | xml_escape }}</time>
+            <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: '%Y/%m/%d' | strip | normalize_whitespace | xml_escape -}}</time>
             <span>&mdash;</span>
-            <a href="{{ post.url | relative_url | uri_escape }}">{{ post.title | strip | normalize_whitespace | xml_escape }}</a>
+            <a href="{{- post.url | relative_url | uri_escape -}}">{{- post.title | strip | normalize_whitespace | xml_escape -}}</a>
         </li>
-        {% endfor %}
+        {%- endfor -%}
     </ul>
 </section>

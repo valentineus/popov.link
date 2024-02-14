@@ -3,20 +3,20 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | strip | slugify | xml_escape }}">
+<html lang="{{- site.lang | strip | slugify | xml_escape -}}">
 
-{% include head.html %}
+{%- include head.html -%}
 
 <body>
     <header>
-        {% include navbar.html %}
+        {%- include navbar.html -%}
     </header>
 
     <article>
-        {{ content }}
+        {{- content -}}
     </article>
 
-    {% include counter.html %}
+    {%- include counter.html -%}
 </body>
 
 </html>

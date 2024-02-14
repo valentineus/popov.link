@@ -6,20 +6,20 @@
     <meta content="index, follow" name="robots" />
 
     <!-- Title / Description -->
-    <meta content="{{ page.description | default: site.description | strip | normalize_whitespace | xml_escape }}" name="description" />
-    <title>{{ page.title | default: site.title | strip | normalize_whitespace | xml_escape }}</title>
+    <meta content="{{- page.description | default: site.description | strip | normalize_whitespace | xml_escape -}}" name="description" />
+    <title>{{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}</title>
 
     <!-- CSS -->
-    <link href="{{ '/assets/css/styles.css' | relative_url | uri_escape }}" rel="stylesheet" />
+    <link href="{{- '/assets/css/styles.css' | relative_url | uri_escape -}}" rel="stylesheet" />
 
     <!-- RSS -->
-    <link href="{{ site.rss | absolute_url | uri_escape }}" rel="alternate" title="RSS" type="application/atom+xml" />
+    <link href="{{- site.rss | absolute_url | uri_escape -}}" rel="alternate" title="RSS" type="application/atom+xml" />
 
     <!-- Canonical URL -->
-    <link href="{{ page.url | absolute_url | uri_escape }}" rel="canonical" />
+    <link href="{{- page.url | absolute_url | uri_escape -}}" rel="canonical" />
 
     <!--[if lte IE 9]>
-        <script type="text/javascript" src="{{ '/assets/javascript/html5shiv-3.7.3.min.js' | relative_url | uri_escape }}"></script>
-        <script type="text/javascript" src="{{ '/assets/javascript/respond-1.4.2.min.js' | relative_url | uri_escape }}"></script>
+        <script type="text/javascript" src="{{- '/assets/javascript/html5shiv-3.7.3.min.js' | relative_url | uri_escape -}}"></script>
+        <script type="text/javascript" src="{{- '/assets/javascript/respond-1.4.2.min.js' | relative_url | uri_escape -}}"></script>
     <![endif]-->
 </head>
