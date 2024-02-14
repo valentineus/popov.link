@@ -1,6 +1,10 @@
+// Base
 @import "reset";
 @import "variables";
-@import "highlighter";
 @import "framework";
-@import "navbar";
 @import "print";
+
+// Modules
+@import "highlighter";
+@import "navbar";
+@import "welcome";

@@ -1,0 +1,20 @@
+main {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  transform: translate(-50%, -50%);
+
+  div {
+    white-space: nowrap;
+
+    a {
+      color: $color-text;
+      padding: 0 .5em;
+
+      &:visited {
+        color: $color-text;
+      }
+    }
+  }
+}
