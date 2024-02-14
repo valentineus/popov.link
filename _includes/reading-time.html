@@ -3,5 +3,5 @@
 {%- endcapture -%}
 
 {%- unless words contains '-' -%}
-{{- words | plus: 150 | divided_by: 150 | append: '&nbsp;min read' -}}
+{{- words | plus: 150 | divided_by: 150 | append: ' min read' | xml_escape -}}
 {%- endunless -%}

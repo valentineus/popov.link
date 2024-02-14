@@ -8,10 +8,10 @@ layout: default
     <p>
         <small>
             Posted
-            <time datetime="{{- page.date | date_to_xmlschema -}}">{{- page.date | date: '%B %e, %Y' | strip | normalize_whitespace | xml_escape -}}</time>
+            <time datetime="{{- page.date | date_to_xmlschema | xml_escape -}}">{{- page.date | date: '%B %e, %Y' | strip | normalize_whitespace | xml_escape -}}</time>
             by
-            <a href="mailto:{{- site.email | strip | url_encode -}}?subject={{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}">Valentin Popov</a>
-            &nbsp;&hyphen;
+            <a href="mailto:{{- site.email | strip | url_encode -}}?subject={{- page.title | default: site.title | strip | normalize_whitespace | uri_escape -}}">Valentin Popov</a>
+            &hyphen;
             <strong>{%- include reading-time.html -%}</strong>
         </small>
     </p>
