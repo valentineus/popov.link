@@ -6,5 +6,5 @@ permalink: /404.html
 <div style="text-align:center;">
     <h1>404</h1>
     <p><strong>Page not found.</strong></p>
-    <p><small>If you see this message, please <a href="mailto:{{- site.email | strip | url_encode -}}?subject={{- 'I found a broken page' | strip | normalize_whitespace | uri_encode -}}">let me know</a>.</small></p>
+    <p><small>If you see this message, please <a href="mailto:{{- site.email | strip | url_encode -}}?subject={{- 'I found a broken page' | strip | normalize_whitespace | uri_escape -}}">let me know</a>.</small></p>
 </div>
