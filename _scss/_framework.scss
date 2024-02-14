@@ -22,14 +22,14 @@ body {
   margin: auto;
   max-width: 52em;
   min-height: 100vh;
-  padding: 6em 4em 4em 4em;
-  text-rendering: optimizeLegibility;
+  padding: 6em 4em 4em;
+  text-rendering: optimizelegibility;
 }
 
-@media (max-width: 684px) {
+@media (width <=684px) {
   body {
     font-size: $font-size-base * 0.85;
-    padding: 4em 1em 2em 1em;
+    padding: 4em 1em 2em;
   }
 }
 
@@ -174,15 +174,6 @@ td,
 th {
   border-bottom: 1px dashed $color-blossom;
   padding: 0.5em;
-}
-
-input,
-textarea {
-  border: 1px solid $color-text;
-
-  &:focus {
-    border: 1px solid $color-blossom;
-  }
 }
 
 textarea {
