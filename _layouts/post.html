@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section style="text-align: center;">
+<div style="text-align: center;">
     <h1>{{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}</h1>
 
     <p>
@@ -14,12 +14,8 @@ layout: default
             <strong>{%- include reading-time.html -%}</strong>
         </small>
     </p>
-</section>
+</div>
 
-<section>
-    {{- content -}}
-</section>
+{{- content -}}
 
-<section>
-    {%- include comments.html -%}
-</section>
+{%- include comments.html -%}
