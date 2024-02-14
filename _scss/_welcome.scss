@@ -4,10 +4,9 @@
   text-align: center;
   top: 40%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 
   div {
-    white-space: nowrap;
-
     a {
       color: $color-text;
       padding: 0 .5em;
