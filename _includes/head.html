@@ -9,14 +9,14 @@
     <meta content="{{- page.description | default: site.description | strip | normalize_whitespace | xml_escape -}}" name="description" />
     <title>{{- page.title | default: site.title | strip | normalize_whitespace | xml_escape -}}</title>
 
-    <!-- CSS -->
-    <link href="{{- '/assets/css/styles.css' | relative_url | url_escape -}}" rel="stylesheet" />
-
     <!-- RSS -->
     <link href="{{- site.rss | absolute_url | url_escape -}}" rel="alternate" title="RSS" type="application/atom+xml" />
 
     <!-- Canonical URL -->
     <link href="{{- page.url | absolute_url | url_escape -}}" rel="canonical" />
+
+    <!-- CSS -->
+    {%- include styles.html -%}
 
     <!--[if lte IE 9]>
         <script type="text/javascript" src="{{- '/assets/javascript/html5shiv-3.7.3.min.js' | relative_url | url_escape -}}"></script>
