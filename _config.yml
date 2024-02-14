@@ -41,11 +41,12 @@ baseurl: ""
 title: Valentin Popov's Technology Blog
 description: Tech insights and coding best practices from an OpenSource enthusiast and ethical hacker.
 email: valentin@popov.link
-rss: /atom.xml
+rss: /feed.xml
 lang: ru
 
 # Plugins
 plugins:
+    - jekyll-feed
     - jekyll-sitemap
 
 # Exceptions

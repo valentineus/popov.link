@@ -2,6 +2,7 @@
 description: >-
     Руководство по автоматической перезагрузке приложений на Electron с помощью пакетов electron-reload и electron-webpack. Обход проблем с совместимостью и использование HMR для renderer процесса.
 title: Горячая перезагрузка ElectronJS приложения
+author: valentineus
 layout: post
 ---
 
