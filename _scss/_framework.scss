@@ -8,6 +8,7 @@
 html {
   font-family: $font-family-base;
   font-size: 62.5%;
+  min-height: 100%;
   overflow-y: scroll;
 }
 
@@ -20,6 +21,7 @@ body {
   line-height: 1.5;
   margin: auto;
   max-width: 52em;
+  min-height: 100vh;
   padding: 6em 4em 4em 4em;
   text-rendering: optimizeLegibility;
 }
@@ -38,7 +40,6 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  hyphens: auto;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   margin-top: 3rem;
@@ -200,7 +201,7 @@ input[type="button"] {
   color: $color-bg;
   cursor: pointer;
   display: inline-block;
-  padding: 5px 10;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -228,8 +229,8 @@ input {
   box-shadow: none;
   box-sizing: border-box;
   color: $color-text;
-  margin-bottom: 10;
-  padding: 6px 10;
+  margin-bottom: 10px;
+  padding: 6px 10px;
 
   &:focus {
     border: 1px solid $color-blossom;
