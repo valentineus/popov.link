@@ -13,7 +13,7 @@
     <link href="{{- site.rss | absolute_url | url_escape -}}" rel="alternate" title="RSS" type="application/atom+xml">
 
     <!-- Canonical URL -->
-    <link href="{{- page.url | absolute_url | url_escape -}}" rel="canonical">
+    <link href="{{- page.url | absolute_url | url_escape | replace: 'index.html', '' -}}" rel="canonical">
 
     <!-- CSS -->
     {%- include styles.html -%}
