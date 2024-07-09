@@ -1,0 +1,15 @@
+{
+  "name": "Zola Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    1111
+  ],
+  "portsAttributes": {
+    "1111": {
+      "label": "Application",
+      "onAutoForward": "notify"
+    }
+  }
+}
