@@ -1,9 +1,0 @@
----
-layout: null
-permalink: /robots.txt
----
-
-User-agent: *
-Disallow: {{ "/404.html" | relative_url | url_escape }}
-Allow: /
-Sitemap: {{ "sitemap.xml" | absolute_url | url_escape }}

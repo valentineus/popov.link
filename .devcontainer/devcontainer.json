@@ -1,15 +1,15 @@
 {
-  "name": "Zola Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "forwardPorts": [
-    1111
-  ],
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "forwardPorts": [4321],
   "portsAttributes": {
-    "1111": {
+    "4321": {
       "label": "Application",
       "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
     }
   }
 }

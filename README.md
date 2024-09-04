@@ -1,22 +1,16 @@
 # Personal site
 
-This is my main site.
-The site publishes articles, useful information and notes.
-Also, the site serves as a hosting of free and personal images.
+This is my main site. The site publishes articles, useful information and notes. Also, the site serves as a hosting of free and personal images.
 
 Principles of site development:
 
-* Lightness and minimalism.
-The site is designed to store information, it's not a heavy application;
+-   Lightness and minimalism. The site is designed to store information, it's not a heavy application;
 
-* Maximum cross-platform.
-Information should be read from any device and software;
+-   Maximum cross-platform. Information should be read from any device and software;
 
-* Focusing on content perception.
-Only useful information, nothing superfluous;
+-   Focusing on content perception. Only useful information, nothing superfluous;
 
-* No JS on the site.
-The site should be completely safe for the user;
+-   No JS on the site. The site should be completely safe for the user;
 
 ## Development
 
@@ -52,6 +46,4 @@ Material on the site is published on the CC BY-NC 3.0 license.
 
 <img width="256px" alt="MIT License" src="https://raw.githubusercontent.com/valentineus/valentineus.github.io/master/assets/images/7d05cad0-d553-42c7-be1f-7007926ba720.png" />
 
-[MIT](LICENSE.txt).
-Copyright (c)
-[Valentin Popov](https://valentineus.link/).
+[MIT](LICENSE.txt). Copyright (c) [Valentin Popov](https://valentineus.link/).

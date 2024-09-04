@@ -1,6 +1,0 @@
-<nav>
-    {%- for link in site.data.navbar -%}
-    <a href="{{- link.path | relative_url | url_escape -}}">{{- link.title | strip | normalize_whitespace | xml_escape -}}</a>
-    {%- endfor -%}
-    <span><span>|</span><a href="{{- site.rss | absolute_url | url_escape -}}">RSS</a></span>
-</nav>
