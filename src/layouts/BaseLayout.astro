@@ -1,27 +1,15 @@
 ---
-import CanonicalURL from "../components/CanonicalURL.astro";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html>
-	<head>
-		<!-- Meta tags -->
-		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-		<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<meta content="index, follow" name="robots" />
-
-		<!-- Title / Description -->
-		<meta content="Description" name="description" />
-		<title>Title</title>
-
-		<!-- RSS -->
-		<link href="#" rel="alternate" title="RSS" type="application/atom+xml" />
-
-		<!-- Canonical URL -->
-		<CanonicalURL />
-	</head>
+	<Head />
 
 	<body>
-		<slot />
+		<Header />
+		<article>
+			<slot />
+		</article>
 	</body>
 </html>
