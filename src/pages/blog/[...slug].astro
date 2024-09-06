@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import Comments from "../../components/Comments.astro";
 import Layout from "../../layouts/PageLayout.astro";
 
 export async function getStaticPaths() {
@@ -34,4 +35,5 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 		</p>
 	</div>
 	<Content />
+	<Comments />
 </Layout>
