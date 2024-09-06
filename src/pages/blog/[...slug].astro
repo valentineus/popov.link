@@ -27,8 +27,8 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 		<p>
 			<small>
 				Posted
-				<time datetime="#">#</time>
-				&nbsp;by&nbsp;Valentin Popov&nbsp;‐
+				<time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toDateString()}</time>
+				&nbsp;by&nbsp;{post.data.author}&nbsp;‐
 				<strong>{remarkPluginFrontmatter.minutesRead}</strong>
 			</small>
 		</p>
