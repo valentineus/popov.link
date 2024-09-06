@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "../../layouts/PostLayout.astro";
+import Layout from "../../layouts/PageLayout.astro";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
@@ -12,9 +12,26 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
+<style>
+	.header {
+		text-align: center;
+	}
+</style>
+
 <Layout>
+	<div class="header">
+		<h1>Title</h1>
+		<p>
+			<small>
+				Posted
+				<time datetime="#">#</time>
+				&nbsp;by&nbsp;Valentin Popov&nbsp;‐
+				<strong>{remarkPluginFrontmatter.minutesRead}</strong>
+			</small>
+		</p>
+	</div>
 	<Content />
 </Layout>
