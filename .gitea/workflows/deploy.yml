@@ -25,4 +25,4 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: website
-      - run: rsync --delete -a ./ /var/www/popov.link/
+      - run: rsync --delete-after -a ./ /var/www/popov.link/
