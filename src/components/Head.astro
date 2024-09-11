@@ -1,17 +1,20 @@
 ---
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description } = Astro.props;
 ---
 
 <head>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<meta content="index, follow" name="robots" />
-	<meta content="Description" name="description" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="description" content={description ?? import.meta.env.DEFAULT_DESCRIPTION} />
+	<meta name="robots" content="index, follow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link href="/feed.xml" rel="alternate" title="RSS" type="application/atom+xml" />
 	<link href="/sitemap-index.xml" rel="sitemap" />
 	<link href={canonicalURL} rel="canonical" />
 
-	<title>Title</title>
+	<title>{title ?? import.meta.env.DEFAULT_TITLE}</title>
 </head>

@@ -6,7 +6,7 @@ export async function GET(context) {
 
 	return rss({
 		customData: `<language>ru-ru</language>`,
-		description: "Tech insights and coding best practices from an OpenSource enthusiast and ethical hacker.",
+		description: import.meta.env.DEFAULT_DESCRIPTION,
 		items: posts.map((post) => ({
 			customData: post.data.customData,
 			description: post.data.description,
@@ -15,6 +15,6 @@ export async function GET(context) {
 			title: post.data.title,
 		})),
 		site: context.site,
-		title: "Valentin Popov’s Technology Blog",
+		title: import.meta.env.DEFAULT_TITLE,
 	});
 }

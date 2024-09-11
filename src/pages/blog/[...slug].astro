@@ -22,7 +22,7 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 	}
 </style>
 
-<Layout>
+<Layout title={post.data.title} description={post.data.description}>
 	<div class="header">
 		<h1>{post.data.title}</h1>
 		<p>
