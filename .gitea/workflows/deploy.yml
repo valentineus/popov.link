@@ -2,8 +2,25 @@ name: Deploy
 on: [push, pull_request]
 
 jobs:
-  build_and_deploy:
-    runs-on: self-hosted
+  build:
+    container: gitea/runner-images:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: dist/
+
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: website
       - run: echo "Deploying to production"
