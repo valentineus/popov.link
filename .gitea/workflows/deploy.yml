@@ -20,8 +20,9 @@ jobs:
 
   deploy:
     runs-on: self-hosted
+    needs: build
     steps:
       - uses: actions/download-artifact@v3
         with:
           name: website
-      - run: echo "Deploying to production"
+      - run: ls -lah
