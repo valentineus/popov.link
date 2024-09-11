@@ -1,5 +1,8 @@
 name: Deploy
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -25,4 +28,4 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: website
-      - run: rsync --delete-after -a ./ /var/www/popov.link/
+      - run: rsync --archive --delete-after ./ /var/www/popov.link/
