@@ -1,0 +1,41 @@
+header {
+	background-color: $color-bg;
+	border-bottom: 1px solid $color-header;
+	box-shadow: 0 5px 5px $color-bg;
+	left: 0;
+	line-height: 3.5em;
+	opacity: 0.975;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+nav {
+	margin: auto;
+	max-width: 60em;
+	padding: 0 4em;
+	text-align: right;
+
+	a {
+		color: $color-text;
+		padding: 0 1em;
+
+		&:visited {
+			color: $color-text;
+		}
+	}
+}
+
+@media (width <=684px) {
+	header {
+		box-shadow: none;
+	}
+
+	nav {
+		padding: 0 2em;
+
+		span {
+			display: none;
+		}
+	}
+}
