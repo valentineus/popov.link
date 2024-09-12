@@ -3,11 +3,11 @@ import Next from "./Pagination/Next.astro";
 import Prev from "./Pagination/Prev.astro";
 
 type Props = {
-	readonly prevUrl?: string;
 	readonly nextUrl?: string;
+	readonly prevUrl?: string;
 };
 
-const { prevUrl, nextUrl } = Astro.props;
+const { nextUrl, prevUrl } = Astro.props;
 ---
 
 <style lang="scss">

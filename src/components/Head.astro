@@ -1,18 +1,18 @@
 ---
 type Props = {
-	readonly description?: string;
-	readonly title?: string;
+	readonly description: string;
+	readonly title: string;
 };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, description } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-	<meta name="description" content={description ?? import.meta.env.DEFAULT_DESCRIPTION} />
+	<meta name="description" content={description} />
 	<meta name="robots" content="index, follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -20,5 +20,5 @@ const { title, description } = Astro.props;
 	<link href="/sitemap-index.xml" rel="sitemap" />
 	<link href={canonicalURL} rel="canonical" />
 
-	<title>{title ?? import.meta.env.DEFAULT_TITLE}</title>
+	<title>{title}</title>
 </head>
