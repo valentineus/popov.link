@@ -1,18 +1,13 @@
 ---
 import { getCollection } from "astro:content";
+import Element from "../components/PostElement.astro";
 import Layout from "../layouts/PageLayout.astro";
 
 const posts = await getCollection("blog");
 ---
 
 <Layout>
-	<ul>
-		{
-			posts.map((post) => (
-				<li>
-					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
-				</li>
-			))
-		}
-	</ul>
+	<section>
+		{posts.map((post) => <Element post={post} />)}
+	</section>
 </Layout>

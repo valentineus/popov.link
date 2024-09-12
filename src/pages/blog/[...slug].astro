@@ -23,17 +23,25 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 </style>
 
 <Layout title={post.data.title} description={post.data.description}>
-	<div class="header">
-		<h1>{post.data.title}</h1>
-		<p>
-			<small>
-				Posted
-				<time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toDateString()}</time>
-				&nbsp;by&nbsp;{post.data.author}&nbsp;‐
-				<strong>{remarkPluginFrontmatter.minutesRead}</strong>
-			</small>
-		</p>
-	</div>
-	<Content />
-	<Comments />
+	<article>
+		<section class="header">
+			<h1>{post.data.title}</h1>
+			<p>
+				<small>
+					Posted
+					<time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toDateString()}</time>
+					&nbsp;by&nbsp;{post.data.author}&nbsp;‐
+					<strong>{remarkPluginFrontmatter.minutesRead}</strong>
+				</small>
+			</p>
+		</section>
+
+		<section>
+			<Content />
+		</section>
+
+		<section>
+			<Comments />
+		</section>
+	</article>
 </Layout>

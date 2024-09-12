@@ -1,0 +1,46 @@
+---
+import dayjs from "dayjs";
+
+const { post } = Astro.props;
+---
+
+<style lang="scss">
+	@import "../scss/_variables.scss";
+
+	/* Post */
+	.post {
+		padding-bottom: 3rem;
+	}
+
+	.link {
+		color: $colorText;
+	}
+
+	/* Meta */
+	.meta {
+		padding-bottom: 1.5rem;
+	}
+
+	.date {
+		opacity: 0.5;
+	}
+
+	.tag {
+		display: none;
+	}
+</style>
+
+<article class="post">
+	<h2><a class="link" href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
+	<div class="meta">
+		<time class="date" datetime={post.data.pubDate.toISOString()}>
+			{dayjs(post.data.pubDate.toString()).format("YYYY-MM-DD")}
+		</time>
+		<ul class="tag">
+			<li><a href="#">tag1</a></li>
+			<li><a href="#">tag2</a></li>
+		</ul>
+	</div>
+	<p>{post.data.description}</p>
+	<a href={`/blog/${post.slug}`}>Read More</a>
+</article>

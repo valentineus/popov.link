@@ -1,7 +1,7 @@
 header {
-	background-color: $color-bg;
-	border-bottom: 1px solid $color-header;
-	box-shadow: 0 5px 5px $color-bg;
+	background-color: $colorBg;
+	border-bottom: 1px solid $colorHeader;
+	box-shadow: 0 5px 5px $colorBg;
 	left: 0;
 	line-height: 3.5em;
 	opacity: 0.975;
@@ -17,11 +17,11 @@ nav {
 	text-align: right;
 
 	a {
-		color: $color-text;
+		color: $colorText;
 		padding: 0 1em;
 
 		&:visited {
-			color: $color-text;
+			color: $colorText;
 		}
 	}
 }
