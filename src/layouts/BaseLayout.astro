@@ -3,6 +3,11 @@ import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import "../scss/global.scss";
 
+type Props = {
+	readonly description?: string;
+	readonly title?: string;
+};
+
 const { title, description } = Astro.props;
 ---
 

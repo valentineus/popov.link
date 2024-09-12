@@ -1,5 +1,10 @@
 ---
+import { type CollectionEntry } from "astro:content";
 import dayjs from "dayjs";
+
+type Props = {
+	readonly post: CollectionEntry<"blog">;
+};
 
 const { post } = Astro.props;
 ---
