@@ -2,17 +2,24 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Comments from "../../components/Comments.astro";
 import Layout from "../../layouts/PageLayout.astro";
+import Pagination from "../../components/PostPagination.astro";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
-	return posts.map((post) => ({
+	const total = posts.length;
+
+	return posts.map((post, index) => ({
 		params: { slug: post.slug },
-		props: post,
+		props: {
+			post,
+			prevPost: index + 1 === total ? null : posts[index + 1],
+			nextPost: index === 0 ? null : posts[index - 1],
+		},
 	}));
 }
 type Props = CollectionEntry<"blog">;
 
-const post = Astro.props;
+const { post, prevPost, nextPost } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
@@ -38,6 +45,10 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 
 		<section>
 			<Content />
+		</section>
+
+		<section>
+			<Pagination prevPost={prevPost} nextPost={nextPost} />
 		</section>
 
 		<section>
