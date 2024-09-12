@@ -13,5 +13,5 @@ const { title } = Astro.props;
 <!-- GoatCounter -->
 <script is:inline data-goatcounter="https://analytics.popov.link/count" src="//gc.zgo.at/count.js"></script>
 <noscript>
-	<img alt="pixel" src={`https://analytics.popov.link/count?p=${path}&t=${title}`} />
+	<img alt="pixel" src={`https://analytics.popov.link/count?p=${encodeURI(path)}&t=${encodeURI(title)}`} />
 </noscript>
