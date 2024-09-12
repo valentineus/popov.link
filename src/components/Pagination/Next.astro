@@ -1,0 +1,18 @@
+---
+type Props = {
+	readonly url: string;
+};
+
+const { url } = Astro.props;
+---
+
+<style lang="scss">
+	span {
+		float: right;
+		max-width: 40%;
+	}
+</style>
+
+<span>
+	<a href={url}>Next &gt;</a>
+</span>
