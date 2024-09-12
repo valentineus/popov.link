@@ -1,0 +1,46 @@
+---
+type Props = {
+	readonly prevUrl?: string;
+	readonly nextUrl?: string;
+};
+
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<style lang="scss">
+	.pagination {
+		overflow: hidden;
+		padding: 3rem 0;
+		width: 100%;
+	}
+
+	.prev,
+	.next {
+		max-width: 40%;
+	}
+
+	.prev {
+		float: left;
+	}
+
+	.next {
+		float: right;
+	}
+</style>
+
+<div class="pagination">
+	{
+		prevUrl && (
+			<span class="prev">
+				<a href={prevUrl}>&lt; Prev</a>
+			</span>
+		)
+	}
+	{
+		nextUrl && (
+			<span class="next">
+				<a href={nextUrl}>Next &gt;</a>
+			</span>
+		)
+	}
+</div>
