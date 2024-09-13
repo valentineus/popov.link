@@ -1,7 +1,4 @@
 ---
-import Next from "./Pagination/Next.astro";
-import Prev from "./Pagination/Prev.astro";
-
 type Props = {
 	readonly nextUrl?: string;
 	readonly prevUrl?: string;
@@ -12,13 +9,27 @@ const { nextUrl, prevUrl } = Astro.props;
 
 <style lang="scss">
 	div {
-		overflow: hidden;
-		padding: 3rem 0;
-		width: 100%;
+		text-align: center;
+	}
+
+	span {
+		margin: 0 2em;
 	}
 </style>
 
 <div>
-	{prevUrl && <Prev url={prevUrl} />}
-	{nextUrl && <Next url={nextUrl} />}
+	{
+		prevUrl && (
+			<span>
+				<a href={prevUrl}>&lt; Prev</a>
+			</span>
+		)
+	}
+	{
+		nextUrl && (
+			<span>
+				<a href={nextUrl}>Next &gt;</a>
+			</span>
+		)
+	}
 </div>
