@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import dayjs from "dayjs";
+---
+
+<style lang="scss">
+	@import "../scss/_variables.scss";
+
+	footer {
+		bottom: 0;
+		height: 4em;
+		left: 0;
+		padding: 1em 4em;
+		position: absolute;
+		right: 0;
+	}
+
+	.left-nav,
+	.right-nav {
+		display: inline-block;
+		vertical-align: top;
+		width: 49%;
+	}
+
+	.left-nav {
+		float: left;
+		font-size: $fontSizeBase * 0.75;
+		text-align: left;
+	}
+
+	.right-nav {
+		float: right;
+		text-align: right;
+	}
+
+	@media (width <=684px) {
+		footer {
+			padding: 4em 1em 2em;
+		}
+	}
+
+	a {
+		color: $colorText;
+
+		&:visited {
+			color: $colorText;
+		}
+	}
+</style>
+
+<footer>
+	<div class="left-nav">
+		<span>&copy; {dayjs().year()} <a href="mailto:valentin@popov.link">Valentin Popov</a></span>
+	</div>
+	<div class="right-nav">
+		<a href="https://github.com/valentineus" target="_blank"><Icon name="hugeicons:github-01" /></a>
+		<a href="https://www.linkedin.com/in/valentineus/" target="_blank"><Icon name="hugeicons:linkedin-01" /></a>
+		<a href="https://analytics.popov.link" target="_blank"><Icon name="hugeicons:analytics-up" /></a>
+		<a href="/feed.xml" target="_blank"><Icon name="hugeicons:rss" /></a>
+	</div>
+</footer>
