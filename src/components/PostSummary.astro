@@ -7,45 +7,39 @@ type Props = {
 };
 
 const { post } = Astro.props;
+const { remarkPluginFrontmatter } = await post.render();
+const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
 ---
 
 <style lang="scss">
 	@import "../scss/_variables.scss";
 
-	/* Post */
-	.post {
+	a {
+		color: $colorText;
+		display: block;
 		padding-bottom: 3rem;
 	}
 
-	.link {
-		color: $colorText;
+	h2 {
+		color: $colorBlossom;
+		font-size: 1.25em;
+		margin: 0.5em 0;
 	}
 
-	/* Meta */
-	.meta {
-		padding-bottom: 1.5rem;
-	}
-
-	.date {
+	div {
+		font-size: $fontSizeBase * 0.75;
 		opacity: 0.5;
-	}
-
-	.tag {
-		display: none;
 	}
 </style>
 
-<article class="post">
-	<h2><a class="link" href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
-	<div class="meta">
-		<time class="date" datetime={post.data.pubDate.toISOString()}>
-			{dayjs(post.data.pubDate.toString()).format("YYYY-MM-DD")}
-		</time>
-		<ul class="tag">
-			<li><a href="#">tag1</a></li>
-			<li><a href="#">tag2</a></li>
-		</ul>
-	</div>
-	<p>{post.data.description}</p>
-	<a href={`/blog/${post.slug}`}>Read More</a>
-</article>
+<a href={`/blog/${post.slug}`}>
+	<article>
+		<div>
+			<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+			<span>•</span>
+			<span>{remarkPluginFrontmatter.minutesRead}</span>
+		</div>
+		<h2>{post.data.title}</h2>
+		<p>{post.data.description}</p>
+	</article>
+</a>

@@ -6,7 +6,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
 	site: "https://popov.link",
 	output: "hybrid",
-	adapter: cloudflare(),
+	adapter: cloudflare({
+		imageService: "compile",
+	}),
 	integrations: [sitemap()],
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
