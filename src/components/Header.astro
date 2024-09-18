@@ -1,14 +1,18 @@
 ---
+import { Icon } from "astro-icon/components";
 
+const { pathname } = Astro.url;
 ---
 
 <style lang="scss">
 	@import "../scss/_variables.scss";
 
+	[data-icon] {
+		vertical-align: middle;
+	}
+
 	header {
 		background-color: $colorBg;
-		border-bottom: 1px solid $colorHeader;
-		box-shadow: 0 5px 5px $colorBg;
 		left: 0;
 		line-height: 3.5em;
 		opacity: 0.975;
@@ -19,38 +23,42 @@
 
 	nav {
 		margin: auto;
-		max-width: 60em;
+		max-width: 52em;
 		padding: 0 4em;
-		text-align: right;
+	}
 
-		a {
+	a {
+		color: $colorText;
+
+		&:visited {
 			color: $colorText;
-			padding: 0 1em;
-
-			&:visited {
-				color: $colorText;
-			}
 		}
 	}
 
 	@media (width <=684px) {
 		header {
-			box-shadow: none;
 			position: fixed;
-		}
-
-		nav {
-			padding: 0 2em;
-
-			span {
-				display: none;
-			}
+			text-align: center;
 		}
 	}
 </style>
 
 <header>
 	<nav>
-		<a href="/">Home</a>
+		<a href="/">
+			{
+				pathname !== "/" ? (
+					<>
+						<Icon name="hugeicons:arrow-left-01" />
+						<span>{import.meta.env.DEFAULT_TITLE}</span>
+					</>
+				) : (
+					<>
+						<Icon name="hugeicons:source-code" />
+						<span>{import.meta.env.DEFAULT_TITLE}</span>
+					</>
+				)
+			}
+		</a>
 	</nav>
 </header>

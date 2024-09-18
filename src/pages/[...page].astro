@@ -20,7 +20,7 @@ const { page } = Astro.props;
 ---
 
 <Layout>
-	<section>
+	<section style={{ "margin-top": "3rem" }}>
 		{page.data.map((post) => <PostSummary post={post} />)}
 	</section>
 
