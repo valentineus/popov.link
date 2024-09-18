@@ -11,6 +11,9 @@ export default defineConfig({
 		imageService: "compile",
 	}),
 	integrations: [icon(), sitemap()],
+	build: {
+		inlineStylesheets: "always",
+	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 	},
