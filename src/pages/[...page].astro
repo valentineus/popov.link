@@ -8,7 +8,10 @@ import PostSummary from "../components/PostSummary.astro";
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const posts = await getCollection("blog");
+	const posts = await getCollection("blog", ({ data }) => {
+		return data.draft !== true;
+	});
+
 	posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 	return paginate(posts, {

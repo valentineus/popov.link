@@ -2,7 +2,9 @@ import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";
 
 export async function GET(context) {
-	const posts = await getCollection("blog");
+	const posts = await getCollection("blog", ({ data }) => {
+		return data.draft !== true;
+	});
 
 	return rss({
 		customData: `<language>ru-ru</language>`,
