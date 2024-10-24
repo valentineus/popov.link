@@ -1,7 +1,8 @@
 {
   "name": "website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2024.10.24",
+  "private": true,
   "scripts": {
     "format": "prettier --write .",
     "dev": "astro dev",
@@ -16,9 +17,7 @@
     "@astrojs/cloudflare": "^11.1.0",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
-    "@iconify-json/hugeicons": "^1.2.1",
     "astro": "^4.16.7",
-    "astro-icon": "^1.1.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "cssnano-preset-advanced": "^7.0.6",

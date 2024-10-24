@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import { remarkReadingTime } from "./src/plugins/remarkReadingTime";
 import cloudflare from "@astrojs/cloudflare";
-import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
@@ -10,7 +9,7 @@ export default defineConfig({
 	adapter: cloudflare({
 		imageService: "compile",
 	}),
-	integrations: [icon(), sitemap()],
+	integrations: [sitemap()],
 	build: {
 		inlineStylesheets: "always",
 	},
