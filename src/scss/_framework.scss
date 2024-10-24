@@ -35,7 +35,7 @@ body {
 	margin: auto;
 	max-width: 52em;
 	min-height: 100vh;
-	padding: 4em;
+	padding: 2em 4em;
 	position: relative;
 	text-rendering: optimizelegibility;
 }
@@ -43,7 +43,7 @@ body {
 @media (width <=684px) {
 	body {
 		font-size: $fontSizeBase * 0.85;
-		padding: 4em 1em 2em;
+		padding: 2em 1em;
 	}
 }
 
