@@ -1,5 +1,7 @@
 @media print {
 	body {
+		background: #fff;
+		color: #000;
 		padding: 0;
 	}
 
@@ -17,5 +19,26 @@
 
 	img {
 		max-width: 500px;
+	}
+
+	* {
+		background: none;
+		border-color: #000;
+		color: #000;
+	}
+
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	table {
+		border: 1px solid #000;
+	}
+
+	th,
+	td {
+		background: none;
+		border: 1px solid #000;
 	}
 }
