@@ -16,12 +16,12 @@ Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur puru
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
--   **To bold text**, use `<strong>`.
--   _To italicize text_, use `<em>`.
--   Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
--   Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
--   <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
--   Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
+- **To bold text**, use `<strong>`.
+- _To italicize text_, use `<em>`.
+- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
+- Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
+- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
+- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
 Most of these elements are styled by browsers with few modifications on our part.
 
@@ -58,9 +58,9 @@ Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. N
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 
--   Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
--   Donec id elit non mi porta gravida at eget metus.
--   Nulla vitae elit libero, a pharetra augue.
+- Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+- Donec id elit non mi porta gravida at eget metus.
+- Nulla vitae elit libero, a pharetra augue.
 
 Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
 

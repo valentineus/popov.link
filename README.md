@@ -4,13 +4,13 @@ This is my main site. The site publishes articles, useful information and notes.
 
 Principles of site development:
 
--   Lightness and minimalism. The site is designed to store information, it's not a heavy application;
+- Lightness and minimalism. The site is designed to store information, it's not a heavy application;
 
--   Maximum cross-platform. Information should be read from any device and software;
+- Maximum cross-platform. Information should be read from any device and software;
 
--   Focusing on content perception. Only useful information, nothing superfluous;
+- Focusing on content perception. Only useful information, nothing superfluous;
 
--   No JS on the site. The site should be completely safe for the user;
+- No JS on the site. The site should be completely safe for the user;
 
 ## Development
 

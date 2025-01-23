@@ -9,12 +9,12 @@ description: 'Как настроить и оптимизировать прое
 
 Потребуется:
 
--   Установленный [rustup](https://rustup.rs/) инструментарий.
--   Установленный пакет [cross-rs](https://github.com/cross-rs/cross) для кросс-компиляции.
--   Упаковщик исполняемых файлов [upx](https://github.com/upx/upx).
--   Контейнеризатор [Docker](https://docs.docker.com/engine/install/) (рекомендуется) или [Podman](https://podman.io/getting-started/installation).
--   SSH подключение к маршрутизатору.
--   Установленный [SFTP сервер](https://openwrt.org/docs/guide-user/services/nas/sftp.server) на TL-MR3020.
+- Установленный [rustup](https://rustup.rs/) инструментарий.
+- Установленный пакет [cross-rs](https://github.com/cross-rs/cross) для кросс-компиляции.
+- Упаковщик исполняемых файлов [upx](https://github.com/upx/upx).
+- Контейнеризатор [Docker](https://docs.docker.com/engine/install/) (рекомендуется) или [Podman](https://podman.io/getting-started/installation).
+- SSH подключение к маршрутизатору.
+- Установленный [SFTP сервер](https://openwrt.org/docs/guide-user/services/nas/sftp.server) на TL-MR3020.
 
 > Требуется rustup инструментарий с официального сайта. Rust и Cargo из репозитория дистрибутива не подойдут. Пакет кросс-компиляции требует rustup, который в репозиториях дистрибутива отсутствует.
 
@@ -166,7 +166,7 @@ curl -L "http://10.0.0.2:3000"
 
 ## Полезные ссылки и источники
 
--   [Building Rust code for my OpenWrt Wi-Fi router](https://blog.dend.ro/building-rust-for-routers/)
--   [Cross Compile Rust For OpenWRT](https://www.kiloleaf.com/posts/cross-compile-rust-for-openwrt/)
--   [Minimizing Rust Binary Size](https://github.com/johnthagen/min-sized-rust)
--   [Кросс-компиляция программ Rust для запуска на маршрутизаторе](https://dzen.ru/media/nuancesprog.ru/krosskompiliaciia-programm-rust-dlia-zapuska-na-marshrutizatore-5f6457b8bdfa745d402cd1ec)
+- [Building Rust code for my OpenWrt Wi-Fi router](https://blog.dend.ro/building-rust-for-routers/)
+- [Cross Compile Rust For OpenWRT](https://www.kiloleaf.com/posts/cross-compile-rust-for-openwrt/)
+- [Minimizing Rust Binary Size](https://github.com/johnthagen/min-sized-rust)
+- [Кросс-компиляция программ Rust для запуска на маршрутизаторе](https://dzen.ru/media/nuancesprog.ru/krosskompiliaciia-programm-rust-dlia-zapuska-na-marshrutizatore-5f6457b8bdfa745d402cd1ec)
