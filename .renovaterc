@@ -7,10 +7,6 @@
       "groupSlug": "all-digest",
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
-    },
-    {
-      "matchUpdateTypes": ["security"],
-      "enabled": false
     }
   ]
 }
