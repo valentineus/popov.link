@@ -11,6 +11,9 @@ export default defineConfig({
 	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
+		shikiConfig: {
+			theme: "vitesse-dark",
+		},
 	},
 	redirects: {
 		"/blog": {
