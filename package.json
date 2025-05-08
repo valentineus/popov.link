@@ -15,19 +15,19 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.1.9",
-    "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "cssnano-preset-advanced": "^7.0.6",
+    "@astrojs/sitemap": "^3.3.1",
+    "astro": "^5.7.11",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "cssnano-preset-advanced": "^7.0.7",
     "dayjs": "^1.11.13",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.83.4",
-    "typescript": "^5.7.3"
+    "sass": "^1.87.0",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
