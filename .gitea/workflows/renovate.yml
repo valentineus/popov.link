@@ -14,3 +14,4 @@ jobs:
           RENOVATE_CONFIG_FILE: renovate.config.cjs
           RENOVATE_REPOSITORIES: ${{ gitea.repository }}
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          LOG_LEVEL: debug
