@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "groupName": "all digest updates",
@@ -9,5 +10,10 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": ["*"]
     }
-  ]
+  ],
+  "npm": {
+    "enabled": true,
+    "stabilityDays": 3,
+    "postUpdateOptions": ["npmDedupe"]
+  }
 }
