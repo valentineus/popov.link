@@ -3,6 +3,7 @@
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
   "rangeStrategy": "bump",
+  "binarySource": "global",
   "npm": {
     "enabled": true,
     "ignoreScripts": false,
