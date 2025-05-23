@@ -5,7 +5,7 @@
   "rangeStrategy": "bump",
   "npm": {
     "enabled": true,
-    "ignoreScripts": true,
+    "ignoreScripts": false,
     "skipInstalls": false
   },
   "packageRules": [
