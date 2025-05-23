@@ -5,7 +5,8 @@
   "rangeStrategy": "bump",
   "npm": {
     "enabled": true,
-    "ignoreScripts": false
+    "ignoreScripts": false,
+    "skipInstalls": false
   },
   "lockFileMaintenance": {
     "enabled": true,
