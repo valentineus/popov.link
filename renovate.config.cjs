@@ -3,4 +3,5 @@ module.exports = {
 	gitAuthor: "RenovateBot <renovatebot@noreply.localhost>",
 	optimizeForDisabled: true,
 	platform: "gitea",
+	binarySource: "global",
 };
