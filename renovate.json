@@ -3,6 +3,9 @@
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
   "rangeStrategy": "bump",
+  "containerbase": {
+    "enabled": false
+  },
   "npm": {
     "enabled": true,
     "ignoreScripts": false,
