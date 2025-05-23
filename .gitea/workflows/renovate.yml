@@ -10,10 +10,11 @@ jobs:
     container: ghcr.io/renovatebot/renovate:40-full
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: renovate
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Renovate updates
+        run: renovate
         env:
           RENOVATE_CONFIG_FILE: renovate.config.cjs
           RENOVATE_REPOSITORIES: ${{ gitea.repository }}
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          LOG_LEVEL: debug
