@@ -9,5 +9,14 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": ["*"]
     }
-  ]
+  ],
+  "npm": {
+    "enabled": true,
+    "requireConfig": false,
+    "ignoreScripts": false
+  },
+  "postUpgradeTasks": {
+    "commands": ["npm install"],
+    "fileFilters": ["package.json"]
+  }
 }
