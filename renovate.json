@@ -18,7 +18,8 @@
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackageNames": ["*"]
+      "matchPackageNames": ["*"],
+      "postUpdateOptions": ["npmUpdateLockfile"]
     }
   ]
 }
