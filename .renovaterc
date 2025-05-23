@@ -2,24 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
-  "rangeStrategy": "bump",
-  "updateLockFiles": true,
-  "binarySource": "global",
   "packageRules": [
     {
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackageNames": ["*"],
-      "postUpgradeTasks": {
-        "commands": ["npm install"],
-        "fileFilters": ["package.json"]
-      }
+      "matchPackageNames": ["*"]
     }
-  ],
-  "npm": {
-    "enabled": true,
-    "stabilityDays": 3,
-    "postUpdateOptions": ["npmDedupe"]
-  }
+  ]
 }
