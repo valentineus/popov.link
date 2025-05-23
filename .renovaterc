@@ -4,15 +4,13 @@
   "assignees": ["valentineus"],
   "rangeStrategy": "bump",
   "updateLockFiles": true,
+  "binarySource": "global",
   "packageRules": [
     {
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackageNames": ["*"]
-    },
-    {
-      "matchManagers": ["npm"],
+      "matchPackageNames": ["*"],
       "postUpgradeTasks": {
         "commands": ["npm install"],
         "fileFilters": ["package.json"]
