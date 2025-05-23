@@ -3,6 +3,14 @@
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
   "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "npm": {
+    "enabled": true,
+    "ignoreScripts": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "description": "Group patch & minor updates together",
@@ -12,12 +20,5 @@
       "matchPackageNames": ["*"],
       "automerge": true
     }
-  ],
-  "npm": {
-    "enabled": true,
-    "ignoreScripts": false
-  },
-  "lockFileMaintenance": {
-    "enabled": true
-  }
+  ]
 }
