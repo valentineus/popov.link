@@ -1,22 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":disableDependencyDashboard"],
+  "extends": ["config:recommended", ":disableDependencyDashboard", ":automergeRenovate"],
   "assignees": ["valentineus"],
+  "labels": ["dependencies"],
   "packageRules": [
     {
+      "description": "Group patch & minor updates together",
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackageNames": ["*"]
+      "matchPackageNames": ["*"],
+      "automerge": true
     }
   ],
   "npm": {
     "enabled": true,
-    "requireConfig": false,
     "ignoreScripts": false
   },
-  "postUpgradeTasks": {
-    "commands": ["npm install"],
-    "fileFilters": ["package.json"]
+  "lockFileMaintenance": {
+    "enabled": true
   }
 }
