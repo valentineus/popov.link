@@ -3,17 +3,10 @@
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
   "rangeStrategy": "bump",
-  "containerbase": {
-    "enabled": false
-  },
   "npm": {
     "enabled": true,
     "ignoreScripts": false,
     "skipInstalls": false
-  },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["at any time"]
   },
   "packageRules": [
     {
@@ -21,8 +14,7 @@
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchPackageNames": ["*"],
-      "postUpdateOptions": ["npmUpdateLockfile"]
+      "matchPackageNames": ["*"]
     }
   ]
 }
