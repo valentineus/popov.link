@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2025.01.24",
   "private": true,
-  "packageManager": "npm@10.9.0",
+  "packageManager": "npm@11.4.1",
   "scripts": {
     "format": "prettier --write .",
     "dev": "astro dev",
