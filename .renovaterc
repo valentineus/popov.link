@@ -12,11 +12,7 @@
   ],
   "npm": {
     "enabled": true,
-    "requireConfig": false,
+    "requireConfig": "optional",
     "ignoreScripts": false
-  },
-  "postUpgradeTasks": {
-    "commands": ["npm install"],
-    "fileFilters": ["package.json"]
   }
 }
