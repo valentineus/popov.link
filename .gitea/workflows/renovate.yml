@@ -1,7 +1,5 @@
 name: RenovateBot
 on:
-  push:
-    branches: [master]
   schedule:
     - cron: "@daily"
 
