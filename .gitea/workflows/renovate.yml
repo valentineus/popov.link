@@ -7,7 +7,7 @@ on:
 
 jobs:
   renovate:
-    container: ghcr.io/renovatebot/renovate:40
+    container: ghcr.io/renovatebot/renovate:40-full
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,5 +16,4 @@ jobs:
           RENOVATE_CONFIG_FILE: renovate.config.cjs
           RENOVATE_REPOSITORIES: ${{ gitea.repository }}
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.RENOVATE_GITHUB_TOKEN }}
           LOG_LEVEL: debug
