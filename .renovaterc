@@ -3,12 +3,20 @@
   "extends": ["config:recommended", ":disableDependencyDashboard"],
   "assignees": ["valentineus"],
   "rangeStrategy": "bump",
+  "updateLockFiles": true,
   "packageRules": [
     {
       "groupName": "all digest updates",
       "groupSlug": "all-digest",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchPackageNames": ["*"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "postUpgradeTasks": {
+        "commands": ["npm install"],
+        "fileFilters": ["package.json"]
+      }
     }
   ],
   "npm": {
