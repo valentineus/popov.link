@@ -4,6 +4,11 @@
   "version": "2025.01.24",
   "private": true,
   "packageManager": "npm@11.4.1",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "IE 11"
+  ],
   "scripts": {
     "format": "prettier --write .",
     "dev": "astro dev",
