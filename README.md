@@ -2,21 +2,40 @@
 
 [![CI](https://github.com/valentineus/popov.link/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineus/popov.link/actions/workflows/ci.yml)
 
-Source code of my personal website built with [Astro](https://astro.build/).
+Personal website source code built with [Astro](https://astro.build/).
 
 ## Requirements
 
-- Node.js 22 or later
-- npm 11
+- Node.js v22 or later
+- npm v11 or later
 
 ## Development
 
+1. Install dependencies:
+
 ```bash
 npm ci
+```
+
+2. Start the development server:
+
+```bash
 npm run dev
-# build site
+```
+
+3. Open your browser and go to http://localhost:3000 to view changes live.
+
+## Build & Preview
+
+- To build the project for production:
+
+```bash
 npm run build
-# preview static output
+```
+
+- To preview the production build locally:
+
+```bash
 npm run preview
 ```
 
@@ -28,10 +47,8 @@ npm run preview
 
 ## Comments
 
-Comments are powered by [giscus.app](https://giscus.app) and stored in [GitHub Discussions](https://github.com/valentineus/popov.link/discussions).
+Comments on the site are powered by [giscus.app](https://giscus.app) and stored in [GitHub Discussions](https://github.com/valentineus/popov.link/discussions).
 
 ## License
 
-- Code: [MIT](LICENSE.txt)
-- Materials: [Personal Use Only](LICENSE.materials.txt)
-
+This project is licensed under the [MIT License](LICENSE.txt).
