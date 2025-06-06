@@ -1,49 +1,54 @@
-# Personal site
+# popov.link
 
-This is my main site. The site publishes articles, useful information and notes. Also, the site serves as a hosting of free and personal images.
+[![CI](https://github.com/valentineus/popov.link/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineus/popov.link/actions/workflows/ci.yml)
 
-Principles of site development:
+Personal website source code built with [Astro](https://astro.build/).
 
-- Lightness and minimalism. The site is designed to store information, it's not a heavy application;
+## Requirements
 
-- Maximum cross-platform. Information should be read from any device and software;
-
-- Focusing on content perception. Only useful information, nothing superfluous;
-
-- No JS on the site. The site should be completely safe for the user;
+- Node.js v22 or later
+- npm v11 or later
 
 ## Development
 
-To start a local server for development, you need:
-
-1. Clone the source repository:
+1. Install dependencies:
 
 ```bash
-git clone "https://github.com/valentineus/valentineus.github.io.git"
+npm ci
 ```
 
-2. Install packages:
+2. Start the development server:
 
 ```bash
-cd valentineus.github.io && bundle update
+npm run dev
 ```
 
-3. Start the server:
+3. Open your browser and go to http://localhost:3000 to view changes live.
+
+## Build & Preview
+
+- To build the project for production:
 
 ```bash
-bundle exec jekyll serve --host "${IP}" --port "${PORT}" --trace
+npm run build
 ```
 
-Please note in the executable command uses environment variables `IP` and `PORT`.
+- To preview the production build locally:
 
-## License hosted material
+```bash
+npm run preview
+```
 
-<img width="256px" alt="CC BY-NC 3.0 License" src="https://raw.githubusercontent.com/valentineus/valentineus.github.io/master/assets/images/87624cb5-4a8f-4be4-90b6-0ec5b9a90333.png" />
+## Project Info
 
-Material on the site is published on the CC BY-NC 3.0 license.
+- Maintained by [Valentin Popov](mailto:valentin@popov.link)
+- Issues: [GitHub](https://github.com/valentineus/popov.link/issues)
+- Read-only mirror: [code.popov.link](https://code.popov.link/valentineus/popov.link)
 
-## Source Code License
+## Comments
 
-<img width="256px" alt="MIT License" src="https://raw.githubusercontent.com/valentineus/valentineus.github.io/master/assets/images/7d05cad0-d553-42c7-be1f-7007926ba720.png" />
+Comments on the site are powered by [giscus.app](https://giscus.app) and stored in [GitHub Discussions](https://github.com/valentineus/popov.link/discussions).
 
-[MIT](LICENSE.txt). Copyright (c) [Valentin Popov](https://valentineus.link/).
+## License
+
+This project is licensed under the [MIT License](LICENSE.txt).
