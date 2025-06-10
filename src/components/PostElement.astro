@@ -1,0 +1,32 @@
+---
+import { type CollectionEntry } from "astro:content";
+import dayjs from "dayjs";
+
+type Props = {
+	readonly post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+const { remarkPluginFrontmatter } = await post.render();
+const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
+---
+
+<style lang="scss">
+	@import "../scss/_variables.scss";
+
+	small {
+		font-size: $fontSizeBase * 0.75;
+		opacity: 0.5;
+	}
+</style>
+
+<li>
+	<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+	<div>
+		<small>
+			<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+			<span>•</span>
+			<span>{remarkPluginFrontmatter.minutesRead}</span>
+		</small>
+	</div>
+</li>
