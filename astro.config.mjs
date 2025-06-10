@@ -15,10 +15,4 @@ export default defineConfig({
 			theme: "vitesse-dark",
 		},
 	},
-	redirects: {
-		"/blog": {
-			destination: "/",
-			status: 301,
-		},
-	},
 });

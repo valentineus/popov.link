@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/BaseLayout.astro";
+import PostElement from "../../components/PostElement.astro";
+
+const posts = await getCollection("blog", ({ data }) => {
+	return data.draft !== true;
+});
+
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout>
+	<section style={{ "margin-top": "3rem" }}>
+		<ul>
+			{posts.map((post) => <PostElement post={post} />)}
+		</ul>
+	</section>
+</Layout>
