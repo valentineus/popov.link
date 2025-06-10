@@ -33,10 +33,12 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 <Layout description={post.data.description} title={post.data.title}>
 	<article>
 		<section>
+			<h1>{post.data.title}</h1>
+		</section>
+
+		<section>
 			<p>
 				<small>
-					<a href="/">&lt; Home</a>
-					<span>&nbsp;•&nbsp;</span>
 					Posted
 					<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
 					by&nbsp;{post.data.author}
@@ -44,10 +46,6 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 					<span>{remarkPluginFrontmatter.minutesRead}</span>
 				</small>
 			</p>
-		</section>
-
-		<section>
-			<h1>{post.data.title}</h1>
 		</section>
 
 		<section>

@@ -1,6 +1,7 @@
 ---
 import Analytics from "../components/Analytics.astro";
 import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
 import "../scss/global.scss";
 
 type Props = {
@@ -19,6 +20,10 @@ const { description, title } = Astro.props;
 
 	<body>
 		<main>
+			<section>
+				<Header />
+			</section>
+
 			<slot />
 		</main>
 		<Analytics title={title ?? import.meta.env.DEFAULT_TITLE} />
