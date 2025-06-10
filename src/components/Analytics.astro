@@ -1,17 +1,2 @@
----
-type Props = {
-	readonly title: string;
-};
-
-const path = Astro.url.pathname;
-const { title } = Astro.props;
----
-
 <!-- AppMetrix -->
 <script is:inline src="https://appmetrix.com/pixel/T5X0z12SoASBV8Dv"></script>
-
-<!-- GoatCounter -->
-<script is:inline data-goatcounter="https://analytics.popov.link/count" src="//gc.zgo.at/count.js"></script>
-<noscript>
-	<img alt="pixel" src={`https://analytics.popov.link/count?p=${encodeURI(path)}&t=${encodeURI(title)}`} />
-</noscript>

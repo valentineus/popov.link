@@ -14,8 +14,8 @@ const { description, title } = Astro.props;
 
 <html lang="ru">
 	<Head
-		description={description ?? import.meta.env.DEFAULT_DESCRIPTION}
 		title={title ?? import.meta.env.DEFAULT_TITLE}
+		description={description ?? import.meta.env.DEFAULT_DESCRIPTION}
 	/>
 
 	<body>
@@ -26,6 +26,6 @@ const { description, title } = Astro.props;
 
 			<slot />
 		</main>
-		<Analytics title={title ?? import.meta.env.DEFAULT_TITLE} />
+		<Analytics />
 	</body>
 </html>
