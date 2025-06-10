@@ -12,7 +12,7 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 ---
 
 <style lang="scss">
-	@import "../scss/_variables.scss";
+        @use "../scss/variables" as *;
 
 	a {
 		color: $colorText;
