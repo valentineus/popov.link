@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Comments from "../../components/Comments.astro";
 import Layout from "../../layouts/BaseLayout.astro";
+import blogPostSchema from "../../utils/schemas/blogPostSchema";
 import dayjs from "dayjs";
 
 type Props = CollectionEntry<"blog">;
@@ -21,10 +22,21 @@ const post = Astro.props;
 
 const { Content, remarkPluginFrontmatter } = await post.render();
 
-const date = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
-const title = `${post.data.title} | Valentin Popov`;
+const title = post.data.title;
 const description = post.data.description;
+const author = post.data.author;
 const lang = post.data.lang;
+
+const formattedData = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
+const data = post.data.pubDate.toISOString();
+
+const schema = blogPostSchema({
+	siteUrl: new URL("/", Astro.site).toString(),
+	title,
+	slug: post.slug,
+	datePublished: data,
+	author,
+});
 ---
 
 <style lang="scss">
@@ -35,18 +47,18 @@ const lang = post.data.lang;
 	}
 </style>
 
-<Layout title={title} description={description} lang={lang}>
+<Layout title={title} description={description} lang={lang} schema={schema}>
 	<article>
 		<section>
-			<h1>{post.data.title}</h1>
+			<h1>{title}</h1>
 		</section>
 
 		<section>
 			<p>
 				<small>
 					Posted
-					<time datetime={post.data.pubDate.toISOString()} lang="en">{date}</time>
-					by&nbsp;{post.data.author}
+					<time datetime={data} lang="en">{formattedData}</time>
+					by&nbsp;{author}
 					<span>&nbsp;•&nbsp;</span>
 					<span>{remarkPluginFrontmatter.minutesRead}</span>
 				</small>

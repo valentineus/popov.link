@@ -3,10 +3,8 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/BaseLayout.astro";
 import PostElement from "../../components/PostElement.astro";
-
-const title = "Valentin Popov's Blog | Software Development, Leadership & Open-Source";
-const description = "Explore Valentin Popov's blog on software development, tech leadership, and open-source experiments. Stay updated with in-depth tutorials and expert insights.";
-const lang = "en";
+import blogSchema from "../../utils/schemas/blogSchema";
+import RSSIcon from "../../components/Icons/RSS.astro";
 
 const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
@@ -24,14 +22,26 @@ const postsByYear = posts.reduce<Record<string, CollectionEntry<"blog">[]>>((acc
 }, {});
 
 const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+const title = "Valentin Popov's Blog | Software Development, Leadership & Open-Source";
+const description = "Explore Valentin Popov's blog on software development, tech leadership, and open-source experiments. Stay updated with in-depth tutorials and expert insights.";
+const lang = "en";
+
+const schema = blogSchema({
+	siteUrl: new URL("/", Astro.site).toString(),
+	title,
+});
 ---
 
-<Layout title={title} description={description} lang={lang}>
+<Layout title={title} description={description} lang={lang} schema={schema}>
 	<section>
-		<h1>Blog posts</h1>
+		<h1>
+			Blog posts
+			<RSSIcon />
+		</h1>
 	</section>
 
-	<section style={{ "margin-top": "3rem" }}>
+	<section>
 		{
 			years.map((year) => (
 				<div>

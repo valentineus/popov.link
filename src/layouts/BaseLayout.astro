@@ -1,4 +1,5 @@
 ---
+import type { WithContext, Thing } from "schema-dts";
 import Analytics from "../components/Analytics.astro";
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
@@ -8,13 +9,14 @@ type Props = {
 	readonly description: string;
 	readonly title: string;
 	readonly lang: string;
+	readonly schema: WithContext<Thing>;
 };
 
-const { title, description, lang } = Astro.props;
+const { title, description, lang, schema } = Astro.props;
 ---
 
 <html lang={lang}>
-	<Head title={title} description={description} />
+	<Head title={title} description={description} schema={schema} />
 
 	<body>
 		<main>

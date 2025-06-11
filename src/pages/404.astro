@@ -1,13 +1,19 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
+import websiteSchema from "../utils/schemas/websiteSchema";
 
 const title = "404 — Page Not Found | Valentin Popov";
 const description = "The page you're looking for doesn't exist!";
 const lang = "en";
+
+const schema = websiteSchema({
+	siteUrl: new URL("/", Astro.site).toString(),
+	title,
+});
 ---
 
-<Layout title={title} description={description} lang={lang}>
-	<div style="text-align:center;">
+<Layout title={title} description={description} lang={lang} schema={schema}>
+	<div style={{ "text-align": "center" }}>
 		<h1>404</h1>
 		<p><strong>Page not found</strong></p>
 		<p>

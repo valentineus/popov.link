@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import dayjs from "dayjs";
+import RSSIcon from "../Icons/RSS.astro";
 
 const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
@@ -21,7 +22,7 @@ const latestPosts = posts.slice(0, 5);
 </style>
 
 <section>
-	<h2>Latest posts</h2>
+	<h2>Latest posts <RSSIcon /></h2>
 	<ul>
 		{
 			latestPosts.map((post) => (
@@ -29,7 +30,12 @@ const latestPosts = posts.slice(0, 5);
 					<a href={`/blog/${post.slug}`} lang={post.data.lang}>
 						{post.data.title}
 					</a>
-					<small>{dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY")}</small>
+
+					<small>
+						<time datetime={post.data.pubDate.toISOString()} lang="en">
+							{dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY")}
+						</time>
+					</small>
 				</li>
 			))
 		}

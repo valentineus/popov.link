@@ -3,13 +3,19 @@ import Layout from "../layouts/BaseLayout.astro";
 import LatestPostsSection from "../components/Sections/LatestPosts.astro";
 import SocialLinksSection from "../components/Sections/SocialLinks.astro";
 import WelcomeSection from "../components/Sections/Welcome.astro";
+import websiteSchema from "../utils/schemas/websiteSchema";
 
 const title = "Valentin Popov – Software Developer & Team Lead | Tech Insights";
-const description = "Valentin Popov is an experienced project manager and team lead sharing expert insights on software development, leadership, and digital innovation.";
+const description = "Blog by Valentin Popov — software developer and team lead writing about code, side projects, digital tools, and fun experiments.";
 const lang = "en";
+
+const schema = websiteSchema({
+	siteUrl: new URL("/", Astro.site).toString(),
+	title,
+});
 ---
 
-<Layout title={title} description={description} lang={lang}>
+<Layout title={title} description={description} lang={lang} schema={schema}>
 	<WelcomeSection />
 	<SocialLinksSection />
 	<LatestPostsSection />

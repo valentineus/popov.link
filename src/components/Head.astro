@@ -1,11 +1,15 @@
 ---
+import type { WithContext, Thing } from "schema-dts";
+import JsonLd from "./JsonLd.astro";
+
 type Props = {
 	readonly description: string;
 	readonly title: string;
+	readonly schema: WithContext<Thing>;
 };
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { description, title } = Astro.props;
+const { description, title, schema } = Astro.props;
 ---
 
 <head>
@@ -27,4 +31,6 @@ const { description, title } = Astro.props;
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="manifest" href="/manifest.json" />
 	<meta name="theme-color" content="#ffffff" />
+
+	<JsonLd schema={schema} />
 </head>
