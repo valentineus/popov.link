@@ -5,18 +5,15 @@ import Header from "../components/Header.astro";
 import "../scss/global.scss";
 
 type Props = {
-	readonly description?: string;
-	readonly title?: string;
+	readonly description: string;
+	readonly title: string;
 };
 
-const { description, title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="ru">
-	<Head
-		title={title ?? import.meta.env.DEFAULT_TITLE}
-		description={description ?? import.meta.env.DEFAULT_DESCRIPTION}
-	/>
+	<Head title={title} description={description} />
 
 	<body>
 		<main>

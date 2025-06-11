@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
+
+const title = "404 — Page Not Found | Valentin Popov";
+const description = "The page you're looking for doesn't exist!";
 ---
 
-<Layout>
+<Layout title={title} description={description}>
 	<div style="text-align:center;">
 		<h1>404</h1>
 		<p><strong>Page not found</strong></p>
 		<p>
 			<small>
 				If you see this message, please
-				<a href=`mailto:valentin@popov.link?subject=${encodeURIComponent('I found a broken page')}`>
-					let me know
-				</a>
+				<a href=`mailto:valentin@popov.link?subject=${encodeURIComponent('I found a broken page')}`>let me know</a>
 			</small>
 		</p>
 	</div>

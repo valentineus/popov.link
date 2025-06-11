@@ -3,9 +3,12 @@ import Layout from "../layouts/BaseLayout.astro";
 import LatestPostsSection from "../components/Sections/LatestPosts.astro";
 import SocialLinksSection from "../components/Sections/SocialLinks.astro";
 import WelcomeSection from "../components/Sections/Welcome.astro";
+
+const title = "Valentin Popov";
+const description = "A personal website of Valentin Popov, a software developer and team lead.";
 ---
 
-<Layout>
+<Layout title={title} description={description}>
 	<WelcomeSection />
 	<SocialLinksSection />
 	<LatestPostsSection />

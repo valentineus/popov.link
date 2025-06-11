@@ -30,7 +30,7 @@ export default {
 		},
 	],
 	plugins: ["prettier-plugin-astro"],
-	printWidth: 120,
+	printWidth: 180,
 	proseWrap: "never",
 	quoteProps: "consistent",
 	requirePragma: false,

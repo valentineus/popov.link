@@ -2,13 +2,16 @@ import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";
 
 export async function GET(context) {
+	const title = "RSS Feed | Valentin Popov Blog";
+	const description = "Follow the latest posts from Valentin Popov via RSS.";
+
 	const posts = await getCollection("blog", ({ data }) => {
 		return data.draft !== true;
 	});
 
 	return rss({
 		customData: `<language>ru-ru</language>`,
-		description: import.meta.env.DEFAULT_DESCRIPTION,
+		description: description,
 		items: posts.map((post) => ({
 			customData: post.data.customData,
 			description: post.data.description,
@@ -17,6 +20,6 @@ export async function GET(context) {
 			title: post.data.title,
 		})),
 		site: context.site,
-		title: import.meta.env.DEFAULT_TITLE,
+		title: title,
 	});
 }

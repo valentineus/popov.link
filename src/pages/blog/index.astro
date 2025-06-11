@@ -4,6 +4,9 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/BaseLayout.astro";
 import PostElement from "../../components/PostElement.astro";
 
+const title = "Blog | Valentin Popov";
+const description = "A collection of articles on software development, tech leadership and open-source experiments.";
+
 const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
 });
@@ -22,7 +25,7 @@ const postsByYear = posts.reduce<Record<string, CollectionEntry<"blog">[]>>((acc
 const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
-<Layout>
+<Layout title={title} description={description}>
 	<section style={{ "margin-top": "3rem" }}>
 		{
 			years.map((year) => (

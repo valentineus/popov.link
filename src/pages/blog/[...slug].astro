@@ -18,8 +18,12 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
+
 const { Content, remarkPluginFrontmatter } = await post.render();
-const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
+
+const date = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
+const title = `${post.data.title} | Valentin Popov`;
+const description = post.data.description;
 ---
 
 <style lang="scss">
@@ -30,7 +34,7 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 	}
 </style>
 
-<Layout description={post.data.description} title={post.data.title}>
+<Layout title={title} description={description}>
 	<article>
 		<section>
 			<h1>{post.data.title}</h1>
@@ -40,7 +44,7 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 			<p>
 				<small>
 					Posted
-					<time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+					<time datetime={post.data.pubDate.toISOString()}>{date}</time>
 					by&nbsp;{post.data.author}
 					<span>&nbsp;•&nbsp;</span>
 					<span>{remarkPluginFrontmatter.minutesRead}</span>
