@@ -1,24 +1,4 @@
 <style lang="scss">
-	@use "../scss/variables" as *;
-
-	header {
-		padding-bottom: 1rem;
-		position: relative;
-	}
-
-	.site-title {
-		color: $colorText;
-		font-weight: bold;
-		left: 0;
-		position: absolute;
-		text-decoration: none;
-		top: 0;
-	}
-
-	.nav-links {
-		text-align: right;
-	}
-
 	a {
 		margin-right: 1.5rem;
 		text-decoration: none;
@@ -30,9 +10,6 @@
 </style>
 
 <header>
-	<a class="site-title" href="/">{import.meta.env.DEFAULT_TITLE}</a>
-	<div class="nav-links">
-		<a href="/">Home</a>
-		<a href="/blog/">Blog</a>
-	</div>
+	<a href="/">Home</a>
+	<a href="/blog/">Blog</a>
 </header>
