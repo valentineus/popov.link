@@ -1,6 +1,6 @@
 # popov.link
 
-[![CI](https://github.com/valentineus/popov.link/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineus/popov.link/actions/workflows/ci.yml)
+[![512KB club](https://512kb.club/assets/images/green-team.svg)](https://512kb.club)
 
 Personal website source code built with [Astro](https://astro.build/).
 
