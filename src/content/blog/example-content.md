@@ -3,6 +3,7 @@ title: "Example Content"
 author: "Example User"
 pubDate: "2018-01-01"
 description: "Howdy! This is an example blog post that shows several types of HTML content supported in this theme."
+lang: "en"
 draft: true
 ---
 

@@ -7,12 +7,13 @@ import "../scss/global.scss";
 type Props = {
 	readonly description: string;
 	readonly title: string;
+	readonly lang: string;
 };
 
-const { title, description } = Astro.props;
+const { title, description, lang } = Astro.props;
 ---
 
-<html lang="ru">
+<html lang={lang}>
 	<Head title={title} description={description} />
 
 	<body>

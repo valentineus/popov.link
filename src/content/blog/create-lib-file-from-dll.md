@@ -3,6 +3,7 @@ title: 'Create ".lib" file from ".dll" (archive)'
 author: "Adrian Henke"
 pubDate: "2023-05-04"
 description: "Learn how to generate a *.lib file from a *.dll with this comprehensive guide. Using the Visual Studio Command Prompt and Microsoft's recommended tools, this article walks you through the steps for a seamless process. Perfect for developers working with 3rd party win dll's."
+lang: "en"
 ---
 
 > This's a copy of a non-my post. The original article [is here](https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/) ([archive](https://web.archive.org/web/20161118122539/https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/)).

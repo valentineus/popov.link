@@ -3,6 +3,7 @@ title: "Горячая перезагрузка ElectronJS приложения"
 author: "Valentin Popov"
 pubDate: "2019-08-15"
 description: "Руководство по автоматической перезагрузке приложений на Electron с помощью пакетов electron-reload и electron-webpack. Обход проблем с совместимостью и использование HMR для renderer процесса."
+lang: "ru"
 ---
 
 ## Main процесс

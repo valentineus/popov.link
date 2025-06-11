@@ -10,7 +10,7 @@ export async function GET(context) {
 	});
 
 	return rss({
-		customData: `<language>ru-ru</language>`,
+		customData: `<language>en</language>`,
 		description: description,
 		items: posts.map((post) => ({
 			customData: post.data.customData,

@@ -3,6 +3,7 @@ title: 'Получение исходного кода "Chromium Projects"'
 author: "Valentin Popov"
 pubDate: "2012-01-30"
 description: "Изучение исходных кодов Chromium: подготовка системы и установка необходимых программных компонентов. Руководство для начинающих разработчиков. Получите инструкции по установке Microsoft Visual Studio, Cygwin, Python и других инструментов. Действительно на январь-февраль 2012 года."
+lang: "ru"
 ---
 
 > Перенос [оригинальной статьи](https://adeptus-mechanicus.blogspot.com/2012/01/chromium-projects.html) 2012 года из моего [старого блога](https://adeptus-mechanicus.blogspot.com/) ([зеркало](https://web.archive.org/web/20160217052148/http://adeptus-mechanicus.blogspot.com/)).
