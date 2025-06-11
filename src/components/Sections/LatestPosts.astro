@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import dayjs from "dayjs";
+
+const posts = await getCollection("blog", ({ data }) => {
+	return data.draft !== true;
+});
+
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const latestPosts = posts.slice(0, 5);
+---
+
+<style lang="scss">
+	@use "../../scss/variables" as *;
+
+	small {
+		font-size: $fontSizeBase * 0.75;
+		opacity: 0.5;
+	}
+</style>
+
+<section>
+	<h2>Latest posts</h2>
+	<ul>
+		{
+			latestPosts.map((post) => (
+				<li>
+					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+					<small>{dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY")}</small>
+				</li>
+			))
+		}
+	</ul>
+</section>
