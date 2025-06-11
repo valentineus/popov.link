@@ -1,17 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "../layouts/BaseLayout.astro";
-import PostSummary from "../components/PostSummary.astro";
-
-const posts = await getCollection("blog", ({ data }) => {
-	return data.draft !== true;
-});
-
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+import SocialLinksSection from "../components/Sections/SocialLinks.astro";
+import WelcomeSection from "../components/Sections/Welcome.astro";
 ---
 
 <Layout>
-	<section style={{ "margin-top": "3rem" }}>
-		{posts.map((post) => <PostSummary post={post} />)}
-	</section>
+	<WelcomeSection />
+	<SocialLinksSection />
 </Layout>
