@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/BaseLayout.astro";
 import PostElement from "../../components/PostElement.astro";
@@ -8,12 +9,32 @@ const posts = await getCollection("blog", ({ data }) => {
 });
 
 posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const postsByYear = posts.reduce<Record<string, CollectionEntry<"blog">[]>>((acc, post) => {
+	const year = post.data.pubDate.getFullYear().toString();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(post);
+	return acc;
+}, {});
+
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
 <Layout>
 	<section style={{ "margin-top": "3rem" }}>
-		<ul>
-			{posts.map((post) => <PostElement post={post} />)}
-		</ul>
+		{
+			years.map((year) => (
+				<div>
+					<div style={{ "margin-bottom": "1rem" }}>{year}</div>
+					<ul>
+						{postsByYear[year].map((post) => (
+							<PostElement post={post} />
+						))}
+					</ul>
+				</div>
+			))
+		}
 	</section>
 </Layout>
