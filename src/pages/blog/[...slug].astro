@@ -33,9 +33,11 @@ const data = post.data.pubDate.toISOString();
 const schema = blogPostSchema({
 	siteUrl: new URL("/", Astro.site).toString(),
 	title,
+	description,
 	slug: post.slug,
 	datePublished: data,
 	author,
+	lang,
 });
 ---
 
@@ -49,11 +51,9 @@ const schema = blogPostSchema({
 
 <Layout title={title} description={description} lang={lang} schema={schema}>
 	<article>
-		<section>
+		<header>
 			<h1>{title}</h1>
-		</section>
 
-		<section>
 			<p>
 				<small>
 					Posted
@@ -63,7 +63,7 @@ const schema = blogPostSchema({
 					<span>{remarkPluginFrontmatter.minutesRead}</span>
 				</small>
 			</p>
-		</section>
+		</header>
 
 		<section>
 			<Content />
