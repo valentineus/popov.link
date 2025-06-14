@@ -22,15 +22,16 @@ const post = Astro.props;
 
 const { Content, remarkPluginFrontmatter } = await post.render();
 
-const title = post.data.title;
-const description = post.data.description;
 const author = post.data.author;
+const description = post.data.description;
+const isBasedOn = post.data.basedOn;
 const lang = post.data.lang;
-
-const formattedDate = dayjs(post.data.datePublished.toString()).format("MMMM DD, YYYY");
-const datePublished = post.data.datePublished.toISOString();
-const dateModified = post.data.dateModified?.toISOString();
 const slug = post.slug;
+const title = post.data.title;
+
+const dateModified = post.data.dateModified?.toISOString();
+const datePublished = post.data.datePublished.toISOString();
+const formattedDate = dayjs(post.data.datePublished.toString()).format("MMMM DD, YYYY");
 
 const schema = blogPostSchema({
 	siteUrl: new URL("/", Astro.site).toString(),
@@ -41,6 +42,7 @@ const schema = blogPostSchema({
 	dateModified,
 	author,
 	lang,
+	isBasedOn,
 });
 ---
 
@@ -61,7 +63,6 @@ const schema = blogPostSchema({
 				<small>
 					Posted
 					<time datetime={datePublished} lang="en">{formattedDate}</time>
-					by&nbsp;{author}
 					<span>&nbsp;•&nbsp;</span>
 					<span>{remarkPluginFrontmatter.minutesRead}</span>
 				</small>

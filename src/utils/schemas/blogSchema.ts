@@ -14,6 +14,8 @@ export default ({ siteUrl, title, posts }: BlogSchemaParams): WithContext<Collec
 	"name": title,
 	"mainEntity": {
 		"@type": "ItemList",
+		"itemListOrder": "https://schema.org/ItemListOrderDescending",
+		"numberOfItems": posts.length,
 		"itemListElement": posts.map((post, index) => ({
 			"@type": "ListItem",
 			"position": index + 1,

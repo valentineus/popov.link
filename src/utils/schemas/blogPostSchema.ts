@@ -5,13 +5,14 @@ export type BlogPostSchemaParams = {
 	readonly dateModified: string;
 	readonly datePublished: string;
 	readonly description: string;
+	readonly isBasedOn?: string;
 	readonly lang: string;
 	readonly siteUrl: string;
 	readonly slug: string;
 	readonly title: string;
 };
 
-export default ({ siteUrl, slug, title, description, datePublished, dateModified, author, lang }: BlogPostSchemaParams): WithContext<BlogPosting> => ({
+export default ({ siteUrl, slug, title, description, datePublished, dateModified, author, lang, isBasedOn }: BlogPostSchemaParams): WithContext<BlogPosting> => ({
 	"@context": "https://schema.org",
 	"@type": "BlogPosting",
 	"url": new URL(`/blog/${slug}`, siteUrl).toString(),
@@ -28,4 +29,5 @@ export default ({ siteUrl, slug, title, description, datePublished, dateModified
 		"@type": "WebPage",
 		"@id": new URL(`/blog/${slug}`, siteUrl).toString(),
 	},
+	...(isBasedOn && { isBasedOn: isBasedOn }),
 });
