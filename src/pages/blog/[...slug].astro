@@ -27,15 +27,18 @@ const description = post.data.description;
 const author = post.data.author;
 const lang = post.data.lang;
 
-const formattedData = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
-const data = post.data.pubDate.toISOString();
+const formattedDate = dayjs(post.data.datePublished.toString()).format("MMMM DD, YYYY");
+const datePublished = post.data.datePublished.toISOString();
+const dateModified = post.data.dateModified?.toISOString();
+const slug = post.slug;
 
 const schema = blogPostSchema({
 	siteUrl: new URL("/", Astro.site).toString(),
 	title,
 	description,
-	slug: post.slug,
-	datePublished: data,
+	slug,
+	datePublished,
+	dateModified,
 	author,
 	lang,
 });
@@ -57,7 +60,7 @@ const schema = blogPostSchema({
 			<p>
 				<small>
 					Posted
-					<time datetime={data} lang="en">{formattedData}</time>
+					<time datetime={datePublished} lang="en">{formattedDate}</time>
 					by&nbsp;{author}
 					<span>&nbsp;•&nbsp;</span>
 					<span>{remarkPluginFrontmatter.minutesRead}</span>

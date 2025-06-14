@@ -10,10 +10,10 @@ const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
 });
 
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+posts.sort((a, b) => b.data.datePublished.getTime() - a.data.datePublished.getTime());
 
 const postsByYear = posts.reduce<Record<string, CollectionEntry<"blog">[]>>((acc, post) => {
-	const year = post.data.pubDate.getFullYear().toString();
+	const year = post.data.datePublished.getFullYear().toString();
 	if (!acc[year]) {
 		acc[year] = [];
 	}

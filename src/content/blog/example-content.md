@@ -1,8 +1,9 @@
 ---
 title: "Example Content"
-author: "Example User"
-pubDate: "2018-01-01"
 description: "Howdy! This is an example blog post that shows several types of HTML content supported in this theme."
+datePublished: "2018-01-01"
+dateModified: "2018-01-01"
+author: "Example User"
 lang: "en"
 draft: true
 ---

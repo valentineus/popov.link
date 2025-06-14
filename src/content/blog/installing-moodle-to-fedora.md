@@ -1,8 +1,9 @@
 ---
 title: "Установка Moodle в Fedora"
-author: "Valentin Popov"
-pubDate: "2018-07-23"
 description: "Решение проблем установки Moodle из-за SELinux: как настроить правила доступа для устранения ошибок в веб-интерфейсе и при работе с cURL. Практические советы и команды."
+datePublished: "2018-07-23"
+dateModified: "2018-07-23"
+author: "Valentin Popov"
 lang: "ru"
 ---
 

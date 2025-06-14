@@ -8,7 +8,9 @@ type Props = {
 
 const { post } = Astro.props;
 const { remarkPluginFrontmatter } = await post.render();
-const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY");
+
+const formattedDate = dayjs(post.data.datePublished.toString()).format("MMMM DD, YYYY");
+const datePublished = post.data.datePublished.toISOString();
 ---
 
 <style lang="scss">
@@ -29,7 +31,7 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 		<a href={`/blog/${post.slug}`} lang={post.data.lang}>{post.data.title}</a>
 		<div>
 			<small>
-				<time datetime={post.data.pubDate.toISOString()} lang="en">{formattedDate}</time>
+				<time datetime={datePublished} lang="en">{formattedDate}</time>
 				<span>•</span>
 				<span>{remarkPluginFrontmatter.minutesRead}</span>
 			</small>

@@ -2,9 +2,9 @@ import type { WithContext, CollectionPage } from "schema-dts";
 import type { CollectionEntry } from "astro:content";
 
 export type BlogSchemaParams = {
+	readonly posts: CollectionEntry<"blog">[];
 	readonly siteUrl: string;
 	readonly title: string;
-	readonly posts: CollectionEntry<"blog">[];
 };
 
 export default ({ siteUrl, title, posts }: BlogSchemaParams): WithContext<CollectionPage> => ({

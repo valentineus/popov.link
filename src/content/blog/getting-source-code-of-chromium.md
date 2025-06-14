@@ -1,8 +1,9 @@
 ---
 title: 'Получение исходного кода "Chromium Projects"'
-author: "Valentin Popov"
-pubDate: "2012-01-30"
 description: "Изучение исходных кодов Chromium: подготовка системы и установка необходимых программных компонентов. Руководство для начинающих разработчиков. Получите инструкции по установке Microsoft Visual Studio, Cygwin, Python и других инструментов. Действительно на январь-февраль 2012 года."
+datePublished: "2012-01-30"
+dateModified: "2012-01-30"
+author: "Valentin Popov"
 lang: "ru"
 ---
 

@@ -7,7 +7,7 @@ const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
 });
 
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+posts.sort((a, b) => b.data.datePublished.getTime() - a.data.datePublished.getTime());
 
 const latestPosts = posts.slice(0, 5);
 ---
@@ -32,8 +32,8 @@ const latestPosts = posts.slice(0, 5);
 					</a>
 
 					<small>
-						<time datetime={post.data.pubDate.toISOString()} lang="en">
-							{dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY")}
+						<time datetime={post.data.datePublished.toISOString()} lang="en">
+							{dayjs(post.data.datePublished.toString()).format("MMMM DD, YYYY")}
 						</time>
 					</small>
 				</li>
