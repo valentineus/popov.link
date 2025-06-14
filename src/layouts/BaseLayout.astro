@@ -7,16 +7,17 @@ import "../scss/global.scss";
 
 type Props = {
 	readonly description: string;
-	readonly title: string;
 	readonly lang: string;
+	readonly preview: string;
 	readonly schema: WithContext<Thing>;
+	readonly title: string;
 };
 
-const { title, description, lang, schema } = Astro.props;
+const { description, lang, preview, schema, title } = Astro.props;
 ---
 
 <html lang={lang}>
-	<Head title={title} description={description} schema={schema} />
+	<Head title={title} description={description} preview={preview} schema={schema} />
 
 	<body>
 		<main>

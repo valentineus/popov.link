@@ -1,9 +1,11 @@
 ---
+import { config } from "../config";
 import Layout from "../layouts/BaseLayout.astro";
 import pageSchema from "../utils/schemas/pageSchema";
 
 const title = "404 — Page Not Found | Valentin Popov";
 const description = "The page you're looking for doesn't exist!";
+const preview = config.og.defaultPreview;
 const lang = "en";
 
 const schema = pageSchema({
@@ -15,7 +17,7 @@ const schema = pageSchema({
 });
 ---
 
-<Layout title={title} description={description} lang={lang} schema={schema}>
+<Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>
 	<div style={{ "text-align": "center" }}>
 		<h1>404</h1>
 		<p><strong>Page not found</strong></p>

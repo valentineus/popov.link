@@ -1,12 +1,14 @@
 ---
-import Layout from "../layouts/BaseLayout.astro";
+import { config } from "../config";
 import LatestPostsSection from "../components/Sections/LatestPosts.astro";
+import Layout from "../layouts/BaseLayout.astro";
+import pageSchema from "../utils/schemas/pageSchema";
 import SocialLinksSection from "../components/Sections/SocialLinks.astro";
 import WelcomeSection from "../components/Sections/Welcome.astro";
-import pageSchema from "../utils/schemas/pageSchema";
 
 const title = "Valentin Popov – Software Developer & Team Lead | Tech Insights";
 const description = "Blog by Valentin Popov — software developer and team lead writing about code, side projects, digital tools, and fun experiments.";
+const preview = config.og.defaultPreview;
 const lang = "en";
 
 const schema = pageSchema({
@@ -18,7 +20,7 @@ const schema = pageSchema({
 });
 ---
 
-<Layout title={title} description={description} lang={lang} schema={schema}>
+<Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>
 	<WelcomeSection />
 	<SocialLinksSection />
 	<LatestPostsSection />

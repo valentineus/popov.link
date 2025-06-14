@@ -25,6 +25,7 @@ const { Content, remarkPluginFrontmatter } = await post.render();
 const description = post.data.description;
 const isBasedOn = post.data.basedOn;
 const lang = post.data.lang;
+const preview = `/images/preview/${post.slug}.png`;
 const slug = post.slug;
 const title = post.data.title;
 
@@ -34,13 +35,14 @@ const formattedDate = dayjs(post.data.datePublished.toString()).format("MMMM DD,
 
 const schema = blogPostSchema({
 	siteUrl: new URL("/", Astro.site).toString(),
-	title,
-	description,
-	slug,
-	datePublished,
 	dateModified,
-	lang,
+	datePublished,
+	description,
 	isBasedOn,
+	lang,
+	preview,
+	slug,
+	title,
 });
 ---
 
@@ -52,7 +54,7 @@ const schema = blogPostSchema({
 	}
 </style>
 
-<Layout title={title} description={description} lang={lang} schema={schema}>
+<Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>
 	<article>
 		<header>
 			<h1>{title}</h1>

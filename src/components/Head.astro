@@ -1,16 +1,18 @@
 ---
 import type { WithContext, Thing } from "schema-dts";
 import JsonLd from "./JsonLd.astro";
-import OpenGraph from "./OpenGraph.astro";
 
 type Props = {
 	readonly description: string;
-	readonly title: string;
+	readonly preview: string;
 	readonly schema: WithContext<Thing>;
+	readonly title: string;
 };
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { description, title, schema } = Astro.props;
+const { description, preview, schema, title } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const previewUrl = new URL(preview, Astro.site);
 ---
 
 <head>
@@ -24,7 +26,7 @@ const { description, title, schema } = Astro.props;
 
 	<link href="/feed.xml" rel="alternate" title="RSS" type="application/atom+xml" />
 	<link href="/sitemap-index.xml" rel="sitemap" />
-	<link href={canonicalURL} rel="canonical" />
+	<link href={canonicalUrl} rel="canonical" />
 
 	<title>{title}</title>
 
@@ -35,6 +37,18 @@ const { description, title, schema } = Astro.props;
 	<link rel="manifest" href="/manifest.json" />
 	<meta name="theme-color" content="#ffffff" />
 
-	<OpenGraph title={title} description={description} />
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={previewUrl} />
+	<meta property="og:url" content={canonicalUrl} />
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={previewUrl} />
+
 	<JsonLd schema={schema} />
 </head>
