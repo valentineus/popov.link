@@ -25,12 +25,14 @@ const formattedDate = dayjs(post.data.pubDate.toString()).format("MMMM DD, YYYY"
 </style>
 
 <li>
-	<a href={`/blog/${post.slug}`} lang={post.data.lang}>{post.data.title}</a>
-	<div>
-		<small>
-			<time datetime={post.data.pubDate.toISOString()} lang="en">{formattedDate}</time>
-			<span>•</span>
-			<span>{remarkPluginFrontmatter.minutesRead}</span>
-		</small>
-	</div>
+	<article>
+		<a href={`/blog/${post.slug}`} lang={post.data.lang}>{post.data.title}</a>
+		<div>
+			<small>
+				<time datetime={post.data.pubDate.toISOString()} lang="en">{formattedDate}</time>
+				<span>•</span>
+				<span>{remarkPluginFrontmatter.minutesRead}</span>
+			</small>
+		</div>
+	</article>
 </li>
