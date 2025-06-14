@@ -9,4 +9,5 @@ const { schema } = Astro.props;
 const json = JSON.stringify(schema);
 ---
 
+<!-- JSON-LD -->
 <script is:inline type="application/ld+json" set:html={json} />

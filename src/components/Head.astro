@@ -1,6 +1,7 @@
 ---
 import type { WithContext, Thing } from "schema-dts";
 import JsonLd from "./JsonLd.astro";
+import OpenGraph from "./OpenGraph.astro";
 
 type Props = {
 	readonly description: string;
@@ -13,6 +14,7 @@ const { description, title, schema } = Astro.props;
 ---
 
 <head>
+	<!-- Meta Tags -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -26,11 +28,13 @@ const { description, title, schema } = Astro.props;
 
 	<title>{title}</title>
 
+	<!-- Icons -->
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="manifest" href="/manifest.json" />
 	<meta name="theme-color" content="#ffffff" />
 
+	<OpenGraph title={title} description={description} />
 	<JsonLd schema={schema} />
 </head>
