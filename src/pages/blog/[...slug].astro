@@ -22,7 +22,6 @@ const post = Astro.props;
 
 const { Content, remarkPluginFrontmatter } = await post.render();
 
-const author = post.data.author;
 const description = post.data.description;
 const isBasedOn = post.data.basedOn;
 const lang = post.data.lang;
@@ -40,7 +39,6 @@ const schema = blogPostSchema({
 	slug,
 	datePublished,
 	dateModified,
-	author,
 	lang,
 	isBasedOn,
 });

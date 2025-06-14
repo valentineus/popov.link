@@ -3,7 +3,6 @@ title: "Компиляция Rust на TL-MR3020"
 description: 'Как настроить и оптимизировать проект Rust для кросс-компиляции на TP-Link TL-MR3020 с использованием Fedora Linux 38 и OpenWrt 22.03.4. Шаг за шагом от базового "Hello, World!" до асинхронного TCP сервера.'
 datePublished: "2023-05-01"
 dateModified: "2023-05-01"
-author: "Valentin Popov"
 lang: "ru"
 ---
 
