@@ -41,9 +41,9 @@ npm run preview
 
 ## Project Info
 
-- Maintained by [Valentin Popov](mailto:valentin@popov.link)
 - Issues: [GitHub](https://github.com/valentineus/popov.link/issues)
 - Read-only mirror: [git.popov.link](https://git.popov.link/popov.link/)
+- Maintained by [Valentin Popov](mailto:valentin@popov.link)
 
 ## Comments
 
