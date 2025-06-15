@@ -43,7 +43,7 @@ npm run preview
 
 - Maintained by [Valentin Popov](mailto:valentin@popov.link)
 - Issues: [GitHub](https://github.com/valentineus/popov.link/issues)
-- Read-only mirror: [code.popov.link](https://code.popov.link/valentineus/popov.link)
+- Read-only mirror: [git.popov.link](https://git.popov.link/popov.link/)
 
 ## Comments
 
