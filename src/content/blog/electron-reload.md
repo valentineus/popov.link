@@ -1,6 +1,6 @@
 ---
 title: "Горячая перезагрузка ElectronJS приложения"
-description: "Руководство по автоматической перезагрузке приложений на Electron с помощью пакетов electron-reload и electron-webpack. Обход проблем с совместимостью и использование HMR для renderer процесса."
+description: "Горячая перезагрузка ElectronJS: перезапуск main через nodemon и автообновление renderer с HMR/chokidar. Пошагово, без electron-reload и с Webpack."
 datePublished: "2019-08-15"
 dateModified: "2019-08-15"
 lang: "ru"

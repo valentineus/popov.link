@@ -1,6 +1,6 @@
 ---
 title: 'Получение исходного кода "Chromium Projects"'
-description: "Изучение исходных кодов Chromium: подготовка системы и установка необходимых программных компонентов. Руководство для начинающих разработчиков. Получите инструкции по установке Microsoft Visual Studio, Cygwin, Python и других инструментов. Действительно на январь-февраль 2012 года."
+description: "Как получить и подготовить исходники Chromium на Windows: Visual Studio, Cygwin, depot_tools, команды gclient. Краткая пошаговая инструкция."
 datePublished: "2012-01-30"
 dateModified: "2012-01-30"
 lang: "ru"

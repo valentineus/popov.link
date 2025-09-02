@@ -1,6 +1,6 @@
 ---
 title: "Установка Moodle в Fedora"
-description: "Решение проблем установки Moodle из-за SELinux: как настроить правила доступа для устранения ошибок в веб-интерфейсе и при работе с cURL. Практические советы и команды."
+description: "Установка Moodle в Fedora: как исправить зависание инсталлятора и cURL error из-за SELinux. Правильные setsebool и chcon для доступа к сети и каталогам."
 datePublished: "2018-07-23"
 dateModified: "2018-07-23"
 lang: "ru"
