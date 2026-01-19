@@ -35,7 +35,7 @@
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
     "sass": "^1.89.1",
-    "satori": "^0.18.0",
+    "satori": "^0.19.1",
     "satori-html": "^0.3.2",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.2",
