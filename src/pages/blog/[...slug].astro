@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import Comments from "../../components/Comments.astro";
 import Layout from "../../layouts/BaseLayout.astro";
 import blogPostSchema from "../../utils/schemas/blogPostSchema";
@@ -13,20 +13,20 @@ export async function getStaticPaths() {
 	});
 
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 		props: post,
 	}));
 }
 
 const post = Astro.props;
 
-const { Content, remarkPluginFrontmatter } = await post.render();
+const { Content, remarkPluginFrontmatter } = await render(post);
 
 const description = post.data.description;
 const isBasedOn = post.data.basedOn;
 const lang = post.data.lang;
-const preview = `/images/preview/${post.slug}.png`;
-const slug = post.slug;
+const preview = `/images/preview/${post.id}.png`;
+const slug = post.id;
 const title = post.data.title;
 
 const dateModified = post.data.dateModified?.toISOString();

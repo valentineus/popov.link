@@ -19,7 +19,7 @@ export default ({ siteUrl, title, posts }: BlogSchemaParams): WithContext<Collec
 		"itemListElement": posts.map((post, index) => ({
 			"@type": "ListItem",
 			"position": index + 1,
-			"url": new URL(`/blog/${post.slug}`, siteUrl).toString(),
+			"url": new URL(`/blog/${post.id}`, siteUrl).toString(),
 			"name": post.data.title,
 		})),
 	},

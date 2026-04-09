@@ -27,7 +27,7 @@ const latestPosts = posts.slice(0, 5);
 		{
 			latestPosts.map((post) => (
 				<li>
-					<a href={`/blog/${post.slug}`} lang={post.data.lang}>
+					<a href={`/blog/${post.id}`} lang={post.data.lang}>
 						{post.data.title}
 					</a>
 
