@@ -8,17 +8,20 @@ import "../scss/global.scss";
 type Props = {
 	readonly description: string;
 	readonly lang: string;
+	readonly modifiedTime?: string;
+	readonly ogType?: "website" | "article";
 	readonly preview: string;
+	readonly publishedTime?: string;
 	readonly robots?: string;
 	readonly schema: Thing[];
 	readonly title: string;
 };
 
-const { description, lang, preview, robots, schema, title } = Astro.props;
+const { description, lang, modifiedTime, ogType, preview, publishedTime, robots, schema, title } = Astro.props;
 ---
 
 <html lang={lang}>
-	<Head title={title} description={description} preview={preview} robots={robots} schema={schema} />
+	<Head title={title} description={description} preview={preview} robots={robots} schema={schema} lang={lang} ogType={ogType} publishedTime={publishedTime} modifiedTime={modifiedTime} />
 
 	<body>
 		<main>

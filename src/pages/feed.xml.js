@@ -1,24 +1,47 @@
 import { getCollection } from "astro:content";
+import MarkdownIt from "markdown-it";
 import rss from "@astrojs/rss";
+import sanitizeHtml from "sanitize-html";
+import { config } from "../config";
+
+const parser = new MarkdownIt({ html: true, linkify: true });
 
 export async function GET(context) {
 	const title = "RSS Feed | Valentin Popov Blog";
 	const description = "Follow the latest posts from Valentin Popov via RSS.";
 
-	const posts = await getCollection("blog", ({ data }) => {
-		return data.draft !== true;
-	});
+	const posts = (await getCollection("blog", ({ data }) => data.draft !== true)).sort((a, b) => b.data.datePublished.getTime() - a.data.datePublished.getTime());
+
+	const feedUrl = new URL("/feed.xml", context.site).toString();
 
 	return rss({
-		customData: `<language>en</language>`,
-		description: description,
-		items: posts.map((post) => ({
-			description: post.data.description,
-			link: `/blog/${post.id}`,
-			pubDate: post.data.datePublished,
-			title: post.data.title,
-		})),
+		title,
+		description,
 		site: context.site,
-		title: title,
+		xmlns: {
+			atom: "http://www.w3.org/2005/Atom",
+			content: "http://purl.org/rss/1.0/modules/content/",
+			dc: "http://purl.org/dc/elements/1.1/",
+		},
+		customData: [`<language>en</language>`, `<atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>`].join(""),
+		items: posts.map((post) => ({
+			title: post.data.title,
+			description: post.data.description,
+			link: `/blog/${post.id}/`,
+			pubDate: post.data.datePublished,
+			author: `${config.author.email} (${config.author.name})`,
+			content: sanitizeHtml(parser.render(post.body ?? ""), {
+				allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "pre", "code", "span"]),
+				allowedAttributes: {
+					...sanitizeHtml.defaults.allowedAttributes,
+					img: ["src", "alt", "title", "loading", "decoding"],
+					code: ["class"],
+					span: ["class", "style"],
+					pre: ["class", "style"],
+					a: ["href", "name", "target", "rel"],
+				},
+			}),
+			customData: `<dc:language>${post.data.lang}</dc:language>`,
+		})),
 	});
 }

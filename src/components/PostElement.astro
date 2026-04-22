@@ -31,7 +31,7 @@ const datePublished = post.data.datePublished.toISOString();
 		<a href={`/blog/${post.id}`} lang={post.data.lang}>{post.data.title}</a>
 		<div>
 			<small>
-				<time datetime={datePublished} lang="en">{formattedDate}</time>
+				<time datetime={datePublished} lang={post.data.lang}>{formattedDate}</time>
 				<span>•</span>
 				<span>{remarkPluginFrontmatter.minutesRead}</span>
 			</small>
