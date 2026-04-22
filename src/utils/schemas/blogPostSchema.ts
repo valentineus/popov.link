@@ -1,5 +1,5 @@
-import type { WithContext, BlogPosting } from "schema-dts";
-import { config } from "../../config";
+import type { BlogPosting } from "schema-dts";
+import { personId, websiteId } from "./ids";
 
 export type BlogPostSchemaParams = {
 	readonly dateModified: string;
@@ -13,25 +13,26 @@ export type BlogPostSchemaParams = {
 	readonly title: string;
 };
 
-export default ({ siteUrl, slug, title, description, preview, datePublished, dateModified, lang, isBasedOn }: BlogPostSchemaParams): WithContext<BlogPosting> => ({
-	"@context": "https://schema.org",
-	"@type": "BlogPosting",
-	"url": new URL(`/blog/${slug}`, siteUrl).toString(),
-	"headline": title,
-	"description": description,
-	"image": new URL(preview, siteUrl).toString(),
-	"datePublished": datePublished,
-	"dateModified": dateModified,
-	"inLanguage": lang,
-	"author": {
-		"@type": "Person",
-		"name": config.author.name,
-		"url": config.author.url,
-		"sameAs": config.author.sameAs,
-	},
-	"mainEntityOfPage": {
-		"@type": "WebPage",
-		"@id": new URL(`/blog/${slug}`, siteUrl).toString(),
-	},
-	...(isBasedOn && { isBasedOn: isBasedOn }),
-});
+export default ({ siteUrl, slug, title, description, preview, datePublished, dateModified, lang, isBasedOn }: BlogPostSchemaParams): BlogPosting => {
+	const url = new URL(`/blog/${slug}`, siteUrl).toString();
+
+	return {
+		"@type": "BlogPosting",
+		"@id": url,
+		"url": url,
+		"headline": title,
+		"description": description,
+		"image": new URL(preview, siteUrl).toString(),
+		"datePublished": datePublished,
+		"dateModified": dateModified,
+		"inLanguage": lang,
+		"author": { "@id": personId(siteUrl) },
+		"publisher": { "@id": personId(siteUrl) },
+		"isPartOf": { "@id": websiteId(siteUrl) },
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": url,
+		},
+		...(isBasedOn && { isBasedOn: isBasedOn }),
+	};
+};

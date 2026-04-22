@@ -8,16 +8,20 @@ const description = "The page you're looking for doesn't exist!";
 const preview = config.og.defaultPreview;
 const lang = "en";
 
-const schema = pageSchema({
-	siteUrl: new URL("/", Astro.site).toString(),
-	page: "/404",
-	title,
-	description,
-	lang,
-});
+const siteUrl = new URL("/", Astro.site).toString();
+
+const schema = [
+	pageSchema({
+		siteUrl,
+		page: "/404",
+		title,
+		description,
+		lang,
+	}),
+];
 ---
 
-<Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>
+<Layout title={title} description={description} preview={preview} lang={lang} robots="noindex, follow" schema={schema}>
 	<div style={{ "text-align": "center" }}>
 		<h1>404</h1>
 		<p><strong>Page not found</strong></p>

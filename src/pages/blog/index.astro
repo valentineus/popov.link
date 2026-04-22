@@ -3,9 +3,11 @@ import type { CollectionEntry } from "astro:content";
 import { config } from "../../config";
 import { getCollection } from "astro:content";
 import blogSchema from "../../utils/schemas/blogSchema";
+import breadcrumbSchema from "../../utils/schemas/breadcrumbSchema";
 import Layout from "../../layouts/BaseLayout.astro";
 import PostElement from "../../components/PostElement.astro";
 import RSSIcon from "../../components/Icons/RSS.astro";
+import websiteSchema from "../../utils/schemas/websiteSchema";
 
 const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
@@ -29,11 +31,19 @@ const description = "Explore Valentin Popov's blog on software development, tech
 const preview = config.og.defaultPreview;
 const lang = "en";
 
-const schema = blogSchema({
-	siteUrl: new URL("/", Astro.site).toString(),
-	title,
-	posts,
-});
+const siteUrl = new URL("/", Astro.site).toString();
+
+const schema = [
+	websiteSchema({ siteUrl, name: config.og.website, description, lang }),
+	blogSchema({ siteUrl, title, description, lang, posts }),
+	breadcrumbSchema({
+		siteUrl,
+		items: [
+			{ name: "Home", url: "/" },
+			{ name: "Blog", url: "/blog/" },
+		],
+	}),
+];
 ---
 
 <Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>

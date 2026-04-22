@@ -3,21 +3,19 @@ import { config } from "../config";
 import LatestPostsSection from "../components/Sections/LatestPosts.astro";
 import Layout from "../layouts/BaseLayout.astro";
 import pageSchema from "../utils/schemas/pageSchema";
+import personSchema from "../utils/schemas/personSchema";
 import SocialLinksSection from "../components/Sections/SocialLinks.astro";
 import WelcomeSection from "../components/Sections/Welcome.astro";
+import websiteSchema from "../utils/schemas/websiteSchema";
 
 const title = "Valentin Popov – Software Developer & Team Lead | Tech Insights";
 const description = "Blog by Valentin Popov — software developer and team lead writing about code, side projects, digital tools, and fun experiments.";
 const preview = config.og.defaultPreview;
 const lang = "en";
 
-const schema = pageSchema({
-	siteUrl: new URL("/", Astro.site).toString(),
-	page: "/",
-	title,
-	description,
-	lang,
-});
+const siteUrl = new URL("/", Astro.site).toString();
+
+const schema = [websiteSchema({ siteUrl, name: config.og.website, description, lang }), personSchema({ siteUrl }), pageSchema({ siteUrl, page: "/", title, description, lang, type: "ProfilePage" })];
 ---
 
 <Layout title={title} description={description} preview={preview} lang={lang} schema={schema}>

@@ -1,15 +1,16 @@
 ---
-import type { WithContext, Thing } from "schema-dts";
+import type { Thing } from "schema-dts";
 import JsonLd from "./JsonLd.astro";
 
 type Props = {
 	readonly description: string;
 	readonly preview: string;
-	readonly schema: WithContext<Thing>;
+	readonly robots?: string;
+	readonly schema: Thing[];
 	readonly title: string;
 };
 
-const { description, preview, schema, title } = Astro.props;
+const { description, preview, robots = "index, follow", schema, title } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const previewUrl = new URL(preview, Astro.site);
@@ -21,7 +22,7 @@ const previewUrl = new URL(preview, Astro.site);
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 	<meta name="description" content={description} />
-	<meta name="robots" content="index, follow" />
+	<meta name="robots" content={robots} />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link href="/feed.xml" rel="alternate" title="RSS" type="application/atom+xml" />
