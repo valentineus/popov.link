@@ -5,7 +5,7 @@ import { Resvg } from "@resvg/resvg-js";
 import dayjs from "dayjs";
 import satori from "satori";
 
-export async function createOgImage(title: string, datePublished: Date): Promise<Buffer> {
+export async function createOgImage(title: string, datePublished: Date): Promise<Uint8Array> {
 	const formattedDate = dayjs(datePublished).format("MMMM DD, YYYY");
 
 	const markup = await satori(

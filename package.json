@@ -3,11 +3,11 @@
   "type": "module",
   "version": "2025.01.24",
   "private": true,
+  "license": "MIT",
   "packageManager": "npm@11.12.1",
   "browserslist": [
     ">0.2%",
-    "not dead",
-    "IE 11"
+    "not dead"
   ],
   "scripts": {
     "format": "prettier --write .",
@@ -29,7 +29,6 @@
     "cssnano": "^7.0.7",
     "cssnano-preset-advanced": "^7.0.7",
     "dayjs": "^1.11.13",
-    "geist": "^1.4.2",
     "globby": "^16.0.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.1",
@@ -46,6 +45,8 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/sanitize-html": "^2.16.1",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
   }

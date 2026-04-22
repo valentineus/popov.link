@@ -4,14 +4,13 @@ import { personId, websiteId } from "./ids";
 export type WebsiteSchemaParams = {
 	readonly description: string;
 	readonly lang: string;
-	readonly mainEntityId?: string;
 	readonly page: string;
 	readonly siteUrl: string;
 	readonly title: string;
 	readonly type?: "WebPage" | "ProfilePage";
 };
 
-export default ({ siteUrl, page, title, description, lang, type = "WebPage", mainEntityId }: WebsiteSchemaParams): WebPage | ProfilePage => {
+export default ({ siteUrl, page, title, description, lang, type = "WebPage" }: WebsiteSchemaParams): WebPage | ProfilePage => {
 	const url = new URL(page, siteUrl).toString();
 
 	const base = {
@@ -28,7 +27,7 @@ export default ({ siteUrl, page, title, description, lang, type = "WebPage", mai
 		return {
 			...base,
 			"@type": "ProfilePage",
-			"mainEntity": { "@id": mainEntityId ?? personId(siteUrl) },
+			"mainEntity": { "@id": personId(siteUrl) },
 		};
 	}
 

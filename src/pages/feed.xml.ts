@@ -1,12 +1,13 @@
+import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
 import MarkdownIt from "markdown-it";
 import rss from "@astrojs/rss";
 import sanitizeHtml from "sanitize-html";
 import { config } from "../config";
 
-const parser = new MarkdownIt({ html: true, linkify: true });
+const parser = new MarkdownIt({ html: false, linkify: true });
 
-export async function GET(context) {
+export async function GET(context: APIContext) {
 	const title = "RSS Feed | Valentin Popov Blog";
 	const description = "Follow the latest posts from Valentin Popov via RSS.";
 
@@ -17,13 +18,13 @@ export async function GET(context) {
 	return rss({
 		title,
 		description,
-		site: context.site,
+		site: context.site ?? config.author.url,
 		xmlns: {
 			atom: "http://www.w3.org/2005/Atom",
 			content: "http://purl.org/rss/1.0/modules/content/",
 			dc: "http://purl.org/dc/elements/1.1/",
 		},
-		customData: [`<language>en</language>`, `<atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>`].join(""),
+		customData: `<atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>`,
 		items: posts.map((post) => ({
 			title: post.data.title,
 			description: post.data.description,
@@ -36,8 +37,8 @@ export async function GET(context) {
 					...sanitizeHtml.defaults.allowedAttributes,
 					img: ["src", "alt", "title", "loading", "decoding"],
 					code: ["class"],
-					span: ["class", "style"],
-					pre: ["class", "style"],
+					span: ["class"],
+					pre: ["class"],
 					a: ["href", "name", "target", "rel"],
 				},
 			}),
