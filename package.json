@@ -30,7 +30,7 @@
     "cssnano": "^8.0.0",
     "cssnano-preset-advanced": "^8.0.0",
     "dayjs": "^1.11.13",
-    "globby": "^16.0.0",
+    "globby": "^16.2.1",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.1",
     "mdast-util-to-string": "^4.0.0",
